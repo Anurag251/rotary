@@ -1,0 +1,433 @@
+@import './mixin.sass'
+
+body
+  background-color: #F7F7F7
+
+p
+  letter-spacing: normal
+  line-height: 1.5rem
+  color: $para
+
+.custom-button
+  &.activeLoading
+    cursor: not-allowed
+    position: relative
+
+    @keyframes loadingBtn
+      0%
+        transform: rotate(-360deg)
+
+      30%
+        transform: rotate(60deg)
+
+      40%
+        transform: rotate(90deg)
+
+      50%
+        transform: rotate(180deg)
+
+      60%
+        transform: rotate(360deg)
+
+      70%
+        transform: rotate(540deg)
+
+      80%
+        transform: rotate(600deg)
+
+      100%
+        transform: rotate(720deg)
+
+    .loading
+      height: 100%
+      width: 100%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-color: rgba($light, .7)
+      backdrop-filter: blur(5px)
+      @include flex($justify: center)
+
+      &::after
+        content: ''
+        position: absolute
+        height: 20px
+        width: 20px
+        border-radius: 50%
+        border: 3px solid $light
+        border-bottom-color: $pri
+        border-top-color: $pri
+        animation: loadingBtn 2s ease-in-out infinite alternate
+
+.view-all-btn
+  @include flex($justify: center)
+
+  button
+    padding: .6rem 2rem
+    color: $light
+    background-color: $dark
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 300
+    cursor: pointer
+
+    &:hover
+      opacity: .85
+
+/***********      section      ***********/
+section
+  padding: 50px 0
+  @include bgImage()
+
+  &.bg
+    background-color: $light
+
+  .sec-bg-img
+    @include image()
+
+/***********      wrapper      ***********/
+.wrapper
+  max-width: 1300px
+  margin: 0 auto
+  padding: 0 2rem
+
+  &.noSpace
+    max-width: auto
+    padding: 0
+
+/***********      title      ***********/
+.title
+  text-align: center
+  margin-bottom: 40px
+
+  h4
+    font-size: 14px
+    font-weight: 600
+    text-transform: uppercase
+
+  h2
+    font-size: 34px
+    font-weight: 300
+
+/***********      header      ***********/
+header
+  position: sticky
+  top: 0
+  left: 0
+  width: 100%
+  padding: .6rem 0
+  border-bottom: 1px solid $light
+  z-index: 20
+  @include trans()
+  background-color: $light
+
+  &.sticky
+    box-shadow: 4px 0 10px rgba($dark, .2)
+
+    .wrapper
+      .logo
+        h3
+          color: $dark
+
+      .nav-links
+        li
+          button
+            color: $dark
+
+      .side-nav-btn
+        &::before, &::after, .das
+          background-color: $dark
+
+  .wrapper
+    @include flex($justify: space-between)
+
+    .logo
+      h3
+        font-weight: 400
+        font-size: 30px
+        color: $dark
+
+    .nav-links
+      @include flex($justify: flex-end)
+
+      li
+        a.active
+          button
+            color: $pri
+
+        button
+          font-size: 15px
+          font-weight: 300
+          text-transform: uppercase
+          padding: 0 20px
+          color: $dark
+          cursor: pointer
+
+    .side-nav-btn
+      height: 20px
+      width: 30px
+      @include flex($justify: center)
+      position: relative
+      display: none
+      cursor: pointer
+
+      &.active
+        &::before
+          width: 50%
+
+        &::after
+          width: 50%
+
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 2.5px
+        background-color: $dark
+        border-radius: 10px
+        @include trans()
+
+      .das
+        height: 2.5px
+        background-color: $dark
+        border-radius: 10px
+        width: 100%
+        @include trans()
+
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 2.5px
+        background-color: $dark
+        border-radius: 10px
+        @include trans()
+
+/***********      side-nav      ***********/
+.side-nav
+  position: fixed
+  top: 0
+  left: -300px
+  width: 260px
+  height: 100%
+  z-index: 100
+  pointer-events: none
+  @include trans()
+  border-radius: 0
+  background-color: #fff
+  border: 10px solid rgba($light, .4)
+  background-image: linear-gradient(180deg, rgba($pri, .9), rgba($pri, .9))
+  padding: 1rem
+
+  &.active
+    left: 0px
+    pointer-events: auto
+
+  .side-nav-close-btn
+    position: absolute
+    top: 10px
+    right: -10px
+    height: 30px
+    width: 40px
+    background-color: $light
+    border-radius: 30px 0px 0 30px
+    @include flex($justify: center)
+    color: $price
+    font-size: 16px
+    cursor: pointer
+
+    i
+      @include trans()
+      transform: translateX(5px)
+
+    &:hover
+      i
+        transform: translateX(-5px)
+
+  .logo
+    height: 60px
+    width: 100%
+    @include flex($justify: center)
+
+    h3
+      color: $light
+
+  .nav-links
+    a.active
+      .nav-btn
+        // background-color: rgba($pri, .8)
+        // box-shadow: 0 0 10px rgba($dark, .1)
+        // color: $dark
+        border: 1px solid $light
+        transform: scale(1.03)
+
+    .nav-btn
+      padding: 1rem 1rem
+      font-size: 18px
+      color: $light
+      border-radius: 0
+      width: 100%
+      text-align: left
+      margin-bottom: 5px
+      cursor: pointer
+      transition: .4s all cubic-bazier(0,1,0,1)
+
+      &:hover
+        background-color: rgba($light,.1)
+        box-shadow: 0 3px 10px rgba($dark, .1)
+        transform: scale(1.03)
+
+/***********      banner      ***********/
+.banner
+  overflow: hidden
+  width: 100%
+  position: relative
+
+  .text-sec
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 21
+    @include flex($justify: center)
+
+    .wrapper
+      width: 100%
+      @include flex($justify: center)
+
+      .content
+        width: 50%
+        text-align: center
+        color: $light
+
+        h2
+          font-size: 32px
+          font-weight: 500
+
+        p
+          font-size: 14px
+          font-weight: 400
+          text-transform: uppercase
+          color: $light
+
+        .others
+          margin: 1.2rem 0
+          @include flex($justify: center)
+
+          li
+            margin: 0 .5rem
+            font-size: 12px
+            text-transform: uppercase
+
+        button
+          font-size: 18px
+          color: $light
+          height: 50px
+          width: 50px
+          border-radius: 50%
+          background-color: #2862FF
+          text-align: center
+
+  .images-sec
+    position: relative
+
+    .image-preview
+      overflow: hidden
+
+      @keyframes zoomEffect
+        0%
+          transform: scale(2)
+
+        100%
+          transform: scale(1)
+
+      .swiper-wrapper
+        @include trans()
+
+      .swiper-slide
+        position: relative
+        height: 600px
+        width: 100%
+
+        &::before
+          content: ''
+          position: absolute
+          @include dark($opacity: .64)
+          z-index: 20
+
+        &.swiper-slide-active
+          img
+            animation: zoomEffect 4s cubic-bezier(0.22, 0.61, 0.36, 1)
+
+        img
+          @include image()
+
+    .image-btns
+      overflow: hidden
+      position: absolute
+      bottom: 30px
+      right: 30px
+      width: 365px
+      z-index: 3
+
+      .swiper-wrapper
+        display: flex
+        align-items: center
+
+      .swiper-slide
+        max-width: 120px !important
+        height: 142px !important
+        @include flex($justify: center)
+
+        &.swiper-slide-thumb-active
+          max-width: 135.19px !important
+          height: 160.13px !important
+
+      img
+        @include image()
+        height: 90%
+        width: 90%
+
+.top-stories-bg
+  background-color: #FAF8F4
+
+.top-stories
+  .list
+    @include grid($columns: 1fr 1fr 1fr 1fr)
+
+    .item
+      margin-bottom: 20px
+
+      .image
+        overflow: hidden
+
+      .item-image
+        @include image()
+        height: 200px
+        border-radius: 4px
+
+      .item-body
+        margin-top: .6rem
+        h5
+          font-size: 12px
+          text-transform: uppercase
+          font-weight: 400
+
+        .item-title
+          color: $para
+          margin: .5rem 0
+
+        .item-footer
+          @include flex($justify: space-between)
+          font-size: 12px
+          color: rgba($dark, .7)
+
+          .name
+            span
+              color: $dark
