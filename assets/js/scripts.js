@@ -149,7 +149,6 @@ if (inputGroups[0] !== undefined) {
 }
 
 let formInputLabels = document.querySelectorAll(".form-input-label");
-let line = document.querySelectorAll(".line");
 
 const getData = (data) => {
   formInputLabels.forEach((formInputLabel, idx) => {
@@ -160,35 +159,29 @@ const getData = (data) => {
       if (data.getAttribute("name") === dataAttributeName) {
         if (data.value.length) {
           formInputLabel.classList.add("shrink");
-          if (line[0]) {
-            line[idx].classList.add("shrink");
-          }
         } else {
           formInputLabel.classList.remove("shrink");
-          if (line[0]) {
-            line[idx].classList.remove("shrink");
-          }
         }
       }
     }
   });
 };
 
-let valueDisplays = document.querySelectorAll(".num");
-let interval = 6000;
+// let valueDisplays = document.querySelectorAll(".num");
+// let interval = 6000;
 
-valueDisplays.forEach((valueDisplay) => {
-  let startValue = 0;
-  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let duration = Math.floor(interval / endValue);
-  let counter = setInterval(function () {
-    startValue += 1;
-    valueDisplay.textContent = startValue;
-    if (startValue == endValue) {
-      clearInterval(counter);
-    }
-  }, duration);
-});
+// valueDisplays.forEach((valueDisplay) => {
+//   let startValue = 0;
+//   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+//   let duration = Math.floor(interval / endValue);
+//   let counter = setInterval(function () {
+//     startValue += 1;
+//     valueDisplay.textContent = startValue;
+//     if (startValue == endValue) {
+//       clearInterval(counter);
+//     }
+//   }, duration);
+// });
 
 let contactButton = document.querySelector(".contact-button");
 let contactPopup = document.querySelector(".contact-popup");

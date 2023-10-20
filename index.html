@@ -19,343 +19,478 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    /> -->
   </head>
+
   <body>
-    <!-- header-start -->
     <header>
-      <div class="wrapper">
-        <div class="logo">
-          <h3>LOGO</h3>
+      <div class="header-top">
+        <div class="wrapper header-other">
+          <!-- <div class="social-icons">
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div> -->
+
+          <ul class="header-contact">
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="mailto:rotary@ntc.net.np">
+                  <i class="fas fa-envelope"></i>
+
+                  rotary@ntc.net.np
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="tel:015355344">
+                  <i class="fas fa-phone"></i>
+
+                  015355344
+                </a>
+              </div>
+            </li>
+
+            <!-- <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Member Login </a>
+              </div>
+            </li> -->
+
+            <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Event Registration </a>
+              </div>
+            </li>
+
+            <li class="button-link drop-menu">
+              <div class="contact-link">
+                <a class="link-button" class="link-button" href="#"
+                  ><i class="fas fa-user"></i> <span>Super Admin Admin</span>
+                </a>
+
+                <ul class="drop-profile">
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-gauge"></i> Super Admin
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-user"></i> My Profile
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                      </button></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <ul class="nav-links">
-          <li>
-            <a href="index.html">
-              <button class="nav-btn">Home</button>
-            </a>
-          </li>
+      <div class="nav-menu-area">
+        <div class="wrapper inner">
+          <a href="index.html">
+            <div class="logo">
+              <img
+                src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+                alt="logo"
+              />
+            </div>
+          </a>
 
-          <li>
-            <a href="about.html">
-              <button class="nav-btn">About Us</button>
-            </a>
-          </li>
+          <ul class="nav-links">
+            <li>
+              <a href="#">
+                <button class="nav-btn">RI District 3292</button>
+              </a>
+            </li>
 
-          <li>
-            <a href="services.html">
-              <button class="nav-btn">Services</button>
-            </a>
-          </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Governor</button>
+              </a>
+            </li>
 
-          <li>
-            <a href="gallery.html">
-              <button class="nav-btn">Gallery</button>
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a href="#">
+                <button class="nav-btn">DG Calendar</button>
+              </a>
+            </li>
 
-        <div class="side-nav-btn">
-          <div class="das"></div>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Top Stories</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Committee</button>
+              </a>
+            </li>
+
+            <li class="drop-menu">
+              <button class="nav-btn">
+                Resources <i class="fas fa-angle-down"></i>
+              </button>
+
+              <ul class="drop-down">
+                <li>
+                  <a href="#">
+                    <button>Rotary Club Matter</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>Downloads</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>GML</button>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Clubs</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Rotarians</button>
+              </a>
+            </li>
+          </ul>
+
+          <div class="header-right-item">
+            <div class="side-nav-btn">
+              <div class="das"></div>
+            </div>
+
+            <div class="mobile-profile">
+              <div class="image">
+                <i class="fas fa-user"></i>
+              </div>
+              <ul class="drop-profile">
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-gauge"></i> Super Admin
+                    </button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button><i class="fas fa-user"></i> My Profile</button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
-    <!-- header-end -->
+
+    <!-- side menu -->
+    <div class="side-nav">
+      <div class="side-nav-close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="logo">
+        <a href="/">
+          <img
+            src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+            alt="logo"
+          />
+        </a>
+      </div>
+
+      <div class="nav-links-area">
+        <ul class="nav-links">
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- banner-start -->
-    <div class="banner">
-      <div class="images-sec">
-        <div class="image-preview">
-          <div
-            style="
-              --swiper-navigation-color: #fff;
-              --swiper-pagination-color: #fff;
-            "
-            class="swiper mySwiper"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_1.jpg"
-                />
-
-                <div class="text-sec">
-                  <div class="wrapper">
-                    <div class="content">
-                      <p>Technology</p>
-
-                      <h2>
-                        How childhood viral infect multiple section project
-                      </h2>
-
-                      <ul class="others">
-                        <li>
-                          <i class="fas fa-calendar-alt"></i>
-
-                          <span>December 9, 2022</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-user"></i>
-
-                          <span>Super Star</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-share-alt"></i>
-
-                          <span>3, 250</span>
-                        </li>
-                      </ul>
-
-                      <a href="#">
-                        <button><i class="fas fa-play"></i></button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_2.jpg"
-                />
-
-                <div class="text-sec">
-                  <div class="wrapper">
-                    <div class="content">
-                      <p>Technology</p>
-
-                      <h2>
-                        How childhood viral infect multiple section project
-                      </h2>
-
-                      <ul class="others">
-                        <li>
-                          <i class="fas fa-calendar-alt"></i>
-
-                          <span>December 9, 2022</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-user"></i>
-
-                          <span>Super Star</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-share-alt"></i>
-
-                          <span>3, 250</span>
-                        </li>
-                      </ul>
-
-                      <a href="#">
-                        <button><i class="fas fa-play"></i></button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_3.jpg"
-                />
-
-                <div class="text-sec">
-                  <div class="wrapper">
-                    <div class="content">
-                      <p>Technology</p>
-
-                      <h2>
-                        How childhood viral infect multiple section project
-                      </h2>
-
-                      <ul class="others">
-                        <li>
-                          <i class="fas fa-calendar-alt"></i>
-
-                          <span>December 9, 2022</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-user"></i>
-
-                          <span>Super Star</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-share-alt"></i>
-
-                          <span>3, 250</span>
-                        </li>
-                      </ul>
-
-                      <a href="#">
-                        <button><i class="fas fa-play"></i></button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_4.jpg"
-                />
-
-                <div class="text-sec">
-                  <div class="wrapper">
-                    <div class="content">
-                      <p>Technology</p>
-
-                      <h2>
-                        How childhood viral infect multiple section project
-                      </h2>
-
-                      <ul class="others">
-                        <li>
-                          <i class="fas fa-calendar-alt"></i>
-
-                          <span>December 9, 2022</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-user"></i>
-
-                          <span>Super Star</span>
-                        </li>
-
-                        <li>
-                          <i class="fas fa-share-alt"></i>
-
-                          <span>3, 250</span>
-                        </li>
-                      </ul>
-
-                      <a href="#">
-                        <button><i class="fas fa-play"></i></button>
-                      </a>
-                    </div>
-                  </div>
+    <div class="slide-banner">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_1.jpg"
+              alt="image"
+            />
+            <div class="main">
+              <div class="content">
+                <h1>Adventure begins here</h1>
+                <div class="button">
+                  <a href="#" class="read-more-btn">Read More</a>
                 </div>
               </div>
             </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_2.jpg"
+              alt="image"
+            />
+            <div class="main">
+              <div class="content">
+                <h1>the best outside time</h1>
+                <div class="button">
+                  <a href="#" class="read-more-btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_3.jpg"
+              alt="image"
+            />
+            <div class="main">
+              <div class="content">
+                <h1>Hiking is the true answer</h1>
+                <div class="button">
+                  <a href="#" class="read-more-btn">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="https://radiustheme.com/demo/html/neeon/media/gallery/video-gallery-bg_4.jpg"
+              alt="image"
+            />
+            <div class="main">
+              <div class="content">
+                <h1>the peace of moutains</h1>
+                <div class="button">
+                  <a href="#" class="read-more-btn">Read More</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
     <!-- banner-end -->
 
-    <section class="top-stories-bg">
-      <div class="wrapper">
-        <div class="title">
-          <h2>Top Stories</h2>
-        </div>
+    <section>
+      <div class="about-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="left-content">
+                <h3 class="greeting">Namaste</h3>
 
-        <div class="top-stories">
-          <div class="list">
-            <div class="item">
-              <div class="image">
-                <img
-                  class="item-image"
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/post-md_1.jpg"
-                  alt=""
-                />
-              </div>
+                <h3 class="section-title">
+                  Welcome to <strong>Rotary District 3292</strong>
+                </h3>
 
-              <div class="item-body">
-                <h5>MUSIC</h5>
+                <div class="desc">
+                  <p>
+                    Rotary is an organization of business and professional
+                    persons united worldwide, who provide humanitarian service,
+                    encourage high ethical standards in all vocations and help
+                    build goodwill and peace in the world.
+                  </p>
 
-                <div class="item-title">
-                  After The Moon How Close gear Is Space Travel Really?
+                  <p>
+                    Rotary International District 3292 covers 2 countries Nepal
+                    and Bhutan, with more than 5,688 members and 153 clubs.
+                  </p>
+
+                  <p>
+                    Rotary International District 3292 and its 153 clubs seek to
+                    help all Nepal and Bhutan through local club projects
+                  </p>
                 </div>
 
-                <div class="item-footer">
-                  <div class="name">BY <span>WILLUM SKEEM</span></div>
-                  <div class="time">
-                    <i class="fas fa-calendar-alt"></i>
-                    DECEMBER 9, 2022
+                <div class="other-infos">
+                  <div class="item">
+                    <div class="total-club">
+                      <div class="num">156</div>
+                      <div class="text">Rotary Clubs</div>
+                    </div>
+
+                    <div class="total-member">
+                      <div class="num">6000</div>
+                      <div class="text">Members</div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="total-club">
+                      <div class="num">100</div>
+                      <div class="text">Rotaract Clubs</div>
+                    </div>
+
+                    <div class="total-member">
+                      <div class="num">5000</div>
+                      <div class="text">Members</div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="total-club">
+                      <div class="num">200</div>
+                      <div class="text">Interact Clubs</div>
+                    </div>
+
+                    <div class="total-member">
+                      <div class="num">3000</div>
+                      <div class="text">Members</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="item">
-              <div class="image">
-                <img
-                  class="item-image"
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/post-md_2.jpg"
-                  alt=""
-                />
-              </div>
+            <div class="col-lg-5">
+              <div class="right-content">
+                <div class="title">2021-22 Grant Summary</div>
+                <div class="list">
+                  <div class="item">
+                    <div class="icon">
+                      <div class="text">
+                        <h3>19</h3>
+                        Global Grant
+                      </div>
+                    </div>
 
-              <div class="item-body">
-                <h5>MUSIC</h5>
-
-                <div class="item-title">
-                  After The Moon How Close gear Is Space Travel Really?
-                </div>
-
-                <div class="item-footer">
-                  <div class="name">BY <span>WILLUM SKEEM</span></div>
-                  <div class="time">
-                    <i class="fas fa-calendar-alt"></i>
-                    DECEMBER 9, 2022
+                    <div class="total-budget">
+                      <div class="num">$27m</div>
+                      <div class="text">program awards</div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="item">
-              <div class="image">
-                <img
-                  class="item-image"
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/post-md_3.jpg"
-                  alt=""
-                />
-              </div>
+                  <div class="item">
+                    <div class="icon">
+                      <div class="text">
+                        <h3>300</h3>
+                        District Grant
+                      </div>
+                    </div>
 
-              <div class="item-body">
-                <h5>MUSIC</h5>
-
-                <div class="item-title">
-                  After The Moon How Close gear Is Space Travel Really?
-                </div>
-
-                <div class="item-footer">
-                  <div class="name">BY <span>WILLUM SKEEM</span></div>
-                  <div class="time">
-                    <i class="fas fa-calendar-alt"></i>
-                    DECEMBER 9, 2022
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="image">
-                <img
-                  class="item-image"
-                  src="https://radiustheme.com/demo/html/neeon/media/gallery/post-md_4.jpg"
-                  alt=""
-                />
-              </div>
-
-              <div class="item-body">
-                <h5>MUSIC</h5>
-
-                <div class="item-title">
-                  After The Moon How Close gear Is Space Travel Really?
-                </div>
-
-                <div class="item-footer">
-                  <div class="name">BY <span>WILLUM SKEEM</span></div>
-                  <div class="time">
-                    <i class="fas fa-calendar-alt"></i>
-                    DECEMBER 9, 2022
+                    <div class="total-budget">
+                      <div class="num">$8m</div>
+                      <div class="text">program awards</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -365,35 +500,668 @@
       </div>
     </section>
 
+    <!-- governer-monthly-letter-start -->
+    <section class="bg governer-monthly-letter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="governer-section">
+              <div class="image-area">
+                <img
+                  src="https://rotarydistrict3292.org.np/frontend/img/news/1656608031-709480.jpg"
+                  alt=""
+                />
+
+                <div class="de-name-area">
+                  <h4>Rajendra Prasad Dhoju</h4>
+                  <p>District Governor (2023-2024)</p>
+                </div>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col-lg-5"></div>
+                  <div class="col-lg-7">
+                    <h1 class="governer-title">
+                      GOVERNOR'S <br />
+                      MONTHLY LETTER
+                    </h1>
+
+                    <div class="message-area">
+                      <p>
+                        Dear Fellow Rotarians, Rotaractors, and Interactors,
+                      </p>
+
+                      <p>
+                        I am truly privileged to witness the remarkable
+                        dedication and activity among Rotarians across our
+                        district. The positive energy, aspirations, and
+                        initiatives I’ve seen in clubs, members, and district
+                        teams have been nothing short of inspiring.
+                      </p>
+
+                      <p>
+                        <strong>
+                          September, dedicated to ‘Basic Education and Literacy
+                          Month’ in Rotary, has seen a series of marvelous
+                          events and activities. Recognizing that the future of
+                          our children hinges on the quality of education they
+                          receive, as well as the nurturing environment and the
+                          dedication of teachers in the classroom, we, as
+                          Rotarians, stand ready to contribute with utmost
+                          dedication.
+                        </strong>
+                      </p>
+                    </div>
+
+                    <div class="view-all-button-area button-left">
+                      <a href="DG-page.html">
+                        <button class="view-all-button">Read More</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- governer-monthly-letter-end -->
+
+    <!-- teams-section-start -->
+    <section>
+      <div class="teams-section">
+        <div class="title">
+          <h4>TOP STORIES</h4>
+          <h2>DISTRICT 3292 | TOP STORIES</h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="list">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <div class="image-area">
+                          <img
+                            src="https://rotarydistrict3292.org.np/frontend/img/news/1656608031-709480.jpg"
+                            alt="..."
+                          />
+                        </div>
+
+                        <div class="content">
+                          <ul>
+                            <li class="phone">{data.designation}</li>
+                          </ul>
+                          <div class="name">{data.name}</div>
+
+                          <ul class="social-media">
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-facebook"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <div class="image-area">
+                          <img
+                            src="https://rotarydistrict3292.org.np/frontend/img/news/1688808827-672272.png"
+                            alt="..."
+                          />
+                        </div>
+
+                        <div class="content">
+                          <ul>
+                            <li class="phone">{data.designation}</li>
+                          </ul>
+                          <div class="name">{data.name}</div>
+
+                          <ul class="social-media">
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-facebook"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <div class="image-area">
+                          <img
+                            src="https://rotarydistrict3292.org.np/frontend/img/news/1688807787-430647.jpg"
+                            alt="..."
+                          />
+                        </div>
+
+                        <div class="content">
+                          <ul>
+                            <li class="phone">{data.designation}</li>
+                          </ul>
+                          <div class="name">{data.name}</div>
+
+                          <ul class="social-media">
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-facebook"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <div class="image-area">
+                          <img
+                            src="https://rotarydistrict3292.org.np/frontend/img/news/1688807527-575003.png"
+                            alt="..."
+                          />
+                        </div>
+
+                        <div class="content">
+                          <ul>
+                            <li class="phone">{data.designation}</li>
+                          </ul>
+                          <div class="name">{data.name}</div>
+
+                          <ul class="social-media">
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-facebook"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <div class="image-area">
+                          <img
+                            src="https://rotarydistrict3292.org.np/frontend/img/news/1656478750-292630.jpg"
+                            alt="..."
+                          />
+                        </div>
+
+                        <div class="content">
+                          <ul>
+                            <li class="phone">{data.designation}</li>
+                          </ul>
+                          <div class="name">{data.name}</div>
+
+                          <ul class="social-media">
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-facebook"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="item">
+                        <div class="image-area">
+                          <img
+                            src="https://rotarydistrict3292.org.np/frontend/img/news/1688808827-672272.png"
+                            alt="..."
+                          />
+                        </div>
+
+                        <div class="content">
+                          <ul>
+                            <li class="phone">{data.designation}</li>
+                          </ul>
+                          <div class="name">{data.name}</div>
+
+                          <ul class="social-media">
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-instagram"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" target="blank">
+                                <i class="fab fa-facebook"></i>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#">
+                                <i class="fas fa-envelope"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- teams-section-end -->
+
+    <!-- Resources-start -->
+    <section class="bg">
+      <div class="explore-activity-sec">
+        <div class="container">
+          <div class="title">
+            <h2>Resources</h2>
+          </div>
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="item">
+                <img
+                  src="https://rotarydistrict3292.org.np/frontend/img/categories/thumb/7491654765074president-resources.jpg"
+                  alt="img"
+                />
+                <a href="#" class="box" title="President Resources">
+                  <span>President Resources</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="item">
+                <img
+                  src="https://rotarydistrict3292.org.np/frontend/img/categories/thumb/3751654780528district_resources.jpg"
+                  alt="img"
+                />
+                <a href="#" class="box" title="Rotary Distric 3292 Resources">
+                  <span>Rotary Distric 3292 Resources</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="item">
+                <img
+                  src="https://rotarydistrict3292.org.np/frontend/img/categories/thumb/4291654767015manual.jpg"
+                  alt="img"
+                />
+                <a href="#" class="box" title="Menuals">
+                  <span>Menuals</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="item">
+                <img
+                  src="https://rotarydistrict3292.org.np/frontend/img/categories/thumb/9901654767028how-to.jpg"
+                  alt="img"
+                />
+                <a href="#" class="box" title="How To"> <span>How To</span> </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="view-all-button-area">
+            <button class="view-all-button">More Resources</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Resources-end -->
+
+    <!-- dg-calendar-start -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="dg-calendar">
+              <div class="title">
+                <h4>October 2023</h4>
+                <h2>District Governor's Calendar</h2>
+              </div>
+
+              <div class="table-area">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="tDate">Date</th>
+                      <th class="tDay">Day</th>
+                      <th class="tEvent">Event</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tDate">1</td>
+                      <td class="tDay">Sunday</td>
+                      <td class="tEvent">DG Visit of RC Lalitpur Midtown</td>
+                    </tr>
+
+                    <tr>
+                      <td class="tDate">1</td>
+                      <td class="tDay">Sunday</td>
+                      <td class="tEvent">DG Visit of RC Lalitpur Midtown</td>
+                    </tr>
+
+                    <tr>
+                      <td class="tDate">1</td>
+                      <td class="tDay">Sunday</td>
+                      <td class="tEvent">DG Visit of RC Lalitpur Midtown</td>
+                    </tr>
+
+                    <tr>
+                      <td class="tDate">1</td>
+                      <td class="tDay">Sunday</td>
+                      <td class="tEvent">DG Visit of RC Lalitpur Midtown</td>
+                    </tr>
+
+                    <tr>
+                      <td class="tDate">1</td>
+                      <td class="tDay">Sunday</td>
+                      <td class="tEvent">DG Visit of RC Lalitpur Midtown</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="view-all-button-area">
+                <button class="view-all-button">Full Calendar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- dg-calendar-end -->
+
+    <!-- footer-start -->
+    <footer>
+      <div class="wrapper">
+        <OurPartnersComponent title="{title}" />
+
+        <div class="footer-list">
+          <div class="item" data-aos="fade-down">
+            <a href="#">
+              <div class="logo">
+                <img src="./assets/images/logo.png" alt="logo" />
+              </div>
+            </a>
+
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                Rotary Bhawan, Thapathali
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+
+                <a href="tel:015355344"> 015355344 </a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+
+                <a href="mailto:rotary@ntc.net.np"> rotary@ntc.net.np </a>
+              </li>
+            </ul>
+
+            <div class="social-media">
+              <div class="name">Follow us on:</div>
+
+              <ul class="social-icons">
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Useful Links</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Activities</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Company</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <span> Copyright 2023 </span>
+
+          <div class="download-on">
+            <h4>Find us on</h4>
+            <div class="button-group">
+              <button class="download-on-button">
+                <img src="./assets/images/play_store.png" alt="playstore" />
+              </button>
+              <button class="download-on-button">
+                <img src="./assets/images/app_store.png" alt="appstore" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+
     <!-- swiper js -->
     <script src="./assets/js/swiper.min.js"></script>
 
     <script>
-      var swiper2 = new Swiper(".banner .mySwiper", {
-        preloadImages: false,
-        init: true,
-        speed: 1200,
-        grabCursor: true,
-        mousewheel: false,
-        keyboard: true,
-        simulateTouch: true,
-        // parallax: true,
-        effect: "slide",
-        pagination: false,
-        scrollbar: false,
-
+      var swiper = new Swiper(".slide-banner .mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        speed: 1000,
+        effect: "fade",
         autoplay: {
-          delay: 5000,
+          delay: 4000,
           disableOnInteraction: false,
         },
-
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
       });
+
+      var swiper = new Swiper(".teams-section .mySwiper", {
+        spaceBetween: 20,
+        slidesPerView: 1,
+        speed: 1000,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          550: {
+            slidesPerView: 2,
+          },
+          850: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+        },
+      });
     </script>
 
     <script src="./assets/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

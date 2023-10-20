@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/styles/swiper.min.css" />
+    <!-- jquery -->
+    <script src="./assets/js/jquery.js"></script>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="wrapper header-other">
+          <!-- <div class="social-icons">
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div> -->
+
+          <ul class="header-contact">
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="mailto:rotary@ntc.net.np">
+                  <i class="fas fa-envelope"></i>
+
+                  rotary@ntc.net.np
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="tel:015355344">
+                  <i class="fas fa-phone"></i>
+
+                  015355344
+                </a>
+              </div>
+            </li>
+
+            <!-- <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Member Login </a>
+              </div>
+            </li> -->
+
+            <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Event Registration </a>
+              </div>
+            </li>
+
+            <li class="button-link drop-menu">
+              <div class="contact-link">
+                <a class="link-button" class="link-button" href="#"
+                  ><i class="fas fa-user"></i> <span>Super Admin Admin</span>
+                </a>
+
+                <ul class="drop-profile">
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-gauge"></i> Super Admin
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-user"></i> My Profile
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                      </button></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-menu-area">
+        <div class="wrapper inner">
+          <a href="index.html">
+            <div class="logo">
+              <img
+                src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+                alt="logo"
+              />
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li>
+              <a href="#">
+                <button class="nav-btn">RI District 3292</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Governor</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">DG Calendar</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">Top Stories</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Committee</button>
+              </a>
+            </li>
+
+            <li class="drop-menu">
+              <button class="nav-btn">
+                Resources <i class="fas fa-angle-down"></i>
+              </button>
+
+              <ul class="drop-down">
+                <li>
+                  <a href="#">
+                    <button>Rotary Club Matter</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>Downloads</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>GML</button>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Clubs</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Contacts</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Rotarians</button>
+              </a>
+            </li>
+          </ul>
+
+          <div class="header-right-item">
+            <div class="side-nav-btn">
+              <div class="das"></div>
+            </div>
+
+            <div class="mobile-profile">
+              <div class="image">
+                <i class="fas fa-user"></i>
+              </div>
+              <ul class="drop-profile">
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-gauge"></i> Super Admin
+                    </button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button><i class="fas fa-user"></i> My Profile</button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- side menu -->
+    <div class="side-nav">
+      <div class="side-nav-close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="logo">
+        <a href="/">
+          <img
+            src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+            alt="logo"
+          />
+        </a>
+      </div>
+
+      <div class="nav-links-area">
+        <ul class="nav-links">
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section>
+      <div class="ads-section">
+        <div class="container">
+          <!-- <div class="new-title">
+            <div class="main-title">
+              <h3>
+                Featu<span class="left-title"><div class="text">red</div></span>
+                Ads
+              </h3>
+              <p>Checkout these latest coo ads from our members</p>
+            </div>
+          </div> -->
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="ads-filter">
+                <div class="filter-title">
+                  <i class="fa-solid fa-sliders"></i>
+                  Filter
+                </div>
+
+                <form action="">
+                  <div class="input-groups">
+                    <!-- <div class="group">
+                      <input
+                        type="text"
+                        placeholder="Whar are you looking for?"
+                      />
+                    </div> -->
+
+                    <div class="group">
+                      <select id="chooseCategory">
+                        <option value="">Choose Category</option>
+                        <option value="Automobile">Automobile</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="IT">IT (100)</option>
+                      </select>
+                    </div>
+
+                    <div class="group">
+                      <select id="chooseLocation">
+                        <option value="">Where to look?</option>
+                        <option value="Kathmandu">Kathmandu</option>
+                        <option value="Pokhara">Pokhara</option>
+                        <option value="Birgunj">Birgunj</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- <div class="checkbox-area">
+                    <h4>Amenities</h4>
+
+                    <ul>
+                      <li class="group">
+                        <input type="checkbox" id="wirelessInternet" />
+                        <label for="wirelessInternet">Wireless Internet</label>
+                      </li>
+
+                      <li class="group">
+                        <input type="checkbox" id="acceptsCreditCards" />
+                        <label for="acceptsCreditCards">
+                          Accepts Credit Cards
+                        </label>
+                      </li>
+
+                      <li class="group">
+                        <input type="checkbox" id="coupouns" />
+                        <label for="coupouns">Coupouns</label>
+                      </li>
+
+                      <li class="group">
+                        <input type="checkbox" id="parkingStreet" />
+                        <label for="parkingStreet">Parking Street</label>
+                      </li>
+                    </ul>
+                  </div> -->
+
+                  <button class="submit">
+                    <i class="fas fa-search"></i>
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-md-12">
+              <div class="search-filter-area">
+                <p class="total-search-result">
+                  Showing <span>1-8</span> of 10 Results
+                </p>
+
+                <div class="sort-section">
+                  <span>Sort by</span>
+
+                  <div class="search-filter">
+                    <div class="group">
+                      <select name="" id="">
+                        <option value="Default">Default</option>
+
+                        <option value="Price Low to High">
+                          Price Low to High
+                        </option>
+
+                        <option value="Price High to Low">
+                          Price High to Low
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="grid-view-button active">
+                      <i class="fa-solid fa-grip"></i>
+                    </div>
+
+                    <div class="list-view-button">
+                      <i class="fa-solid fa-list-ul"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ads-item-list">
+                <div class="item">
+                  <div class="image">
+                    <div class="featured">Featured</div>
+
+                    <button class="wishlist">
+                      <i class="far fa-heart"></i>
+                    </button>
+
+                    <a href="#">
+                      <img
+                        src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                        alt="automotive-icon"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="content">
+                    <div class="rot-info">
+                      <div class="user-image">
+                        <img
+                          src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="rot-name">
+                        <h3 class="name">Rotarian Name</h3>
+                      </div>
+                    </div>
+
+                    <div class="heading">
+                      <div class="cate">
+                        <i class="far fa-circle-stop"></i>
+                        Classification
+                      </div>
+                      <div class="views">
+                        <i class="far fa-eye"></i>
+                        4000
+                      </div>
+                    </div>
+
+                    <h4 class="name">
+                      <a href="#">Business name</a>
+                    </h4>
+
+                    <div class="item-contact-info">
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-map-marker-alt"></i>
+                          Business address
+                        </div>
+                      </div>
+
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-phone"></i>
+                          Phone
+                        </div>
+                      </div>
+
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-envelope"></i>
+                          Email
+                        </div>
+                      </div>
+
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-link"></i>
+                          Web
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-footer">
+                      <div class="club-name">
+                        Rtn. Chhongba Sherpa - RC BOUDHA
+                      </div>
+                      <div class="rating"><span>4.5</span> (50)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="image">
+                    <div class="featured">Featured</div>
+
+                    <button class="wishlist">
+                      <i class="far fa-heart"></i>
+                    </button>
+
+                    <a href="#">
+                      <img
+                        src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                        alt="automotive-icon"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="content">
+                    <div class="rot-info">
+                      <div class="user-image">
+                        <img
+                          src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="rot-name">
+                        <h3 class="name">Rotarian Name</h3>
+                      </div>
+                    </div>
+
+                    <div class="heading">
+                      <div class="cate">
+                        <i class="far fa-circle-stop"></i>
+                        Classification
+                      </div>
+                      <div class="views">
+                        <i class="far fa-eye"></i>
+                        4000
+                      </div>
+                    </div>
+
+                    <h4 class="name">
+                      <a href="#">Business name</a>
+                    </h4>
+
+                    <div class="item-contact-info">
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-map-marker-alt"></i>
+                          Business address
+                        </div>
+                      </div>
+
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-phone"></i>
+                          Phone
+                        </div>
+                      </div>
+
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-envelope"></i>
+                          Email
+                        </div>
+                      </div>
+
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <i class="fas fa-link"></i>
+                          Web
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-footer">
+                      <div class="club-name">
+                        Rtn. Chhongba Sherpa - RC BOUDHA
+                      </div>
+                      <div class="rating"><span>4.5</span> (50)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pagination-area">
+                <button class="prev-button">
+                  <i class="fas fa-arrow-left"></i>
+                  Prev
+                </button>
+
+                <ul class="page-number">
+                  <li>
+                    <button class="active">1</button>
+                  </li>
+                  <li>
+                    <button>2</button>
+                  </li>
+                  <li>
+                    <button>3</button>
+                  </li>
+                  <li>
+                    <button>...</button>
+                  </li>
+                  <li>
+                    <button>10</button>
+                  </li>
+                </ul>
+
+                <button class="next-button">
+                  Next
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer-start -->
+    <footer>
+      <div class="wrapper">
+        <OurPartnersComponent title="{title}" />
+
+        <div class="footer-list">
+          <div class="item" data-aos="fade-down">
+            <a href="#">
+              <div class="logo">
+                <img src="./assets/images/logo.png" alt="logo" />
+              </div>
+            </a>
+
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                Rotary Bhawan, Thapathali
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+
+                <a href="tel:015355344"> 015355344 </a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+
+                <a href="mailto:rotary@ntc.net.np"> rotary@ntc.net.np </a>
+              </li>
+            </ul>
+
+            <div class="social-media">
+              <div class="name">Follow us on:</div>
+
+              <ul class="social-icons">
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Useful Links</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Activities</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Company</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <span> Copyright 2023 </span>
+
+          <div class="download-on">
+            <h4>Find us on</h4>
+            <div class="button-group">
+              <button class="download-on-button">
+                <img src="./assets/images/play_store.png" alt="playstore" />
+              </button>
+              <button class="download-on-button">
+                <img src="./assets/images/app_store.png" alt="appstore" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#chooseCategory").select2();
+        $("#chooseLocation").select2();
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".ads-section .mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        loop: true,
+        speed: 600,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          550: {
+            spaceBetween: 10,
+            slidesPerView: 2,
+          },
+          850: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+          },
+          1200: {
+            spaceBetween: 10,
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      const gridViewButton = document.querySelector(".grid-view-button");
+      const listViewButton = document.querySelector(".list-view-button");
+      const adsItemList = document.querySelector(".ads-item-list");
+
+      listViewButton.addEventListener("click", () => {
+        adsItemList.classList.add("active");
+        listViewButton.classList.add("active");
+        gridViewButton.classList.remove("active");
+      });
+
+      gridViewButton.addEventListener("click", () => {
+        adsItemList.classList.remove("active");
+        gridViewButton.classList.add("active");
+        listViewButton.classList.remove("active");
+      });
+
+      window.addEventListener("resize", (e) => {
+        if (e.target.screen.width <= 691) {
+          adsItemList.classList.remove("active");
+          listViewButton.style.display = "none";
+          console.log("kaksd");
+        } else {
+          listViewButton.style.display = "flex";
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

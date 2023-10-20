@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="./assets/styles/responsive.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/styles/swiper.min.css" />
+    <!-- jquery -->
+    <script src="./assets/js/jquery.js"></script>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="wrapper header-other">
+          <!-- <div class="social-icons">
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div> -->
+
+          <ul class="header-contact">
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="mailto:rotary@ntc.net.np">
+                  <i class="fas fa-envelope"></i>
+
+                  rotary@ntc.net.np
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="tel:015355344">
+                  <i class="fas fa-phone"></i>
+
+                  015355344
+                </a>
+              </div>
+            </li>
+
+            <!-- <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Member Login </a>
+              </div>
+            </li> -->
+
+            <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Event Registration </a>
+              </div>
+            </li>
+
+            <li class="button-link drop-menu">
+              <div class="contact-link">
+                <a class="link-button" class="link-button" href="#"
+                  ><i class="fas fa-user"></i> <span>Super Admin Admin</span>
+                </a>
+
+                <ul class="drop-profile">
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-gauge"></i> Super Admin
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-user"></i> My Profile
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                      </button></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-menu-area">
+        <div class="wrapper inner">
+          <a href="index.html">
+            <div class="logo">
+              <img
+                src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+                alt="logo"
+              />
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li>
+              <a href="#">
+                <button class="nav-btn">RI District 3292</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Governor</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">DG Calendar</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">Top Stories</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Committee</button>
+              </a>
+            </li>
+
+            <li class="drop-menu">
+              <button class="nav-btn">
+                Resources <i class="fas fa-angle-down"></i>
+              </button>
+
+              <ul class="drop-down">
+                <li>
+                  <a href="#">
+                    <button>Rotary Club Matter</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>Downloads</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>GML</button>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Clubs</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Contacts</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Rotarians</button>
+              </a>
+            </li>
+          </ul>
+
+          <div class="header-right-item">
+            <div class="side-nav-btn">
+              <div class="das"></div>
+            </div>
+
+            <div class="mobile-profile">
+              <div class="image">
+                <i class="fas fa-user"></i>
+              </div>
+              <ul class="drop-profile">
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-gauge"></i> Super Admin
+                    </button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button><i class="fas fa-user"></i> My Profile</button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- side menu -->
+    <div class="side-nav">
+      <div class="side-nav-close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="logo">
+        <a href="/">
+          <img
+            src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+            alt="logo"
+          />
+        </a>
+      </div>
+
+      <div class="nav-links-area">
+        <ul class="nav-links">
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="page-banner event-page-banner"
+      style="
+        background-image: url(https://afr100.org/sites/default/files/styles/news_featured_1024x404/public/2023-09/Cover%20Photo_Rszd1.jpg.webp?itok=Ke4IuBa5);
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="contet">
+              <h2>
+                Malawi hosts First-ever Chiefs Forum on Natural Resources
+                Management
+              </h2>
+              <div class="date">
+                <div class="tag">Featured</div>
+                <p>September 18, 2023</p>
+              </div>
+              <a href="#">
+                <button>Read More</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="latest-news">
+      <a href="#" class="more-news-button">
+        <button>More News</button>
+      </a>
+
+      <a href="#" class="more-events-button">
+        <button>More Events</button>
+      </a>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 col-md-3 col-sm-0 no-padding">
+            <div class="left-content">
+              <div class="left-title">
+                <span>Featured Event</span>
+              </div>
+              <div class="content">
+                <div class="date-location">
+                  June 27, 2023, 13:45 PM Asia/Kathmandu
+                </div>
+
+                <div class="event-title">
+                  AFR100 - 7th Annual Partnership Meeting
+                </div>
+
+                <p>
+                  "Attracting Investments to Expand Access to Financing for...
+                </p>
+
+                <a class="read-more-button" href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-9 col-md-7 col-sm-12 no-padding">
+            <div class="right-content">
+              <div class="right-title">
+                <h1>Latest News</h1>
+              </div>
+
+              <div class="news-list">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="news-item">
+                      <div class="image">
+                        <a href="#">
+                          <img
+                            src="https://afr100.org/sites/default/files/styles/latest_news_376x236/public/2023-09/Cover%20Photo_Rszd1_0.jpg.webp?itok=ppwpb4fZ"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+
+                      <h2 class="name">
+                        <a href="#">
+                          Malawi hosts First-ever Chiefs Forum on Natural
+                          Resources Management
+                        </a>
+                      </h2>
+                      <div class="date">September 18, 2023</div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="news-item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/latest_news_376x236/public/2023-09/Cover%20Photo_Rszd1_0.jpg.webp?itok=ppwpb4fZ"
+                          alt=""
+                        />
+                      </div>
+
+                      <h2 class="name">
+                        <a href="#">
+                          Malawi hosts First-ever Chiefs Forum on Natural
+                          Resources Management
+                        </a>
+                      </h2>
+                      <div class="date">September 18, 2023</div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="news-item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/latest_news_376x236/public/2023-09/Cover%20Photo_Rszd1_0.jpg.webp?itok=ppwpb4fZ"
+                          alt=""
+                        />
+                      </div>
+
+                      <h2 class="name">
+                        <a href="#">
+                          Malawi hosts First-ever Chiefs Forum on Natural
+                          Resources Management
+                        </a>
+                      </h2>
+                      <div class="date">September 18, 2023</div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="news-item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/latest_news_376x236/public/2023-09/Cover%20Photo_Rszd1_0.jpg.webp?itok=ppwpb4fZ"
+                          alt=""
+                        />
+                      </div>
+
+                      <h2 class="name">
+                        <a href="#">
+                          Malawi hosts First-ever Chiefs Forum on Natural
+                          Resources Management
+                        </a>
+                      </h2>
+                      <div class="date">September 18, 2023</div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="news-item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/latest_news_376x236/public/2023-09/Cover%20Photo_Rszd1_0.jpg.webp?itok=ppwpb4fZ"
+                          alt=""
+                        />
+                      </div>
+
+                      <h2 class="name">
+                        <a href="#">
+                          Malawi hosts First-ever Chiefs Forum on Natural
+                          Resources Management
+                        </a>
+                      </h2>
+                      <div class="date">September 18, 2023</div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="news-item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/latest_news_376x236/public/2023-09/Cover%20Photo_Rszd1_0.jpg.webp?itok=ppwpb4fZ"
+                          alt=""
+                        />
+                      </div>
+
+                      <h2 class="name">
+                        <a href="#">
+                          Malawi hosts First-ever Chiefs Forum on Natural
+                          Resources Management
+                        </a>
+                      </h2>
+                      <div class="date">September 18, 2023</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="view-all-button-area">
+                <button class="view-all-button">More News</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="latest-on-social-media-section">
+      <div class="latest-on-social-media">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title">Latest on Social Media</div>
+
+              <a href="#">
+                <div class="twitter-id">
+                  <i class="fab fa-twitter"></i>
+                  @Afr100_Official
+                </div>
+              </a>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="post-list">
+                    <div class="item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/social_post_120x120/public/2023-07/2.png.webp?itok=UIpTRrz9"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="content">
+                        <a href="#">
+                          <h4 class="name">
+                            The new #AFR100 website is live? Explore the new
+                            site and reach out to us for any feedback:
+                            https://bit.ly/3Nq9Rgq #GenerationRestoration
+                            #InvestInOurPlanet
+                          </h4>
+                        </a>
+                        <div class="other">
+                          <a href="#">
+                            <button>
+                              <i class="fab fa-twitter"></i>
+                              More
+                            </button>
+                          </a>
+
+                          <div class="date">June 30, 2023</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/social_post_120x120/public/2023-07/2.png.webp?itok=UIpTRrz9"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="content">
+                        <a href="#">
+                          <h4 class="name">
+                            The new #AFR100 website is live? Explore the new
+                            site and reach out to us for any feedback:
+                            https://bit.ly/3Nq9Rgq #GenerationRestoration
+                            #InvestInOurPlanet
+                          </h4>
+                        </a>
+                        <div class="other">
+                          <a href="#">
+                            <button>
+                              <i class="fab fa-twitter"></i>
+                              More
+                            </button>
+                          </a>
+
+                          <div class="date">June 30, 2023</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="image">
+                        <img
+                          src="https://afr100.org/sites/default/files/styles/social_post_120x120/public/2023-07/2.png.webp?itok=UIpTRrz9"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="content">
+                        <a href="#">
+                          <h4 class="name">
+                            The new #AFR100 website is live? Explore the new
+                            site and reach out to us for any feedback:
+                            https://bit.ly/3Nq9Rgq #GenerationRestoration
+                            #InvestInOurPlanet
+                          </h4>
+                        </a>
+                        <div class="other">
+                          <a href="#">
+                            <button>
+                              <i class="fab fa-twitter"></i>
+                              More
+                            </button>
+                          </a>
+
+                          <div class="date">June 30, 2023</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="video-area">
+                    <div class="videobanner">
+                      <a href="#">
+                        <button class="playbutton">
+                          <i class="fas fa-play"></i>
+                        </button>
+                      </a>
+                      <img
+                        src="https://afr100.org/sites/default/files/video_thumbnails/4lyEi-58S_4.jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="content">
+                      <h4 class="name">
+                        The Grand African Green Up tells the story of people
+                        across Africa that are restoring their landscapes, from
+                        the dry forests of Senegal to the green hills of Kenya.
+                        They are all part of Africa’s most ambitious
+                        environmental initiative: the African Forest Landscape
+                        Restoration Initiative (AFR100). Together, local
+                        communities, governments, and private investors are
+                        uniting to restore 100 million hectares of land, an area
+                        of land nearly the size of Ethiopia, by 2030.
+                      </h4>
+
+                      <div class="other">
+                        <a href="#">
+                          <button>
+                            <i class="fab fa-youtube"></i>
+                            The Grand African Green Up
+                          </button>
+                        </a>
+
+                        <div class="date">November 12, 2022</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="past-events">
+        <div class="container">
+          <div class="title">
+            Past Events
+
+            <div class="view-all-link">
+              <a href="#">All Events</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="content">
+                <div class="date-location">
+                  June 27, 2023, 13:45 PM Asia/Kathmandu
+                </div>
+
+                <div class="event-title">
+                  AFR100 - 7th Annual Partnership Meeting
+                </div>
+
+                <p>
+                  "Attracting Investments to Expand Access to Financing for...
+                </p>
+
+                <a class="read-more-button" href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="content">
+                <div class="date-location">
+                  June 27, 2023, 13:45 PM Asia/Kathmandu
+                </div>
+
+                <div class="event-title">
+                  AFR100 - 7th Annual Partnership Meeting
+                </div>
+
+                <p>
+                  "Attracting Investments to Expand Access to Financing for...
+                </p>
+
+                <a class="read-more-button" href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="content">
+                <div class="date-location">
+                  June 27, 2023, 13:45 PM Asia/Kathmandu
+                </div>
+
+                <div class="event-title">
+                  AFR100 - 7th Annual Partnership Meeting
+                </div>
+
+                <p>
+                  "Attracting Investments to Expand Access to Financing for...
+                </p>
+
+                <a class="read-more-button" href="#">Read More</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="content">
+                <div class="date-location">
+                  June 27, 2023, 13:45 PM Asia/Kathmandu
+                </div>
+
+                <div class="event-title">
+                  AFR100 - 7th Annual Partnership Meeting
+                </div>
+
+                <p>
+                  "Attracting Investments to Expand Access to Financing for...
+                </p>
+
+                <a class="read-more-button" href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer-start -->
+    <footer>
+      <div class="wrapper">
+        <OurPartnersComponent title="{title}" />
+
+        <div class="footer-list">
+          <div class="item" data-aos="fade-down">
+            <a href="#">
+              <div class="logo">
+                <img src="./assets/images/logo.png" alt="logo" />
+              </div>
+            </a>
+
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                Rotary Bhawan, Thapathali
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+
+                <a href="tel:015355344"> 015355344 </a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+
+                <a href="mailto:rotary@ntc.net.np"> rotary@ntc.net.np </a>
+              </li>
+            </ul>
+
+            <div class="social-media">
+              <div class="name">Follow us on:</div>
+
+              <ul class="social-icons">
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Useful Links</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Activities</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Company</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <span> Copyright 2023 </span>
+
+          <div class="download-on">
+            <h4>Find us on</h4>
+            <div class="button-group">
+              <button class="download-on-button">
+                <img src="./assets/images/play_store.png" alt="playstore" />
+              </button>
+              <button class="download-on-button">
+                <img src="./assets/images/app_store.png" alt="appstore" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+
+    <script src="./assets/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
