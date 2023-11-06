@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/styles/swiper.min.css" />
+    <!-- jquery -->
+    <script src="./assets/js/jquery.js"></script>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="wrapper header-other">
+          <!-- <div class="social-icons">
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div> -->
+
+          <ul class="header-contact">
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="mailto:rotary@ntc.net.np">
+                  <i class="fas fa-envelope"></i>
+
+                  rotary@ntc.net.np
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="tel:015355344">
+                  <i class="fas fa-phone"></i>
+
+                  015355344
+                </a>
+              </div>
+            </li>
+
+            <!-- <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Member Login </a>
+              </div>
+            </li> -->
+
+            <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Event Registration </a>
+              </div>
+            </li>
+
+            <li class="button-link drop-menu">
+              <div class="contact-link">
+                <a class="link-button" class="link-button" href="#"
+                  ><i class="fas fa-user"></i> <span>Super Admin Admin</span>
+                </a>
+
+                <ul class="drop-profile">
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-gauge"></i> Super Admin
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-user"></i> My Profile
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                      </button></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-menu-area">
+        <div class="wrapper inner">
+          <a href="index.html">
+            <div class="logo">
+              <img
+                src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+                alt="logo"
+              />
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li>
+              <a href="#">
+                <button class="nav-btn">RI District 3292</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Governor</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">DG Calendar</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">Top Stories</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Committee</button>
+              </a>
+            </li>
+
+            <li class="drop-menu">
+              <button class="nav-btn">
+                Resources <i class="fas fa-angle-down"></i>
+              </button>
+
+              <ul class="drop-down">
+                <li>
+                  <a href="#">
+                    <button>Rotary Club Matter</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>Downloads</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>GML</button>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Clubs</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Contacts</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Rotarians</button>
+              </a>
+            </li>
+          </ul>
+
+          <div class="header-right-item">
+            <div class="side-nav-btn">
+              <div class="das"></div>
+            </div>
+
+            <div class="mobile-profile">
+              <div class="image">
+                <i class="fas fa-user"></i>
+              </div>
+              <ul class="drop-profile">
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-gauge"></i> Super Admin
+                    </button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button><i class="fas fa-user"></i> My Profile</button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- side menu -->
+    <div class="side-nav">
+      <div class="side-nav-close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="logo">
+        <a href="/">
+          <img
+            src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+            alt="logo"
+          />
+        </a>
+      </div>
+
+      <div class="nav-links-area">
+        <ul class="nav-links">
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="ads-details-banner">
+      <div class="details-banner-image">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/bird_bg.jpeg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img src="./assets/images/bird_bg.jpeg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Great Rosefinch (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img
+                    src="./assets/images/Great Rosefinch (1 of 1).jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img src="./assets/images/Ibisbill 3 (1 of 1).jpg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img
+                    src="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Purple Heron (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img src="./assets/images/Purple Heron (1 of 1).jpg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="show-photos">... Show Photos</button>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="details-head">
+              <div class="ads-profile-details">
+                <div class="profile-sec">
+                  <div class="image">
+                    <img src="./assets/images/bird_bg.jpeg" alt="" />
+                  </div>
+                  <div class="content">
+                    <h1 class="name">Sleep In a Room in Apartment</h1>
+                    <p class="desc">Luxury hotel in the heart of Blommsbury</p>
+                    <div class="rating">
+                      <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+
+                      <span>4.5</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details-ads-button">
+                  <ul class="nav-button-list">
+                    <li>
+                      <button><i class="far fa-map"></i> Get Directions</button>
+                    </li>
+                    <li>
+                      <button>
+                        <i class="fas fa-link"></i> websiteWebsite
+                      </button>
+                    </li>
+                    <li>
+                      <button><i class="fas fa-share-alt"></i> Share</button>
+                    </li>
+                    <li>
+                      <button>
+                        <i class="far fa-comment"></i> Write A Review
+                      </button>
+                    </li>
+                    <li>
+                      <button><i class="far fa-flag"></i> Report</button>
+                    </li>
+                    <li>
+                      <button><i class="far fa-heart"></i> Save</button>
+                    </li>
+                  </ul>
+
+                  <a class="call-now-button">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="ads-details-banner club-details-banner">
+      <div class="details-banner-image">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/bird_bg.jpeg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img src="./assets/images/bird_bg.jpeg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Great Rosefinch (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img
+                    src="./assets/images/Great Rosefinch (1 of 1).jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img src="./assets/images/Ibisbill 3 (1 of 1).jpg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img
+                    src="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image">
+                <a
+                  href="./assets/images/Purple Heron (1 of 1).jpg"
+                  data-fancybox="slider"
+                  data-caption="Single image"
+                >
+                  <img src="./assets/images/Purple Heron (1 of 1).jpg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="banner-details-content">
+                  <div class="inner-details">
+                    <h1 class="name">Rotary Club of Boudha</h1>
+                    <h5 class="club-details">
+                      <span class="">
+                        <i class="fa-solid fa-circle-check"></i> Club id 92333
+                      </span>
+                      <big>•</big> Chartered on 12 June 2019 <big>•</big>
+                    </h5>
+                    <h5 class="date-and-time">
+                      <span class="address"
+                        >Meeting venue: Siddhartha Hotel, Kapan, Kathmandu</span
+                      >
+                      Friday, 04:30 PM - 6:00 PM
+                    </h5>
+                  </div>
+
+                  <button class="view-photos">See all 1.7k photos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ads-all-details">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 c-padding">
+            <div class="details-left-section">
+              <!-- Description -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-solid fa-align-left"></i>
+
+                  Description
+                </div>
+
+                <div class="content">
+                  <div class="description">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <p>
+                      It was popularised in the 1960s with the release of
+                      Letraset sheets containing Lorem Ipsum passages, and more
+                      recently with desktop publishing software like Aldus
+                      PageMaker including versions of Lorem Ipsum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- President and Secretary -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-solid fa-user-tie"></i>
+
+                  President and Secretary
+                </div>
+
+                <div class="content">
+                  <div class="feature-list">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="item main-member">
+                          <div class="image">
+                            <img
+                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1670412318-403011.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="item main-member">
+                          <div class="image">
+                            <img
+                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1661521493-662435.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Board of Directors -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-solid fa-users"></i>
+
+                  Board of Directors 2023-24
+                </div>
+
+                <div class="content">
+                  <div class="feature-list">
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="item board-member">
+                          <div class="image">
+                            <img
+                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1670412318-403011.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="item board-member">
+                          <div class="image">
+                            <img
+                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1661521493-662435.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="item board-member">
+                          <div class="image">
+                            <img
+                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1670412318-403011.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div class="item board-member">
+                          <div class="image">
+                            <img
+                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1661521493-662435.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Members -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-solid fa-people-group"></i>
+
+                  Club Members
+                </div>
+
+                <div class="content">
+                  <div class="feature-list">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="item">
+                          <div class="image">
+                            <img src="./assets/images/bird_bg.jpeg" alt="" />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="item">
+                          <div class="image">
+                            <img src="./assets/images/bird_bg.jpeg" alt="" />
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Chhongba Sherpa</div>
+                            <p class="role">Information Technology</p>
+
+                            <p>
+                              <a href="tel:"> 009779841595911 </a>
+                            </p>
+
+                            <p>
+                              <a href="mailto:"> sherparotary@gmail.com </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gallery -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-regular fa-images"></i>
+
+                  Gallery
+                </div>
+
+                <div class="content">
+                  <div class="gallery-image-list">
+                    <div class="image">
+                      <a
+                        href="./assets/images/bird_bg.jpeg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img src="./assets/images/bird_bg.jpeg" alt="" />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Great Rosefinch (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Great Rosefinch (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Purple Heron (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Purple Heron (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ratings -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="far fa-star"></i>
+
+                  Ratings
+                </div>
+
+                <div class="content">
+                  <div class="ratings-section">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="overall-ratings">
+                          <div class="total-ratting"><span>4</span>/5</div>
+
+                          <p>OVERALL</p>
+
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+
+                          <p>Based on Listing</p>
+                        </div>
+                      </div>
+
+                      <div class="col-md-9">
+                        <ul class="ratings-progress-bar-area">
+                          <li>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+
+                            <div class="progress-bars">
+                              <div class="bar" style="width: 15%"></div>
+                            </div>
+
+                            <div class="number">10k</div>
+                          </li>
+
+                          <li>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+
+                            <div class="progress-bars">
+                              <div class="bar" style="width: 30%"></div>
+                            </div>
+
+                            <div class="number">342</div>
+                          </li>
+
+                          <li>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+
+                            <div class="progress-bars">
+                              <div class="bar" style="width: 50%"></div>
+                            </div>
+
+                            <div class="number">10k</div>
+                          </li>
+
+                          <li>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+
+                            <div class="progress-bars">
+                              <div class="bar" style="width: 75%"></div>
+                            </div>
+
+                            <div class="number">2m</div>
+                          </li>
+
+                          <li>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
+
+                            <div class="progress-bars">
+                              <div class="bar" style="width: 100%"></div>
+                            </div>
+
+                            <div class="number">10m</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Write a Review -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="far fa-comment"></i>
+
+                  Write a Review
+                </div>
+
+                <div class="content">
+                  <div class="comment-section">
+                    <div class="comment-list">
+                      <div class="comment-item">
+                        <div class="image-sec">
+                          <img src="./assets/images/bird_bg.jpeg" alt="" />
+                        </div>
+
+                        <div class="comment-infos">
+                          <div class="name">Joseph</div>
+
+                          <div class="rating-and-date">
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+
+                            <div class="date">
+                              <i class="far fa-calendar-alt"></i>
+                              4 months ago
+                            </div>
+
+                            <div class="written-by">by: Demo Test</div>
+                          </div>
+                          <div class="commented">
+                            <p>
+                              Lorem Ipsum is simply dummy text of the printing
+                              and typesetting industry. Lorem Ipsum has been the
+                              industry's standard dummy text ever since the
+                              1500s, when an unknown printer took a galley of
+                              type and scrambled it to make a type specimen
+                              book.
+                            </p>
+
+                            <div class="image-list-sec">
+                              <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="comment-item">
+                        <div class="image-sec">
+                          <img src="./assets/images/bird_bg.jpeg" alt="" />
+                        </div>
+
+                        <div class="comment-infos">
+                          <div class="name">Joseph</div>
+
+                          <div class="rating-and-date">
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+
+                            <div class="date">
+                              <i class="far fa-calendar-alt"></i>
+                              4 months ago
+                            </div>
+
+                            <div class="written-by">by: Demo Test</div>
+                          </div>
+                          <div class="commented">
+                            <p>
+                              Lorem Ipsum is simply dummy text of the printing
+                              and typesetting industry. Lorem Ipsum has been the
+                              industry's standard dummy text ever since the
+                              1500s, when an unknown printer took a galley of
+                              type and scrambled it to make a type specimen
+                              book.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="comment-item">
+                        <div class="image-sec">
+                          <img src="./assets/images/bird_bg.jpeg" alt="" />
+                        </div>
+
+                        <div class="comment-infos">
+                          <div class="name">Joseph</div>
+
+                          <div class="rating-and-date">
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+
+                            <div class="date">
+                              <i class="far fa-calendar-alt"></i>
+                              4 months ago
+                            </div>
+
+                            <div class="written-by">by: Demo Test</div>
+                          </div>
+                          <div class="commented">
+                            <p>
+                              Lorem Ipsum is simply dummy text of the printing
+                              and typesetting industry. Lorem Ipsum has been the
+                              industry's standard dummy text ever since the
+                              1500s, when an unknown printer took a galley of
+                              type and scrambled it to make a type specimen
+                              book.
+                            </p>
+
+                            <div class="image-list-sec">
+                              <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="image">
+                                      <a
+                                        href="./assets/images/bird_bg.jpeg"
+                                        data-fancybox="comment1"
+                                        data-caption="Single image"
+                                      >
+                                        <img
+                                          src="./assets/images/bird_bg.jpeg"
+                                          alt=""
+                                        />
+
+                                        <div class="view-image">
+                                          <i class="far fa-eye"></i>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- comment-form -->
+                      <div class="leave-comment">
+                        <div class="comment-title">
+                          Leave feedback about this
+                        </div>
+
+                        <form action="">
+                          <div class="group">
+                            <label for=""
+                              >Title <small>(Optional)</small></label
+                            >
+                            <input type="text" />
+                          </div>
+
+                          <div class="group">
+                            <label for="">Name</label>
+                            <input type="text" />
+                          </div>
+
+                          <div class="group">
+                            <label for="">Email</label>
+                            <input type="email" />
+                          </div>
+
+                          <div class="group textarea">
+                            <label for="">Message</label>
+                            <textarea
+                              name=""
+                              id=""
+                              cols="30"
+                              rows="10"
+                            ></textarea>
+                          </div>
+
+                          <button class="submit-button">
+                            <span>Submit Review</span>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 c-padding">
+            <div class="details-right-section">
+              <!-- Club Details -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-solid fa-sliders"></i>
+
+                  Club Details
+                </div>
+
+                <div class="content">
+                  <ul class="business-details">
+                    <li>Club Id: <span> 90233</span></li>
+                    <li>Chartered: <span> 2019-06-12</span></li>
+                    <li>No of Members: <span> 20</span></li>
+                    <li>Meeting Day: <span> Friday</span></li>
+                    <li>Meeting Time: <span> 05:00 PM</span></li>
+                    <li>Venue: <span> Siddhartha Hotel</span></li>
+                    <li>Area Code: <span> 01</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Details -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-solid fa-sliders"></i>
+
+                  Details
+                </div>
+
+                <div class="content">
+                  <ul class="business-details">
+                    <li>GRANT PROJECT: <span>1</span></li>
+                    <li>PHF: <span>10</span></li>
+                    <li>MPHF: <span>3</span></li>
+                    <li>ROTARACT: <span>2</span></li>
+                    <li>INTERACT: <span>2</span></li>
+                    <li>RCC: <span>1</span></li>
+                    <li>GRANT PROJECT: <span>1</span></li>
+                    <li>PHF: <span>4</span></li>
+                    <li>MPHF: <span>31</span></li>
+                    <li>RFSM: <span>1</span></li>
+                    <li>Major Donor: <span> 3</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Business Info -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fa-solid fa-briefcase"></i>
+
+                  Business Info
+                </div>
+
+                <div class="content">
+                  <div class="business-info">
+                    <div class="row">
+                      <div class="col-lg-12 col-md-7">
+                        <div class="map">
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.9793414019337!2d85.30099458040792!3d27.717924114749213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18e5207db46b%3A0x70f774e60c4701f!2sDathu%20Sadak%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1697615846480!5m2!1sen!2snp"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                          ></iframe>
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-md-5">
+                        <ul class="contact-infos">
+                          <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            484, Ellis st, San Fransisco, CS 94102, United
+                            States
+                          </li>
+
+                          <li>
+                            <a href="tel:">
+                              <i class="fas fa-phone"></i>
+                              + 62 8245 9875
+                            </a>
+                          </li>
+                          <li>
+                            <a href="mailto:">
+                              <i class="fas fa-envelope"></i>
+                              support@listee.com
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fas fa-link"></i>
+                              websitewww.listee.com
+                            </a>
+                          </li>
+                        </ul>
+
+                        <ul class="social-link">
+                          <li>
+                            <a href="#">
+                              <i class="fab fa-facebook"></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="#">
+                              <i class="fab fa-instagram"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fab fa-linkedin"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fab fa-twitter"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rotarian -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="far fa-user"></i>
+
+                  Rotarian
+                </div>
+
+                <div class="content">
+                  <div class="author-section">
+                    <div class="image">
+                      <img src="./assets/images/bird_bg.jpeg" alt="" />
+                    </div>
+
+                    <div class="author-details">
+                      <div class="name">Johnson</div>
+
+                      <div class="date">Member since Nov 24, 2017</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Statisfic -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fas fa-chart-line"></i>
+
+                  Statisfic
+                </div>
+
+                <div class="content">
+                  <div class="statisfic-section">
+                    <ul class="statisfic-list">
+                      <li>
+                        <div class="statisfic-title">
+                          <i class="far fa-eye"></i>
+                          Views
+                        </div>
+                        <span>453563</span>
+                      </li>
+                      <li>
+                        <div class="statisfic-title">
+                          <i class="far fa-star"></i>
+                          Ratings
+                        </div>
+                        <span>153</span>
+                      </li>
+                      <li>
+                        <div class="statisfic-title">
+                          <i class="far fa-heart"></i>
+                          Favuorites
+                        </div>
+                        <span>123</span>
+                      </li>
+                      <li>
+                        <div class="statisfic-title">
+                          <i class="fas fa-share-alt"></i>
+                          Shares
+                        </div>
+                        <span>50</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Business -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="fas fa-phone"></i>
+
+                  Contact Business
+                </div>
+
+                <div class="content">
+                  <div class="contact-form">
+                    <form action="">
+                      <div class="group">
+                        <label for="">Name</label>
+                        <input type="text" />
+                      </div>
+
+                      <div class="group">
+                        <label for="">Email</label>
+                        <input type="email" />
+                      </div>
+
+                      <div class="group textarea">
+                        <label for="">Message</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                      </div>
+
+                      <button class="submit-button">
+                        <span>Send Message</span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer-start -->
+    <footer>
+      <div class="wrapper">
+        <OurPartnersComponent title="{title}" />
+
+        <div class="footer-list">
+          <div class="item" data-aos="fade-down">
+            <a href="#">
+              <div class="logo">
+                <img src="./assets/images/logo.png" alt="logo" />
+              </div>
+            </a>
+
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                Rotary Bhawan, Thapathali
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+
+                <a href="tel:015355344"> 015355344 </a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+
+                <a href="mailto:rotary@ntc.net.np"> rotary@ntc.net.np </a>
+              </li>
+            </ul>
+
+            <div class="social-media">
+              <div class="name">Follow us on:</div>
+
+              <ul class="social-icons">
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Useful Links</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Activities</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Company</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <span> Copyright 2023 </span>
+
+          <div class="download-on">
+            <h4>Find us on</h4>
+            <div class="button-group">
+              <button class="download-on-button">
+                <img src="./assets/images/play_store.png" alt="playstore" />
+              </button>
+              <button class="download-on-button">
+                <img src="./assets/images/app_store.png" alt="appstore" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+      Fancybox.bind("[data-fancybox]");
+
+      const adsBannerImages = document.querySelectorAll(
+        ".ads-details-banner .swiper-slide a"
+      )[0];
+      const viewImageButton = document.querySelector(".view-photos");
+
+      if (adsBannerImages) {
+        viewImageButton.addEventListener("click", () => {
+          adsBannerImages.click();
+        });
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#chooseCategory").select2();
+        $("#chooseLocation").select2();
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".ads-details-banner .mySwiper", {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        speed: 600,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          550: {
+            spaceBetween: 0,
+            slidesPerView: 2,
+          },
+          850: {
+            spaceBetween: 0,
+            slidesPerView: 3,
+          },
+          1200: {
+            spaceBetween: 0,
+            slidesPerView: 4,
+          },
+          1500: {
+            spaceBetween: 0,
+            slidesPerView: 5,
+          },
+          1800: {
+            spaceBetween: 0,
+            slidesPerView: 6,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".comment-section .mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        speed: 600,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          550: {
+            spaceBetween: 10,
+            slidesPerView: 2,
+          },
+          850: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+          },
+          1200: {
+            spaceBetween: 10,
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

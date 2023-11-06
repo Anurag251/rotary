@@ -18,20 +18,21 @@
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.css"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css"
     />
-    <!-- css -->
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
 
   <body>
@@ -329,7 +330,7 @@
       </div>
     </div>
 
-    <!-- <div class="ads-details-banner">
+    <div class="ads-details-banner">
       <div class="details-banner-image">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
@@ -401,7 +402,7 @@
           </div>
         </div>
 
-        <button class="show-photos">... Show Photos</button>
+        <button class="view-photos">... Show Photos</button>
       </div>
 
       <div class="container">
@@ -433,27 +434,77 @@
                 <div class="details-ads-button">
                   <ul class="nav-button-list">
                     <li>
-                      <button><i class="far fa-map"></i> Get Directions</button>
+                      <a
+                        href="https://www.google.com/maps/place/Dathu+Sadak,+Kathmandu+44600/@27.717924,85.305866,15z/data=!4m6!3m5!1s0x39eb18ef59508d09:0xe6a2fcd1ce2efaff!8m2!3d27.71997!4d85.3039429!16s%2Fg%2F12xqh2lwj?hl=en&gl=NP"
+                        target="_blank"
+                      >
+                        <button>
+                          <i class="far fa-map"></i> Get Directions
+                        </button>
+                      </a>
                     </li>
                     <li>
-                      <button>
-                        <i class="fas fa-link"></i> websiteWebsite
-                      </button>
+                      <a href="#" target="_blank">
+                        <button>
+                          <i class="fas fa-link"></i> websiteWebsite
+                        </button>
+                      </a>
                     </li>
-                    <li>
+                    <li class="shareButton">
                       <button><i class="fas fa-share-alt"></i> Share</button>
+
+                      <ul class="share-popup">
+                        <li>
+                          <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=127.0.0.1:5500/adsDetails.html"
+                            target="_blank"
+                          >
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="https://twitter.com/intent/tweet?text=Check%20out%20this%20link:&url=adsDetails.html"
+                            data-size="large"
+                            target="_blank"
+                          >
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <!-- 
+                        <li>
+                          <a
+                            href="https://www.instagram.com/p/ABC123DEF456/"
+                            target="_blank"
+                          >
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li> -->
+
+                        <li>
+                          <a
+                            href="javascript:void(0);"
+                            id="linkedin-share-button"
+                          >
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                        </li>
+                      </ul>
                     </li>
-                    <li>
-                      <button>
-                        <i class="far fa-comment"></i> Write A Review
-                      </button>
+                    <!-- <li>
+                      <a href="#writeCommentSection">
+                        <button>
+                          <i class="far fa-comment"></i> Write A Review
+                        </button>
+                      </a>
                     </li>
                     <li>
                       <button><i class="far fa-flag"></i> Report</button>
                     </li>
                     <li>
                       <button><i class="far fa-heart"></i> Save</button>
-                    </li>
+                    </li> -->
                   </ul>
 
                   <a class="call-now-button">
@@ -466,9 +517,9 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <div class="ads-details-banner club-details-banner">
+    <!-- <div class="ads-details-banner club-details-banner">
       <div class="details-banner-image">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
@@ -568,7 +619,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="ads-all-details">
       <div class="container">
@@ -601,236 +652,170 @@
                       recently with desktop publishing software like Aldus
                       PageMaker including versions of Lorem Ipsum.
                     </p>
+
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s, when an unknown
+                      printer took a galley of type and scrambled it to make a
+                      type specimen book. It has survived not only five
+                      centuries, but also the leap into electronic typesetting,
+                      remaining essentially unchanged.
+                    </p>
+
+                    <p>
+                      It was popularised in the 1960s with the release of
+                      Letraset sheets containing Lorem Ipsum passages, and more
+                      recently with desktop publishing software like Aldus
+                      PageMaker including versions of Lorem Ipsum.
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <!-- President and Secretary -->
-              <div class="details-section">
-                <div class="title-sec">
-                  <i class="fa-solid fa-user-tie"></i>
-
-                  President and Secretary
-                </div>
-
-                <div class="content">
-                  <div class="feature-list">
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="item main-member">
-                          <div class="image">
-                            <img
-                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1670412318-403011.jpg"
-                              alt=""
-                            />
-                          </div>
-
-                          <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="item main-member">
-                          <div class="image">
-                            <img
-                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1661521493-662435.jpg"
-                              alt=""
-                            />
-                          </div>
-
-                          <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Board of Directors -->
-              <div class="details-section">
-                <div class="title-sec">
-                  <i class="fa-solid fa-users"></i>
-
-                  Board of Directors 2023-24
-                </div>
-
-                <div class="content">
-                  <div class="feature-list">
-                    <div class="row">
-                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                        <div class="item board-member">
-                          <div class="image">
-                            <img
-                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1670412318-403011.jpg"
-                              alt=""
-                            />
-                          </div>
-
-                          <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                        <div class="item board-member">
-                          <div class="image">
-                            <img
-                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1661521493-662435.jpg"
-                              alt=""
-                            />
-                          </div>
-
-                          <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                        <div class="item board-member">
-                          <div class="image">
-                            <img
-                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1670412318-403011.jpg"
-                              alt=""
-                            />
-                          </div>
-
-                          <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                        <div class="item board-member">
-                          <div class="image">
-                            <img
-                              src="https://rotarydistrict3292.org.np/frontend/img/profiles/1661521493-662435.jpg"
-                              alt=""
-                            />
-                          </div>
-
-                          <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Members -->
+              <!-- Listing Features -->
               <div class="details-section">
                 <div class="title-sec">
                   <i class="fa-solid fa-people-group"></i>
 
-                  Club Members
+                  Listing Features
                 </div>
 
                 <div class="content">
-                  <div class="feature-list">
+                  <div class="feature-list" id="feature-list">
                     <div class="row">
-                      <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="item">
-                          <div class="image">
-                            <img src="./assets/images/bird_bg.jpeg" alt="" />
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
                           </div>
 
                           <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
+                            <div class="name">Room</div>
+                            <p class="role">amenities</p>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="item">
-                          <div class="image">
-                            <img src="./assets/images/bird_bg.jpeg" alt="" />
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
                           </div>
 
                           <div class="info">
-                            <div class="name">Chhongba Sherpa</div>
-                            <p class="role">Information Technology</p>
-
-                            <p>
-                              <a href="tel:"> 009779841595911 </a>
-                            </p>
-
-                            <p>
-                              <a href="mailto:"> sherparotary@gmail.com </a>
-                            </p>
+                            <div class="name">Bathroom</div>
+                            <p class="role">amenities</p>
                           </div>
                         </div>
                       </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Media & Technology</div>
+                            <p class="role">amenities</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Food & Security</div>
+                            <p class="role">amenities</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Services & Extra</div>
+                            <p class="role">amenities</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Outdoor & View</div>
+                            <p class="role">amenities</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Accessibility</div>
+                            <p class="role">amenities</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Safety & Security</div>
+                            <p class="role">amenities</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
+                        <div class="item feature-item">
+                          <div class="icon">
+                            <span></span>
+                          </div>
+
+                          <div class="info">
+                            <div class="name">Food & Security</div>
+                            <p class="role">amenities</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ADS -->
+              <div class="ads-area-banner no-bg-color mb-3">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="ads-area-banner-image">
+                      <a href="#">
+                        <img
+                          src="https://www.onlinekhabar.com/wp-content/uploads/2023/07/1230x100.gif"
+                          alt=""
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -922,12 +907,217 @@
                         </div>
                       </a>
                     </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/bird_bg.jpeg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img src="./assets/images/bird_bg.jpeg" alt="" />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Great Rosefinch (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Great Rosefinch (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Purple Heron (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Purple Heron (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/bird_bg.jpeg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img src="./assets/images/bird_bg.jpeg" alt="" />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Great Rosefinch (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Great Rosefinch (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Ibisbill 3 (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Pheasant-tailed Jacana1 (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="image">
+                      <a
+                        href="./assets/images/Purple Heron (1 of 1).jpg"
+                        data-fancybox="gallery"
+                        data-caption="Single image"
+                      >
+                        <img
+                          src="./assets/images/Purple Heron (1 of 1).jpg"
+                          alt=""
+                        />
+                        <div class="view-image">
+                          <i class="far fa-eye"></i>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ADS -->
+              <div class="ads-area-banner no-bg-color">
+                <div class="row mb-4">
+                  <div class="col-md-12">
+                    <div class="ads-area-banner-image">
+                      <a href="#">
+                        <img
+                          src="https://www.onlinekhabar.com/wp-content/uploads/2023/07/1230x100.gif"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="ads-area-banner-image bigAds">
+                      <a href="#">
+                        <img
+                          src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/Onlinekhabar-300x200px.gif"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="ads-area-banner-image bigAds">
+                      <a href="#">
+                        <img
+                          src="https://www.onlinekhabar.com/wp-content/uploads/2023/08/KMC-2023-GIF-300x200-1.gif"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="ads-area-banner-image bigAds">
+                      <a href="#">
+                        <img
+                          src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/300-x-200.gif"
+                          alt=""
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <!-- Ratings -->
-              <div class="details-section">
+              <!-- <div class="details-section">
                 <div class="title-sec">
                   <i class="far fa-star"></i>
 
@@ -1041,10 +1231,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Write a Review -->
-              <div class="details-section">
+              <!-- <div class="details-section">
                 <div class="title-sec">
                   <i class="far fa-comment"></i>
 
@@ -1325,8 +1515,7 @@
                         </div>
                       </div>
 
-                      <!-- comment-form -->
-                      <div class="leave-comment">
+                      <div class="leave-comment" id="writeCommentSection">
                         <div class="comment-title">
                           Leave feedback about this
                         </div>
@@ -1367,33 +1556,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
           <div class="col-lg-3 c-padding">
             <div class="details-right-section">
-              <!-- Club Details -->
-              <div class="details-section">
-                <div class="title-sec">
-                  <i class="fa-solid fa-sliders"></i>
-
-                  Club Details
-                </div>
-
-                <div class="content">
-                  <ul class="business-details">
-                    <li>Club Id: <span> 90233</span></li>
-                    <li>Chartered: <span> 2019-06-12</span></li>
-                    <li>No of Members: <span> 20</span></li>
-                    <li>Meeting Day: <span> Friday</span></li>
-                    <li>Meeting Time: <span> 05:00 PM</span></li>
-                    <li>Venue: <span> Siddhartha Hotel</span></li>
-                    <li>Area Code: <span> 01</span></li>
-                  </ul>
-                </div>
-              </div>
-
               <!-- Details -->
               <div class="details-section">
                 <div class="title-sec">
@@ -1404,18 +1572,60 @@
 
                 <div class="content">
                   <ul class="business-details">
-                    <li>GRANT PROJECT: <span>1</span></li>
-                    <li>PHF: <span>10</span></li>
-                    <li>MPHF: <span>3</span></li>
-                    <li>ROTARACT: <span>2</span></li>
-                    <li>INTERACT: <span>2</span></li>
-                    <li>RCC: <span>1</span></li>
-                    <li>GRANT PROJECT: <span>1</span></li>
-                    <li>PHF: <span>4</span></li>
-                    <li>MPHF: <span>31</span></li>
-                    <li>RFSM: <span>1</span></li>
-                    <li>Major Donor: <span> 3</span></li>
+                    <li>Contract <span>For Rent</span></li>
+                    <li>Location <span>New York, USA</span></li>
+                    <li>Year Built <span>1988</span></li>
+                    <li>Rooms <span>3</span></li>
+                    <li>Beds <span>4</span></li>
+                    <li>Baths <span>8</span></li>
+                    <li>Gadgets <span>6</span></li>
+                    <li>Home Area <span>30sqft</span></li>
+                    <li>Lot Dimensions <span>30*30*20 ft</span></li>
+                    <li>Lot Area <span>50 ft</span></li>
                   </ul>
+                </div>
+              </div>
+
+              <div class="ads-area-banner no-bg-color mb-3">
+                <div class="ads-area-banner-image bigAds">
+                  <a href="#">
+                    <img
+                      src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/Onlinekhabar-300x200px.gif"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Hours -->
+              <div class="details-section">
+                <div class="title-sec">
+                  <i class="far fa-clock"></i>
+
+                  Hours
+                </div>
+
+                <div class="content">
+                  <ul class="business-details">
+                    <li>Mon <span>11:00 AM - 3:00 PM</span></li>
+                    <li>Tue <span>11:00 AM - 3:00 PM</span></li>
+                    <li>Wed <span>11:00 AM - 3:00 PM</span></li>
+                    <li>Thu <span>11:00 AM - 3:00 PM</span></li>
+                    <li>Fri <span>11:00 AM - 3:00 PM</span></li>
+                    <li>Sat <span>11:00 AM - 3:00 PM</span></li>
+                    <li>Sun <span>11:00 AM - 3:00 PM</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="ads-area-banner no-bg-color mb-3">
+                <div class="ads-area-banner-image bigAds">
+                  <a href="#">
+                    <img
+                      src="https://www.upmenu.com/wp-content/uploads/2023/05/8-restaurant-seo-online-ordering-system.gif"
+                      alt=""
+                    />
+                  </a>
                 </div>
               </div>
 
@@ -1496,6 +1706,17 @@
                 </div>
               </div>
 
+              <div class="ads-area-banner no-bg-color mb-3">
+                <div class="ads-area-banner-image bigAds">
+                  <a href="#">
+                    <img
+                      src="https://www.onlinekhabar.com/wp-content/uploads/2023/10/Onlinekhabar_300x150-1.gif"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
               <!-- Rotarian -->
               <div class="details-section">
                 <div class="title-sec">
@@ -1520,7 +1741,7 @@
               </div>
 
               <!-- Statisfic -->
-              <div class="details-section">
+              <!-- <div class="details-section">
                 <div class="title-sec">
                   <i class="fas fa-chart-line"></i>
 
@@ -1561,7 +1782,7 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Contact Business -->
               <div class="details-section">
@@ -1601,6 +1822,537 @@
         </div>
       </div>
     </div>
+
+    <section class="bg">
+      <div class="ads-sections also-viewed">
+        <div class="container">
+          <div class="new-title">
+            <div class="main-title">
+              <h3>
+                People also
+                <span class="right-title"><div class="text">vie</div></span>wed
+              </h3>
+              <p>Checkout these latest cool ads from our members</p>
+            </div>
+
+            <div class="carousel-buttons">
+              <button class="slide-button-prev">
+                <i class="fas fa-angle-left"></i>
+              </button>
+              <button class="slide-button-next">
+                <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image">
+                        <div class="featured">Featured</div>
+
+                        <!-- <button class="wishlist">
+                          <i class="far fa-heart"></i>
+                        </button> -->
+
+                        <a href="#">
+                          <img
+                            src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                            alt="automotive-icon"
+                          />
+                        </a>
+                      </div>
+
+                      <div class="content">
+                        <div class="rot-info">
+                          <div class="user-image">
+                            <img
+                              src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="rot-name">
+                            <h3 class="name">Rotarian Name</h3>
+                          </div>
+                        </div>
+
+                        <div class="heading top-heading">
+                          <div class="cate">
+                            <i class="far fa-circle-stop"></i>
+                            <span>Classification Classification</span>
+                          </div>
+
+                          <div class="views">
+                            <i class="far fa-eye"></i>
+                            <span>4000</span>
+                          </div>
+                        </div>
+
+                        <h4 class="name">
+                          <a href="#">Business name</a>
+                        </h4>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">Business address</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Phone</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Email</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Web</div>
+                          </div>
+                        </div>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">
+                              <strong>Open</strong>until 10:12AM
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="item-footer">
+                          <div class="club-name">
+                            Rtn. Chhongba Sherpa - RC BOUDHA
+                          </div>
+                          <div class="rating"><span>4.5</span> (50)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image">
+                        <div class="featured">Featured</div>
+
+                        <!-- <button class="wishlist">
+                          <i class="far fa-heart"></i>
+                        </button> -->
+
+                        <a href="#">
+                          <img
+                            src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                            alt="automotive-icon"
+                          />
+                        </a>
+                      </div>
+
+                      <div class="content">
+                        <div class="rot-info">
+                          <div class="user-image">
+                            <img
+                              src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="rot-name">
+                            <h3 class="name">Rotarian Name</h3>
+                          </div>
+                        </div>
+
+                        <div class="heading top-heading">
+                          <div class="cate">
+                            <i class="far fa-circle-stop"></i>
+                            <span>Classification Classification</span>
+                          </div>
+
+                          <div class="views">
+                            <i class="far fa-eye"></i>
+                            <span>4000</span>
+                          </div>
+                        </div>
+
+                        <h4 class="name">
+                          <a href="#">Business name</a>
+                        </h4>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">Business address</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Phone</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Email</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Web</div>
+                          </div>
+                        </div>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">
+                              <strong>Open</strong>until 10:12AM
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="item-footer">
+                          <div class="club-name">
+                            Rtn. Chhongba Sherpa - RC BOUDHA
+                          </div>
+                          <div class="rating"><span>4.5</span> (50)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image">
+                        <div class="featured">Featured</div>
+
+                        <!-- <button class="wishlist">
+                          <i class="far fa-heart"></i>
+                        </button> -->
+
+                        <a href="#">
+                          <img
+                            src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                            alt="automotive-icon"
+                          />
+                        </a>
+                      </div>
+
+                      <div class="content">
+                        <div class="rot-info">
+                          <div class="user-image">
+                            <img
+                              src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="rot-name">
+                            <h3 class="name">Rotarian Name</h3>
+                          </div>
+                        </div>
+
+                        <div class="heading top-heading">
+                          <div class="cate">
+                            <i class="far fa-circle-stop"></i>
+                            <span>Classification Classification</span>
+                          </div>
+
+                          <div class="views">
+                            <i class="far fa-eye"></i>
+                            <span>4000</span>
+                          </div>
+                        </div>
+
+                        <h4 class="name">
+                          <a href="#">Business name</a>
+                        </h4>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">Business address</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Phone</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Email</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Web</div>
+                          </div>
+                        </div>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">
+                              <strong>Open</strong>until 10:12AM
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="item-footer">
+                          <div class="club-name">
+                            Rtn. Chhongba Sherpa - RC BOUDHA
+                          </div>
+                          <div class="rating"><span>4.5</span> (50)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image">
+                        <div class="featured">Featured</div>
+
+                        <!-- <button class="wishlist">
+                          <i class="far fa-heart"></i>
+                        </button> -->
+
+                        <a href="#">
+                          <img
+                            src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                            alt="automotive-icon"
+                          />
+                        </a>
+                      </div>
+
+                      <div class="content">
+                        <div class="rot-info">
+                          <div class="user-image">
+                            <img
+                              src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="rot-name">
+                            <h3 class="name">Rotarian Name</h3>
+                          </div>
+                        </div>
+
+                        <div class="heading top-heading">
+                          <div class="cate">
+                            <i class="far fa-circle-stop"></i>
+                            <span>Classification Classification</span>
+                          </div>
+
+                          <div class="views">
+                            <i class="far fa-eye"></i>
+                            <span>4000</span>
+                          </div>
+                        </div>
+
+                        <h4 class="name">
+                          <a href="#">Business name</a>
+                        </h4>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">Business address</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Phone</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Email</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Web</div>
+                          </div>
+                        </div>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">
+                              <strong>Open</strong>until 10:12AM
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="item-footer">
+                          <div class="club-name">
+                            Rtn. Chhongba Sherpa - RC BOUDHA
+                          </div>
+                          <div class="rating"><span>4.5</span> (50)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image">
+                        <div class="featured">Featured</div>
+
+                        <!-- <button class="wishlist">
+                          <i class="far fa-heart"></i>
+                        </button> -->
+
+                        <a href="#">
+                          <img
+                            src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                            alt="automotive-icon"
+                          />
+                        </a>
+                      </div>
+
+                      <div class="content">
+                        <div class="rot-info">
+                          <div class="user-image">
+                            <img
+                              src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="rot-name">
+                            <h3 class="name">Rotarian Name</h3>
+                          </div>
+                        </div>
+
+                        <div class="heading top-heading">
+                          <div class="cate">
+                            <i class="far fa-circle-stop"></i>
+                            <span>Classification Classification</span>
+                          </div>
+
+                          <div class="views">
+                            <i class="far fa-eye"></i>
+                            <span>4000</span>
+                          </div>
+                        </div>
+
+                        <h4 class="name">
+                          <a href="#">Business name</a>
+                        </h4>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">Business address</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Phone</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Email</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Web</div>
+                          </div>
+                        </div>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">
+                              <strong>Open</strong>until 10:12AM
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="item-footer">
+                          <div class="club-name">
+                            Rtn. Chhongba Sherpa - RC BOUDHA
+                          </div>
+                          <div class="rating"><span>4.5</span> (50)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="item">
+                      <div class="image">
+                        <div class="featured">Featured</div>
+
+                        <!-- <button class="wishlist">
+                          <i class="far fa-heart"></i>
+                        </button> -->
+
+                        <a href="#">
+                          <img
+                            src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                            alt="automotive-icon"
+                          />
+                        </a>
+                      </div>
+
+                      <div class="content">
+                        <div class="rot-info">
+                          <div class="user-image">
+                            <img
+                              src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="rot-name">
+                            <h3 class="name">Rotarian Name</h3>
+                          </div>
+                        </div>
+
+                        <div class="heading top-heading">
+                          <div class="cate">
+                            <i class="far fa-circle-stop"></i>
+                            <span>Classification Classification</span>
+                          </div>
+
+                          <div class="views">
+                            <i class="far fa-eye"></i>
+                            <span>4000</span>
+                          </div>
+                        </div>
+
+                        <h4 class="name">
+                          <a href="#">Business name</a>
+                        </h4>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">Business address</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Phone</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Email</div>
+                          </div>
+
+                          <div class="heading other-head">
+                            <div class="cate">Web</div>
+                          </div>
+                        </div>
+
+                        <div class="item-contact-info">
+                          <div class="heading other-head">
+                            <div class="cate">
+                              <strong>Open</strong>until 10:12AM
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="item-footer">
+                          <div class="club-name">
+                            Rtn. Chhongba Sherpa - RC BOUDHA
+                          </div>
+                          <div class="rating"><span>4.5</span> (50)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- footer-start -->
     <footer>
@@ -1733,6 +2485,36 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">
+      lang: en_US
+    </script>
+
+    <script>
+      const featureList = document.querySelectorAll(
+        "#feature-list #featureItem"
+      );
+
+      featureList.forEach((item) => {
+        item.querySelector(".icon span").innerHTML =
+          item.querySelector(".name").innerHTML[0];
+      });
+    </script>
+    <script>
+      document
+        .getElementById("linkedin-share-button")
+        .addEventListener("click", function () {
+          IN.UI.Share()
+            .params({
+              url: "https://example.com",
+            })
+            .place();
+        });
+    </script>
 
     <script>
       Fancybox.bind("[data-fancybox]");
@@ -1811,6 +2593,34 @@
             slidesPerView: 2,
           },
           850: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+          },
+          1200: {
+            spaceBetween: 10,
+            slidesPerView: 4,
+          },
+        },
+      });
+
+      var swiper = new Swiper(".also-viewed .mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        speed: 600,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+        breakpoints: {
+          550: {
+            spaceBetween: 10,
+            slidesPerView: 2,
+          },
+          992: {
             spaceBetween: 10,
             slidesPerView: 3,
           },

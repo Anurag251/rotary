@@ -325,8 +325,25 @@
       </div>
     </div>
 
+    <div class="ads-area-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ads-area-banner-image">
+              <a href="#">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/uploads/2023/07/1230x100.gif"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section>
-      <div class="ads-section">
+      <div class="ads-sections">
         <div class="container">
           <!-- <div class="new-title">
             <div class="main-title">
@@ -340,7 +357,7 @@
 
           <div class="row">
             <div class="col-lg-4 col-md-12">
-              <div class="ads-filter">
+              <div class="ads-filter mb-3">
                 <div class="filter-title">
                   <i class="fa-solid fa-sliders"></i>
                   Filter
@@ -355,14 +372,7 @@
                       />
                     </div> -->
 
-                    <div class="group">
-                      <select id="chooseCategory">
-                        <option value="">Choose Category</option>
-                        <option value="Automobile">Automobile</option>
-                        <option value="Restaurant">Restaurant</option>
-                        <option value="IT">IT (100)</option>
-                      </select>
-                    </div>
+                    <label for=""><strong> Filter by Location</strong></label>
 
                     <div class="group">
                       <select id="chooseLocation">
@@ -370,6 +380,19 @@
                         <option value="Kathmandu">Kathmandu</option>
                         <option value="Pokhara">Pokhara</option>
                         <option value="Birgunj">Birgunj</option>
+                      </select>
+                    </div>
+
+                    <hr class="mt-4" />
+
+                    <label for=""><strong> Filter by category</strong></label>
+
+                    <div class="group">
+                      <select id="chooseCategory">
+                        <option value="">Choose Category</option>
+                        <option value="Automobile">Automobile</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="IT">IT (100)</option>
                       </select>
                     </div>
                   </div>
@@ -404,9 +427,38 @@
 
                   <button class="submit">
                     <i class="fas fa-search"></i>
-                    Search
+                    Filter
                   </button>
                 </form>
+              </div>
+
+              <div class="ads-area-banner no-bg-color">
+                <div class="ads-area-banner-image bigAdss">
+                  <a href="#">
+                    <img
+                      src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/Onlinekhabar-300x200px.gif"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="ads-area-banner-image bigAdss">
+                  <a href="#">
+                    <img
+                      src="https://www.onlinekhabar.com/wp-content/uploads/2023/08/KMC-2023-GIF-300x200-1.gif"
+                      alt=""
+                    />
+                  </a>
+                </div>
+
+                <div class="ads-area-banner-image bigAdss">
+                  <a href="#">
+                    <img
+                      src="https://www.upmenu.com/wp-content/uploads/2023/05/8-restaurant-seo-online-ordering-system.gif"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -421,40 +473,35 @@
 
                   <div class="search-filter">
                     <div class="group">
-                      <select name="" id="">
-                        <option value="Default">Default</option>
+                      <select name="sort-by" id="">
+                        <option value="Recommended">Recommended</option>
 
-                        <option value="Price Low to High">
-                          Price Low to High
-                        </option>
+                        <option value="Highest Rated">Highest Rated</option>
 
-                        <option value="Price High to Low">
-                          Price High to Low
-                        </option>
+                        <option value="Most Reviewed">Most Reviewed</option>
                       </select>
                     </div>
 
-                    <div class="grid-view-button active">
+                    <div class="grid-view-button">
                       <i class="fa-solid fa-grip"></i>
                     </div>
 
-                    <div class="list-view-button">
+                    <div class="list-view-button active">
                       <i class="fa-solid fa-list-ul"></i>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div class="ads-item-list">
+              <div class="ads-item-list active">
                 <div class="item">
                   <div class="image">
                     <div class="featured">Featured</div>
 
-                    <button class="wishlist">
+                    <!-- <button class="wishlist">
                       <i class="far fa-heart"></i>
-                    </button>
+                    </button> -->
 
-                    <a href="#">
+                    <a href="javascript:void(0);">
                       <img
                         src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
                         alt="automotive-icon"
@@ -472,57 +519,95 @@
                       </div>
 
                       <div class="rot-name">
-                        <h3 class="name">Rotarian Name</h3>
+                        <h3 class="name" title="Rotarian Name">
+                          Rotarian Name
+                        </h3>
                       </div>
                     </div>
 
                     <div class="heading">
+                      <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span title="Kathmandu Kathmandu Kathmandu"
+                          >Kathmandu Kathmandu Kathmandu</span
+                        >
+                      </div>
+
                       <div class="cate">
                         <i class="far fa-circle-stop"></i>
-                        Classification
+                        <span
+                          title="Classification Classification Classification"
+                        >
+                          Classification Classification Classification</span
+                        >
                       </div>
+
                       <div class="views">
                         <i class="far fa-eye"></i>
-                        4000
+                        <span>4000</span>
                       </div>
                     </div>
 
                     <h4 class="name">
-                      <a href="#">Business name</a>
+                      <a href="#" title="Business name">Business name</a>
                     </h4>
 
                     <div class="item-contact-info">
-                      <div class="heading other-head">
+                      <div class="heading other-head c-address">
                         <div class="cate">
-                          <i class="fas fa-map-marker-alt"></i>
-                          Business address
+                          <span title="Thamel, kathmandu"
+                            >Thamel, kathmandu</span
+                          >
                         </div>
                       </div>
 
-                      <div class="heading other-head">
+                      <div class="heading other-head c-phone-no">
                         <div class="cate">
-                          <i class="fas fa-phone"></i>
-                          Phone
+                          <span>
+                            <a href="tel:Phone" title="+977 9845412777">
+                              +977 9845412777
+                            </a>
+                          </span>
                         </div>
                       </div>
 
-                      <div class="heading other-head">
+                      <div class="heading other-head c-email">
                         <div class="cate">
-                          <i class="fas fa-envelope"></i>
-                          Email
+                          <span>
+                            <a
+                              href="mailto:email"
+                              title="anurag.rana@sherpatech.com"
+                              >anurag.rana@sherpatech.com</a
+                            >
+                          </span>
                         </div>
                       </div>
 
+                      <div class="heading other-head c-web-link">
+                        <div class="cate">
+                          <span>
+                            <a href="#" title="www.sherpatech.com"
+                              >www.sherpatech.com</a
+                            >
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-contact-info open-close-time">
                       <div class="heading other-head">
                         <div class="cate">
-                          <i class="fas fa-link"></i>
-                          Web
+                          <strong>Opens in 10min </strong>
+                          tomorrow
                         </div>
                       </div>
                     </div>
 
                     <div class="item-footer">
-                      <div class="club-name">
+                      <div
+                        class="club-name"
+                        title="Rtn. Chhongba Sherpa - RC BOUDHA"
+                      >
                         Rtn. Chhongba Sherpa - RC BOUDHA
                       </div>
                       <div class="rating"><span>4.5</span> (50)</div>
@@ -534,11 +619,11 @@
                   <div class="image">
                     <div class="featured">Featured</div>
 
-                    <button class="wishlist">
+                    <!-- <button class="wishlist">
                       <i class="far fa-heart"></i>
-                    </button>
+                    </button> -->
 
-                    <a href="#">
+                    <a href="javascript:void(0);">
                       <img
                         src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
                         alt="automotive-icon"
@@ -556,61 +641,353 @@
                       </div>
 
                       <div class="rot-name">
-                        <h3 class="name">Rotarian Name</h3>
+                        <h3 class="name" title="Rotarian Name">
+                          Rotarian Name
+                        </h3>
                       </div>
                     </div>
 
                     <div class="heading">
+                      <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span title="Kathmandu Kathmandu Kathmandu"
+                          >Kathmandu Kathmandu Kathmandu</span
+                        >
+                      </div>
+
                       <div class="cate">
                         <i class="far fa-circle-stop"></i>
-                        Classification
+                        <span
+                          title="Classification Classification Classification"
+                        >
+                          Classification Classification Classification</span
+                        >
                       </div>
+
                       <div class="views">
                         <i class="far fa-eye"></i>
-                        4000
+                        <span>4000</span>
                       </div>
                     </div>
 
                     <h4 class="name">
-                      <a href="#">Business name</a>
+                      <a href="#" title="Business name">Business name</a>
                     </h4>
 
                     <div class="item-contact-info">
-                      <div class="heading other-head">
+                      <div class="heading other-head c-address">
                         <div class="cate">
-                          <i class="fas fa-map-marker-alt"></i>
-                          Business address
+                          <span title="Thamel, kathmandu"
+                            >Thamel, kathmandu</span
+                          >
                         </div>
                       </div>
 
-                      <div class="heading other-head">
+                      <div class="heading other-head c-phone-no">
                         <div class="cate">
-                          <i class="fas fa-phone"></i>
-                          Phone
+                          <span>
+                            <a href="tel:Phone" title="+977 9845412777">
+                              +977 9845412777
+                            </a>
+                          </span>
                         </div>
                       </div>
 
-                      <div class="heading other-head">
+                      <div class="heading other-head c-email">
                         <div class="cate">
-                          <i class="fas fa-envelope"></i>
-                          Email
+                          <span>
+                            <a
+                              href="mailto:email"
+                              title="anurag.rana@sherpatech.com"
+                              >anurag.rana@sherpatech.com</a
+                            >
+                          </span>
                         </div>
                       </div>
 
+                      <div class="heading other-head c-web-link">
+                        <div class="cate">
+                          <span>
+                            <a href="#" title="www.sherpatech.com"
+                              >www.sherpatech.com</a
+                            >
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-contact-info open-close-time">
                       <div class="heading other-head">
                         <div class="cate">
-                          <i class="fas fa-link"></i>
-                          Web
+                          <strong>Open all day </strong>
                         </div>
                       </div>
                     </div>
 
                     <div class="item-footer">
-                      <div class="club-name">
+                      <div
+                        class="club-name"
+                        title="Rtn. Chhongba Sherpa - RC BOUDHA"
+                      >
                         Rtn. Chhongba Sherpa - RC BOUDHA
                       </div>
                       <div class="rating"><span>4.5</span> (50)</div>
                     </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="image">
+                    <div class="featured">Featured</div>
+
+                    <!-- <button class="wishlist">
+                      <i class="far fa-heart"></i>
+                    </button> -->
+
+                    <a href="javascript:void(0);">
+                      <img
+                        src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                        alt="automotive-icon"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="content">
+                    <div class="rot-info">
+                      <div class="user-image">
+                        <img
+                          src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="rot-name">
+                        <h3 class="name" title="Rotarian Name">
+                          Rotarian Name
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div class="heading">
+                      <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span title="Kathmandu Kathmandu Kathmandu"
+                          >Kathmandu Kathmandu Kathmandu</span
+                        >
+                      </div>
+
+                      <div class="cate">
+                        <i class="far fa-circle-stop"></i>
+                        <span
+                          title="Classification Classification Classification"
+                        >
+                          Classification Classification Classification</span
+                        >
+                      </div>
+
+                      <div class="views">
+                        <i class="far fa-eye"></i>
+                        <span>4000</span>
+                      </div>
+                    </div>
+
+                    <h4 class="name">
+                      <a href="#" title="Business name">Business name</a>
+                    </h4>
+
+                    <div class="item-contact-info">
+                      <div class="heading other-head c-address">
+                        <div class="cate">
+                          <span title="Thamel, kathmandu"
+                            >Thamel, kathmandu</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="heading other-head c-phone-no">
+                        <div class="cate">
+                          <span>
+                            <a href="tel:Phone" title="+977 9845412777">
+                              +977 9845412777
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="heading other-head c-email">
+                        <div class="cate">
+                          <span>
+                            <a
+                              href="mailto:email"
+                              title="anurag.rana@sherpatech.com"
+                              >anurag.rana@sherpatech.com</a
+                            >
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="heading other-head c-web-link">
+                        <div class="cate">
+                          <span>
+                            <a href="#" title="www.sherpatech.com"
+                              >www.sherpatech.com</a
+                            >
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-contact-info open-close-time">
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <strong>Open </strong>
+                          until 10:12AM
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-footer">
+                      <div
+                        class="club-name"
+                        title="Rtn. Chhongba Sherpa - RC BOUDHA"
+                      >
+                        Rtn. Chhongba Sherpa - RC BOUDHA
+                      </div>
+                      <div class="rating"><span>4.5</span> (50)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="image">
+                    <div class="featured">Featured</div>
+
+                    <!-- <button class="wishlist">
+                      <i class="far fa-heart"></i>
+                    </button> -->
+
+                    <a href="javascript:void(0);">
+                      <img
+                        src="https://listee.dreamguystech.com/html/assets/img/featured/feature-3.jpg"
+                        alt="automotive-icon"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="content">
+                    <div class="rot-info">
+                      <div class="user-image">
+                        <img
+                          src="https://listee.dreamguystech.com/html/assets/img/profiles/avatar-04.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="rot-name">
+                        <h3 class="name" title="Rotarian Name">
+                          Rotarian Name
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div class="heading">
+                      <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span title="Kathmandu Kathmandu Kathmandu"
+                          >Kathmandu Kathmandu Kathmandu</span
+                        >
+                      </div>
+
+                      <div class="cate">
+                        <i class="far fa-circle-stop"></i>
+                        <span
+                          title="Classification Classification Classification"
+                        >
+                          Classification Classification Classification</span
+                        >
+                      </div>
+
+                      <div class="views">
+                        <i class="far fa-eye"></i>
+                        <span>4000</span>
+                      </div>
+                    </div>
+
+                    <h4 class="name">
+                      <a href="#" title="Business name">Business name</a>
+                    </h4>
+
+                    <div class="item-contact-info">
+                      <div class="heading other-head c-address">
+                        <div class="cate">
+                          <span title="Thamel, kathmandu"
+                            >Thamel, kathmandu</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="heading other-head c-phone-no">
+                        <div class="cate">
+                          <span>
+                            <a href="tel:Phone" title="+977 9845412777">
+                              +977 9845412777
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="heading other-head c-email">
+                        <div class="cate">
+                          <span>
+                            <a
+                              href="mailto:email"
+                              title="anurag.rana@sherpatech.com"
+                              >anurag.rana@sherpatech.com</a
+                            >
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="heading other-head c-web-link">
+                        <div class="cate">
+                          <span>
+                            <a href="#" title="www.sherpatech.com"
+                              >www.sherpatech.com</a
+                            >
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-contact-info open-close-time">
+                      <div class="heading other-head">
+                        <div class="cate">
+                          <strong class="closed">Closed </strong> until 10:12AM
+                          tomorrow
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-footer">
+                      <div
+                        class="club-name"
+                        title="Rtn. Chhongba Sherpa - RC BOUDHA"
+                      >
+                        Rtn. Chhongba Sherpa - RC BOUDHA
+                      </div>
+                      <div class="rating"><span>4.5</span> (50)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ads-area-banner longAdss">
+                  <div class="ads-area-banner-image longAdss">
+                    <a href="#">
+                      <img
+                        src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/Onlinekhabar-300x200px.gif"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -649,6 +1026,23 @@
         </div>
       </div>
     </section>
+
+    <div class="ads-area-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ads-area-banner-image">
+              <a href="#">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/uploads/2023/07/1230x100.gif"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- footer-start -->
     <footer>
@@ -789,7 +1183,7 @@
     </script>
 
     <script>
-      var swiper = new Swiper(".ads-section .mySwiper", {
+      var swiper = new Swiper(".ads-sections .mySwiper", {
         spaceBetween: 10,
         slidesPerView: 1,
         loop: true,

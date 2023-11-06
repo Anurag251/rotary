@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="./assets/styles/responsive.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="./assets/styles/swiper.min.css" />
+    <!-- jquery -->
+    <script src="./assets/js/jquery.js"></script>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/css/select2.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="wrapper header-other">
+          <!-- <div class="social-icons">
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+
+            <div class="icon">
+              <a class="link-button" href="#" target="blank" title="">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div> -->
+
+          <ul class="header-contact">
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="mailto:rotary@ntc.net.np">
+                  <i class="fas fa-envelope"></i>
+
+                  rotary@ntc.net.np
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-link">
+                <a class="link-button" href="tel:015355344">
+                  <i class="fas fa-phone"></i>
+
+                  015355344
+                </a>
+              </div>
+            </li>
+
+            <!-- <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Member Login </a>
+              </div>
+            </li> -->
+
+            <li class="button-link">
+              <div class="contact-link">
+                <a class="link-button" href="#"> Event Registration </a>
+              </div>
+            </li>
+
+            <li class="button-link drop-menu">
+              <div class="contact-link">
+                <a class="link-button" class="link-button" href="#"
+                  ><i class="fas fa-user"></i> <span>Super Admin Admin</span>
+                </a>
+
+                <ul class="drop-profile">
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-gauge"></i> Super Admin
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-user"></i> My Profile
+                      </button></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><button>
+                        <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                      </button></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-menu-area">
+        <div class="wrapper inner">
+          <a href="index.html">
+            <div class="logo">
+              <img
+                src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+                alt="logo"
+              />
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li>
+              <a href="#">
+                <button class="nav-btn">RI District 3292</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Governor</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">DG Calendar</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">Top Stories</button>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <button class="nav-btn">District Committee</button>
+              </a>
+            </li>
+
+            <li class="drop-menu">
+              <button class="nav-btn">
+                Resources <i class="fas fa-angle-down"></i>
+              </button>
+
+              <ul class="drop-down">
+                <li>
+                  <a href="#">
+                    <button>Rotary Club Matter</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>Downloads</button>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <button>GML</button>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Clubs</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Contacts</button>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="nav-btn">Rotarians</button>
+              </a>
+            </li>
+          </ul>
+
+          <div class="header-right-item">
+            <div class="side-nav-btn">
+              <div class="das"></div>
+            </div>
+
+            <div class="mobile-profile">
+              <div class="image">
+                <i class="fas fa-user"></i>
+              </div>
+              <ul class="drop-profile">
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-gauge"></i> Super Admin
+                    </button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button><i class="fas fa-user"></i> My Profile</button></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><button>
+                      <i class="fas fa-arrow-right-from-bracket"></i> Log Out
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- side menu -->
+    <div class="side-nav">
+      <div class="side-nav-close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="logo">
+        <a href="/">
+          <img
+            src="https://rotarydistrict3292.org.np/uploads/config/1654765524-948302.jpg"
+            alt="logo"
+          />
+        </a>
+      </div>
+
+      <div class="nav-links-area">
+        <ul class="nav-links">
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+
+          <li class="drop-menu">
+            <button class="nav-btn">
+              {data.label} <i class="fas fa-angle-down"></i>
+            </button>
+
+            <div class="drop-down-area">
+              <ul class="drop-down">
+                <li key="{idx}">
+                  <a href="#">
+                    <button>{subMenu?.label}</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="{data?.url}">
+              <button class="nav-btn">{data.label}</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section>
+      <div class="profile-edit-form">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+              <div class="custom-form-area">
+                <div class="inner-form">
+                  <div class="title-part no-bg">
+                    <div class="name">Update Information</div>
+                  </div>
+
+                  <p class="form-subtitle"></p>
+                  <div class="form">
+                    <form onSubmit="">
+                      <div class="form-inputs">
+                        <div class="input-group">
+                          <div class="form-title">Personal Details</div>
+
+                          <div class="input-group-divider">
+                            <div class="group">
+                              <div class="inner-input">
+                                <select
+                                  onchange="getData(this)"
+                                  class="custom-input"
+                                  name="forPrefix"
+                                  id="forPrefix"
+                                >
+                                  <option value=""></option>
+                                  <option value="Mr">Mr</option>
+                                  <option value="Ms">Ms</option>
+                                </select>
+                                <label class="form-input-label" for="forPrefix">
+                                  -- Select Prefix --
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="type"
+                                  class="custom-input"
+                                  name="forFName"
+                                  id="forFName"
+                                />
+
+                                <label class="form-input-label" for="forFName">
+                                  First Name
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+
+                          <div class="input-group-divider">
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="type"
+                                  class="custom-input"
+                                  name="forMName"
+                                  id="forMName"
+                                />
+
+                                <label class="form-input-label" for="forMName">
+                                  Middle Name
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="type"
+                                  class="custom-input"
+                                  name="forLName"
+                                  id="forLName"
+                                />
+
+                                <label class="form-input-label" for="forLName">
+                                  Last Name
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+
+                          <div class="input-group-divider">
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="type"
+                                  class="custom-input"
+                                  name="forAddress"
+                                  id="forAddress"
+                                />
+
+                                <label
+                                  class="form-input-label"
+                                  for="forAddress"
+                                >
+                                  Address
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="number"
+                                  class="custom-input"
+                                  name="forContact"
+                                  id="forContact"
+                                />
+
+                                <label
+                                  class="form-input-label"
+                                  for="forContact"
+                                >
+                                  Contact
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+
+                          <!-- <div class="group fileType">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="file"
+                                class="custom-input"
+                                name="forPhoto"
+                                id="forPhoto"
+                              />
+
+                              <label class="form-input-label" for="forPhoto">
+                                Photo
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div> -->
+
+                          <div class="group uploadImageArea" id="UploadPhoto">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="file"
+                                class="custom-input"
+                                name="forPhoto"
+                                id="forPhoto"
+                                hidden
+                              />
+
+                              <img class="preview-image" src="" alt="" />
+
+                              <label class="form-input-label" for="forPhoto">
+                                <i class="fas fa-cloud-arrow-up"></i>
+                                <br />
+                                Click to upload
+
+                                <br />
+                                Photo
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Login Details</div>
+
+                          <div class="group">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="email"
+                                class="custom-input"
+                                name="forEmailAddress"
+                                id="forEmailAddress"
+                              />
+
+                              <label
+                                class="form-input-label"
+                                for="forEmailAddress"
+                              >
+                                Email Address
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Location Details</div>
+
+                          <div class="input-group-divider">
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="email"
+                                  class="custom-input"
+                                  name="forCity"
+                                  id="forCity"
+                                />
+
+                                <label class="form-input-label" for="forCity">
+                                  City
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="type"
+                                  class="custom-input"
+                                  name="forPostalCode"
+                                  id="forPostalCode"
+                                />
+
+                                <label
+                                  class="form-input-label"
+                                  for="forPostalCode"
+                                >
+                                  Postal Code
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="input-group have-business-details">
+                          <div class="form-title">
+                            Are you willing to list your business?
+                          </div>
+
+                          <div class="switch-area">
+                            <span class="noActive">No</span>
+                            <div class="switch-button">
+                              <div class="indicator"></div>
+                            </div>
+                            <span class="yesActive">Yes</span>
+                          </div>
+                        </div>
+
+                        <div class="business-details-all-section">
+                          <div class="business-details-all-section-area">
+                            <div class="form-section-title">
+                              Business Information Section
+                            </div>
+                            <div class="input-group">
+                              <div class="form-title">Buisness Details</div>
+
+                              <div class="group">
+                                <div class="inner-input">
+                                  <input
+                                    onchange="getData(this)"
+                                    type="type"
+                                    class="custom-input"
+                                    name="forBuisnessName"
+                                    id="forBuisnessName"
+                                  />
+
+                                  <label
+                                    class="form-input-label"
+                                    for="forBuisnessName"
+                                  >
+                                    Buisness Name
+                                  </label>
+                                </div>
+                                <p class="input-error">something went wrong</p>
+                              </div>
+
+                              <div class="group">
+                                <div class="inner-input">
+                                  <input
+                                    onchange="getData(this)"
+                                    type="type"
+                                    class="custom-input"
+                                    name="forBuisnessAddress"
+                                    id="forBuisnessAddress"
+                                  />
+
+                                  <label
+                                    class="form-input-label"
+                                    for="forBuisnessAddress"
+                                  >
+                                    Buisness Address
+                                  </label>
+                                </div>
+                                <p class="input-error">something went wrong</p>
+                              </div>
+
+                              <div class="input-group-divider">
+                                <div class="group">
+                                  <div class="inner-input">
+                                    <input
+                                      onchange="getData(this)"
+                                      type="email"
+                                      class="custom-input"
+                                      name="forBuisnessEmail"
+                                      id="forBuisnessEmail"
+                                    />
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forBuisnessEmail"
+                                    >
+                                      Buisness Email
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+
+                                <div class="group">
+                                  <div class="inner-input">
+                                    <input
+                                      onchange="getData(this)"
+                                      type="number"
+                                      class="custom-input"
+                                      name="forBuisnessPhone"
+                                      id="forBuisnessPhone"
+                                    />
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forBuisnessPhone"
+                                    >
+                                      Buisness Phone
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div
+                                class="group uploadImageArea"
+                                id="UploadBusinessLogo"
+                              >
+                                <div class="inner-input">
+                                  <input
+                                    onchange="getData(this)"
+                                    type="file"
+                                    class="custom-input"
+                                    name="forBusinessLogo"
+                                    id="forBusinessLogo"
+                                    hidden
+                                  />
+
+                                  <img class="preview-image" src="" alt="" />
+
+                                  <label
+                                    class="form-input-label"
+                                    for="forBusinessLogo"
+                                  >
+                                    <i class="fas fa-cloud-arrow-up"></i>
+                                    <br />
+                                    Click to upload
+
+                                    <br />
+                                    Business Logo
+                                  </label>
+                                </div>
+                                <p class="input-error">something went wrong</p>
+                              </div>
+
+                              <!-- <div class="group fileType">
+                                  <div class="inner-input">
+                                    <input
+                                      onchange="getData(this)"
+                                      type="file"
+                                      class="custom-input"
+                                      name="forBuisnessLogo"
+                                      id="forBuisnessLogo"
+                                    />
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forBuisnessLogo"
+                                    >
+                                      Buisness Logo
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div> -->
+
+                              <div class="group">
+                                <div class="inner-input">
+                                  <input
+                                    onchange="getData(this)"
+                                    type="url"
+                                    class="custom-input"
+                                    name="forBuisnessUrl"
+                                    id="forBuisnessUrl"
+                                  />
+
+                                  <label
+                                    class="form-input-label"
+                                    for="forBuisnessUrl"
+                                  >
+                                    Buisness Url
+                                  </label>
+                                </div>
+                                <p class="input-error">something went wrong</p>
+                              </div>
+
+                              <div class="input-group-divider">
+                                <div class="group textarea">
+                                  <div class="inner-input">
+                                    <textarea
+                                      class="custom-input"
+                                      name="buisnessDescription"
+                                      id="forBuisnessDescription"
+                                    ></textarea>
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forBuisnessDescription"
+                                    >
+                                      Buisness Description
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+
+                                <div class="group textarea">
+                                  <div class="inner-input">
+                                    <textarea
+                                      class="custom-input"
+                                      name="smallSlogan"
+                                      id="forSmallSlogan"
+                                    ></textarea>
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forSmallSlogan"
+                                    >
+                                      Small slogan
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="input-group">
+                              <div class="form-title">
+                                Buisness Social Media Links
+                              </div>
+
+                              <div class="input-group-divider">
+                                <div class="group">
+                                  <div class="inner-input">
+                                    <input
+                                      onchange="getData(this)"
+                                      type="url"
+                                      class="custom-input"
+                                      name="forFacebook"
+                                      id="forFacebook"
+                                      placeholder="https://www.facebook.com/{your facebook id}"
+                                    />
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forFacebook"
+                                    >
+                                      Facebook URL
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+
+                                <div class="group">
+                                  <div class="inner-input">
+                                    <input
+                                      onchange="getData(this)"
+                                      type="url"
+                                      class="custom-input"
+                                      name="forInstagram"
+                                      id="forInstagram"
+                                      placeholder="https://www.instagram.com/{your Instagram id}"
+                                    />
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forInstagram"
+                                    >
+                                      Instagram URL
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="input-group-divider">
+                                <div class="group">
+                                  <div class="inner-input">
+                                    <input
+                                      onchange="getData(this)"
+                                      type="url"
+                                      class="custom-input"
+                                      name="forLinkedIn"
+                                      id="forLinkedIn"
+                                      placeholder="https://www.linkedin.com/{your Linked In id}"
+                                    />
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forLinkedIn"
+                                    >
+                                      Linked In URL
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+
+                                <div class="group">
+                                  <div class="inner-input">
+                                    <input
+                                      onchange="getData(this)"
+                                      type="url"
+                                      class="custom-input"
+                                      name="forTwitter"
+                                      id="forTwitter"
+                                      placeholder="https://www.twitter.com/{your Twitter id}"
+                                    />
+
+                                    <label
+                                      class="form-input-label"
+                                      for="forTwitter"
+                                    >
+                                      Twitter URL
+                                    </label>
+                                  </div>
+                                  <p class="input-error">
+                                    something went wrong
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="input-group repeaterListSection">
+                              <div class="form-title">
+                                Buisness Features List
+                                <div class="addFeature" id="addFeature">
+                                  <i class="fas fa-plus"></i> Add Feature
+                                </div>
+                              </div>
+
+                              <div
+                                class="repeaterListArea"
+                                id="featuresListing"
+                              >
+                                <!-- <div>
+                                    <div class="repeaterList">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            Feature Title
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="group uploadImageArea">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="file"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            hidden
+                                          />
+    
+                                          <img
+                                            class="preview-image"
+                                            src=""
+                                            alt=""
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            <i class="fas fa-cloud-arrow-up"></i>
+                                            <br />
+                                            Click to upload
+    
+                                            <br />
+                                            Feature Image
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="removeButton">Remove</div>
+                                    </div>
+                                  </div>
+    
+                                  <div>
+                                    <div class="repeaterList">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            Feature Title
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="group uploadImageArea">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="file"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            hidden
+                                          />
+    
+                                          <img
+                                            class="preview-image"
+                                            src=""
+                                            alt=""
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            <i class="fas fa-cloud-arrow-up"></i>
+                                            <br />
+                                            Click to upload
+    
+                                            <br />
+                                            Feature Image
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="removeButton">Remove</div>
+                                    </div>
+                                  </div> -->
+                              </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="input-group repeaterListSection">
+                              <div class="form-title">
+                                Business Hours
+                                <!-- <div class="addFeature" id="addHours">
+                                    <i class="fas fa-plus"></i> Add Hours
+                                  </div> -->
+                              </div>
+
+                              <!-- <div
+                                  class="repeaterListArea"
+                                  id="hoursListing"
+                                ></div> -->
+
+                              <div class="all-day-list">
+                                <ul>
+                                  <li id="businessHourDay">
+                                    <h4>Sun</h4>
+
+                                    <div class="switch-area">
+                                      <div class="switch-button"></div>
+
+                                      <span>Closed</span>
+                                    </div>
+
+                                    <div class="input-area-sec">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forSunAM"
+                                            id="forSunAM"
+                                            placeholder="eg: 10:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forSunAM"
+                                          >
+                                            AM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                      -
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forSunPM"
+                                            id="forSunPM"
+                                            placeholder="08:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forSunPM"
+                                          >
+                                            PM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li id="businessHourDay">
+                                    <h4>Mon</h4>
+
+                                    <div class="switch-area">
+                                      <div class="switch-button"></div>
+
+                                      <span>Closed</span>
+                                    </div>
+
+                                    <div class="input-area-sec">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forMonAM"
+                                            id="forMonAM"
+                                            placeholder="eg: 10:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forMonAM"
+                                          >
+                                            AM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                      -
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forMonPM"
+                                            id="forMonPM"
+                                            placeholder="08:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forMonPM"
+                                          >
+                                            PM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li id="businessHourDay">
+                                    <h4>Tue</h4>
+
+                                    <div class="switch-area">
+                                      <div class="switch-button"></div>
+
+                                      <span>Closed</span>
+                                    </div>
+
+                                    <div class="input-area-sec">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forTueAM"
+                                            id="forTueAM"
+                                            placeholder="eg: 10:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forTueAM"
+                                          >
+                                            AM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                      -
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forTuePM"
+                                            id="forTuePM"
+                                            placeholder="08:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forTuePM"
+                                          >
+                                            PM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li id="businessHourDay">
+                                    <h4>Wed</h4>
+
+                                    <div class="switch-area">
+                                      <div class="switch-button"></div>
+
+                                      <span>Closed</span>
+                                    </div>
+
+                                    <div class="input-area-sec">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forWedAM"
+                                            id="forWedAM"
+                                            placeholder="eg: 10:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forWedAM"
+                                          >
+                                            AM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                      -
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forWedPM"
+                                            id="forWedPM"
+                                            placeholder="08:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forWedPM"
+                                          >
+                                            PM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li id="businessHourDay">
+                                    <h4>Thu</h4>
+
+                                    <div class="switch-area">
+                                      <div class="switch-button"></div>
+
+                                      <span>Closed</span>
+                                    </div>
+
+                                    <div class="input-area-sec">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forThuAM"
+                                            id="forThuAM"
+                                            placeholder="eg: 10:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forThuAM"
+                                          >
+                                            AM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                      -
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forThuPM"
+                                            id="forThuPM"
+                                            placeholder="08:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forThuPM"
+                                          >
+                                            PM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li id="businessHourDay">
+                                    <h4>Fri</h4>
+
+                                    <div class="switch-area">
+                                      <div class="switch-button"></div>
+
+                                      <span>Closed</span>
+                                    </div>
+
+                                    <div class="input-area-sec">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forFriAM"
+                                            id="forFriAM"
+                                            placeholder="eg: 10:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forFriAM"
+                                          >
+                                            AM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                      -
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forFriPM"
+                                            id="forFriPM"
+                                            placeholder="08:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forFriPM"
+                                          >
+                                            PM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <li id="businessHourDay">
+                                    <h4>Sat</h4>
+
+                                    <div class="switch-area">
+                                      <div class="switch-button"></div>
+
+                                      <span>Closed</span>
+                                    </div>
+
+                                    <div class="input-area-sec">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forSatAM"
+                                            id="forSatAM"
+                                            placeholder="eg: 10:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forSatAM"
+                                          >
+                                            AM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                      -
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                            onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forSatPM"
+                                            id="forSatPM"
+                                            placeholder="08:00"
+                                          />
+
+                                          <label
+                                            class="form-input-label"
+                                            for="forSatPM"
+                                          >
+                                            PM
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="input-group repeaterListSection">
+                              <div class="form-title">
+                                Buisness Gallery
+                                <div class="addFeature" id="addGallery">
+                                  <i class="fas fa-plus"></i> Add Gallery
+                                </div>
+                              </div>
+
+                              <div class="repeaterListArea" id="galleryListing">
+                                <!-- <div>
+                                    <div class="repeaterList">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            Feature Title
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="group uploadImageArea">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="file"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            hidden
+                                          />
+    
+                                          <img
+                                            class="preview-image"
+                                            src=""
+                                            alt=""
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            <i class="fas fa-cloud-arrow-up"></i>
+                                            <br />
+                                            Click to upload
+    
+                                            <br />
+                                            Feature Image
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="removeButton">Remove</div>
+                                    </div>
+                                  </div>
+    
+                                  <div>
+                                    <div class="repeaterList">
+                                      <div class="group">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="text"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            Feature Title
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="group uploadImageArea">
+                                        <div class="inner-input">
+                                          <input
+                                           onchange="getData(this)"
+                                            type="file"
+                                            class="custom-input"
+                                            name="forFeatureTitle"
+                                            id="forFeatureTitle"
+                                            hidden
+                                          />
+    
+                                          <img
+                                            class="preview-image"
+                                            src=""
+                                            alt=""
+                                          />
+    
+                                          <label
+                                            class="form-input-label"
+                                            for="forFeatureTitle"
+                                          >
+                                            <i class="fas fa-cloud-arrow-up"></i>
+                                            <br />
+                                            Click to upload
+    
+                                            <br />
+                                            Feature Image
+                                          </label>
+                                        </div>
+                                        <p class="input-error">
+                                          something went wrong
+                                        </p>
+                                      </div>
+    
+                                      <div class="removeButton">Remove</div>
+                                    </div>
+                                  </div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Classification</div>
+
+                          <div class="group">
+                            <div class="inner-input">
+                              <select
+                                onchange="getData(this)"
+                                class="custom-input"
+                                name="forClassification"
+                                id="forClassification"
+                              >
+                                <option value=""></option>
+                                <option value="Doctor">Doctor</option>
+                                <option value="IT">IT</option>
+                                <option value="Restaurant">Restaurant</option>
+                              </select>
+                              <label
+                                class="form-input-label"
+                                for="forClassification"
+                              >
+                                -- Select Classification --
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Donor Type</div>
+
+                          <div class="group">
+                            <div class="inner-input">
+                              <select
+                                onchange="getData(this)"
+                                class="custom-input"
+                                name="forDonorType"
+                                id="forDonorType"
+                              >
+                                <option value=""></option>
+                                <option value="PHF">PHF</option>
+                                <option value="PHF +1">PHF +1</option>
+                              </select>
+                              <label
+                                class="form-input-label"
+                                for="forDonorType"
+                              >
+                                -- Select Donor Type --
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Club and Country</div>
+
+                          <div class="input-group-divider">
+                            <div class="group">
+                              <div class="inner-input">
+                                <select
+                                  onchange="getData(this)"
+                                  class="custom-input"
+                                  name="forClub"
+                                  id="forClub"
+                                >
+                                  <option value=""></option>
+                                  <option value="Kathmandu">Kathmandu</option>
+                                  <option value="Lalitpur">Lalitpur</option>
+                                  <option value="Birgunj">Lalitpur</option>
+                                </select>
+                                <label class="form-input-label" for="forClub">
+                                  -- Select Club --
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+
+                            <div class="group">
+                              <div class="inner-input">
+                                <select
+                                  onchange="getData(this)"
+                                  class="custom-input"
+                                  name="forCountry"
+                                  id="forCountry"
+                                >
+                                  <option value=""></option>
+                                  <option value="Nepal">Nepal</option>
+                                  <option value="Other">Other</option>
+                                </select>
+                                <label
+                                  class="form-input-label"
+                                  for="forCountry"
+                                >
+                                  -- Select Country --
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="submit-btn">Update</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="profile-edit-form">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+              <div class="custom-form-area">
+                <div class="inner-form">
+                  <div class="title-part no-bg">
+                    <div class="name">Update Password</div>
+                  </div>
+
+                  <p class="form-subtitle"></p>
+                  <div class="form">
+                    <form onSubmit="">
+                      <div class="form-inputs">
+                        <div class="input-group">
+                          <div class="form-title">Current Password</div>
+
+                          <div class="group">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="password"
+                                class="custom-input typePassword"
+                                name="forOldPassword"
+                                id="forOldPassword"
+                              />
+
+                              <label
+                                class="form-input-label"
+                                for="forOldPassword"
+                              >
+                                Current Password
+                              </label>
+
+                              <div class="input-icon eye-icon" id="eye-icon">
+                                <i class="fas fa-eye"></i>
+                              </div>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">New Password</div>
+
+                          <div class="w-100 mb-2">
+                            <span class="info">
+                              Password should be at least 6 characters
+                            </span>
+                          </div>
+
+                          <div class="group">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="password"
+                                class="custom-input typePassword"
+                                name="forNewPassword"
+                                id="forNewPassword"
+                              />
+
+                              <label
+                                class="form-input-label"
+                                for="forNewPassword"
+                              >
+                                New Password
+                              </label>
+
+                              <div class="input-icon eye-icon" id="eye-icon">
+                                <i class="fas fa-eye"></i>
+                              </div>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+
+                          <span class="info mb-2">
+                            Please confirm password
+                          </span>
+                          <div class="group">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="password"
+                                class="custom-input typePassword"
+                                name="forConfirmPassword"
+                                id="forConfirmPassword"
+                              />
+
+                              <label
+                                class="form-input-label"
+                                for="forConfirmPassword"
+                              >
+                                Confirm Password
+                              </label>
+
+                              <div class="input-icon eye-icon" id="eye-icon">
+                                <i class="fas fa-eye"></i>
+                              </div>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="submit-btn">Update</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer-start -->
+    <footer>
+      <div class="wrapper">
+        <OurPartnersComponent title="{title}" />
+
+        <div class="footer-list">
+          <div class="item" data-aos="fade-down">
+            <a href="#">
+              <div class="logo">
+                <img src="./assets/images/logo.png" alt="logo" />
+              </div>
+            </a>
+
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                Rotary Bhawan, Thapathali
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+
+                <a href="tel:015355344"> 015355344 </a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+
+                <a href="mailto:rotary@ntc.net.np"> rotary@ntc.net.np </a>
+              </li>
+            </ul>
+
+            <div class="social-media">
+              <div class="name">Follow us on:</div>
+
+              <ul class="social-icons">
+                <li>
+                  <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Useful Links</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Activities</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="item" data-aos="fade-down">
+            <div class="f-title">Company</div>
+
+            <ul>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">DG Message</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <span> Copyright 2023 </span>
+
+          <div class="download-on">
+            <h4>Find us on</h4>
+            <div class="button-group">
+              <button class="download-on-button">
+                <img src="./assets/images/play_store.png" alt="playstore" />
+              </button>
+              <button class="download-on-button">
+                <img src="./assets/images/app_store.png" alt="appstore" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.1/js/select2.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#chooseCategory").select2();
+        $("#chooseLocation").select2();
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

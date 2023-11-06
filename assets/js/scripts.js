@@ -148,8 +148,8 @@ if (inputGroups[0] !== undefined) {
   });
 }
 
+// input shring code
 let formInputLabels = document.querySelectorAll(".form-input-label");
-
 const getData = (data) => {
   formInputLabels.forEach((formInputLabel, idx) => {
     let dataAttributeName = data.getAttribute("name");
@@ -243,4 +243,398 @@ navLink.forEach((link, idx) => {
       link.classList.add("active");
     }
   }
+});
+
+const haveBusinessDetails = document.querySelector(
+  ".have-business-details .switch-button"
+);
+
+const switchArea = document.querySelector(
+  ".have-business-details .switch-area"
+);
+
+const businessDetailsAllSection = document.querySelector(
+  ".business-details-all-section"
+);
+haveBusinessDetails.addEventListener("click", () => {
+  switchArea.classList.toggle("active");
+  businessDetailsAllSection.classList.toggle("active");
+});
+
+haveBusinessDetails.click();
+
+const runAgain = () => {
+  const uploadImageButtons = document.querySelectorAll(
+    ".repeaterListArea .uploadImageArea"
+  );
+  const uploadImageInputs = document.querySelectorAll(
+    ".repeaterListArea .uploadImageArea .custom-input"
+  );
+
+  const uploadImages = document.querySelectorAll(
+    ".repeaterListArea .uploadImageArea img"
+  );
+
+  uploadImageButtons.forEach((uploadImageButton, idx) => {
+    uploadImageButton.addEventListener("click", () => {
+      uploadImageInputs[idx].click();
+      console.log("helo");
+    });
+
+    uploadImageInputs[idx].addEventListener("change", function () {
+      uploadImageButton.classList.add("active");
+      const selectedFile = uploadImageInputs[idx].files[0];
+
+      console.log(selectedFile);
+
+      if (selectedFile) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          uploadImages[idx].src = e.target.result;
+        };
+
+        reader.readAsDataURL(selectedFile);
+      } else {
+        // Clear the image preview if no file is selected
+        uploadImages[idx].src = "";
+      }
+    });
+  });
+};
+
+runAgain();
+
+const addRepeaterButton = document.querySelector("#addFeature");
+const repeaterListArea = document.querySelector("#featuresListing");
+
+const addHoursButton = document.querySelector("#addHours");
+const hoursListing = document.querySelector("#hoursListing");
+
+const addGalleryButton = document.querySelector("#addGallery");
+const galleryListing = document.querySelector("#galleryListing");
+
+const businessHourDays = document.querySelectorAll("#businessHourDay");
+
+// addFeature
+addRepeaterButton.addEventListener("click", function () {
+  runAgain();
+
+  const repeaterDiv = document.createElement("div");
+  repeaterDiv.innerHTML = `
+    <div class="repeaterList">
+      <div class="group">
+        <div class="inner-input">
+          <input
+            onchange="getData(this)"
+            type="text"
+            class="custom-input auto"
+            name="forFeatureTitle"
+            id="forFeatureTitle"
+            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+          />
+          <label class="form-input-label shrink" for="forFeatureTitle">
+            Feature Title
+          </label>
+        </div>
+        <p class="input-error">
+          something went wrong
+        </p>
+      </div>
+      <div class="group uploadImageArea">
+        <div class="inner-input">
+          <input
+            onchange="getData(this)"
+            type="file"
+            class="custom-input"
+            name="forFeatureImage"
+            id="forFeatureImage"
+            hidden
+          />
+          <img class="preview-image" src="" alt="" />
+          <label class="form-input-label" for="forFeatureImage">
+            <i class="fas fa-cloud-arrow-up"></i>
+            <br />
+            Click to upload
+            <br />
+            Feature Image
+          </label>
+        </div>
+        <p class="input-error">
+          something went wrong
+        </p>
+      </div>
+      <div class="removeButton">Remove</div>
+    </div>
+  `;
+
+  const removeButton = repeaterDiv.querySelector(".removeButton");
+  removeButton.addEventListener("click", function () {
+    repeaterListArea.removeChild(repeaterDiv);
+
+    console.log(repeaterListArea);
+  });
+
+  repeaterListArea.appendChild(repeaterDiv);
+});
+
+addRepeaterButton.click();
+
+setTimeout(() => {
+  addRepeaterButton.click();
+}, 1000);
+
+// addHours
+// addHoursButton.addEventListener("click", function () {
+//   runAgain();
+//   const repeaterDiv = document.createElement("div");
+//   repeaterDiv.innerHTML = `
+//     <div class="repeaterList">
+//       <div class="group">
+//         <div class="inner-input">
+//           <input
+//             onchange="getData(this)"
+//             type="text"
+//             class="custom-input auto"
+//             name="forDay"
+//             id="forDay"
+//             placeholder="eg: Sun, Mon, Tue etc..."
+//           />
+
+//           <label
+//             class="form-input-label shrink"
+//             for="forDay"
+//           >
+//             Day
+//           </label>
+//         </div>
+//         <p class="input-error">
+//           something went wrong
+//         </p>
+//       </div>
+
+//       <div class="group">
+//         <div class="inner-input ">
+//           <input
+//             onchange="getData(this)"
+//             type="text"
+//             class="custom-input auto"
+//             name="forTime"
+//             id="forTime"
+//             placeholder="eg: 10:00AM - 08:00PM etc..."
+//           />
+
+//           <label
+//             class="form-input-label shrink"
+//             for="forTime"
+//           >
+//             Time
+//           </label>
+//         </div>
+//         <p class="input-error">
+//           something went wrong
+//         </p>
+//       </div>
+
+//       <div class="removeButton">Remove</div>
+//     </div>
+//   `;
+
+//   const removeButton = repeaterDiv.querySelector(".removeButton");
+//   removeButton.addEventListener("click", function () {
+//     hoursListing.removeChild(repeaterDiv);
+//   });
+
+//   hoursListing.appendChild(repeaterDiv);
+// });
+
+// addHoursButton.click();
+
+// setTimeout(() => {
+//   addHoursButton.click();
+// }, 1000);
+
+// addGallery
+addGalleryButton.addEventListener("click", function () {
+  runAgain();
+  const repeaterDiv = document.createElement("div");
+  repeaterDiv.innerHTML = `
+    <div class="repeaterList">
+      <div class="group">
+        <div class="inner-input">
+          <input
+            onchange="getData(this)"
+            type="text"
+            class="custom-input auto"
+            name="forGalleryTitle"
+            id="forGalleryTitle"
+            placeholder="eg: Food, Room, Car, Hotel etc..."
+          />
+          <label class="form-input-label shrink" for="forGalleryTitle">
+            Gallery Title
+          </label>
+        </div>
+        <p class="input-error">
+          something went wrong
+        </p>
+      </div>
+      <div class="group uploadImageArea">
+        <div class="inner-input">
+          <input
+            onchange="getData(this)"
+            type="file"
+            class="custom-input"
+            name="forGalleryImage"
+            id="forGalleryImage"
+            hidden
+          />
+          <img class="preview-image" src="" alt="" />
+          <label class="form-input-label" for="forGalleryImage">
+            <i class="fas fa-cloud-arrow-up"></i>
+            <br />
+            Click to upload
+            <br />
+            Gallery Image
+          </label>
+        </div>
+        <p class="input-error">
+          something went wrong
+        </p>
+      </div>
+      <div class="removeButton">Remove</div>
+    </div>
+  `;
+
+  const removeButton = repeaterDiv.querySelector(".removeButton");
+  removeButton.addEventListener("click", function () {
+    galleryListing.removeChild(repeaterDiv);
+  });
+
+  galleryListing.appendChild(repeaterDiv);
+});
+
+addGalleryButton.click();
+
+setTimeout(() => {
+  addGalleryButton.click();
+}, 1000);
+
+const switchButton = document.querySelectorAll(
+  "#businessHourDay .switch-button"
+);
+const displayOpenClose = document.querySelectorAll(
+  "#businessHourDay .switch-area span"
+);
+const inputAreaSec = document.querySelectorAll(
+  "#businessHourDay .input-area-sec"
+);
+
+businessHourDays.forEach((businessHourDay, idx) => {
+  let toggle = false;
+
+  switchButton[idx].addEventListener("click", () => {
+    toggle = !toggle;
+
+    if (toggle) {
+      businessHourDay.classList.add("active");
+      switchButton[idx].classList.add("active");
+      displayOpenClose[idx].innerHTML = "Open";
+      inputAreaSec[idx].style.display = "flex";
+    } else {
+      businessHourDay.classList.remove("active");
+      switchButton[idx].classList.remove("active");
+      displayOpenClose[idx].innerHTML = "Closed";
+      inputAreaSec[idx].style.display = "none";
+    }
+  });
+
+  if (toggle) {
+    businessHourDay.classList.add("active");
+    switchButton[idx].classList.add("active");
+    displayOpenClose[idx].innerHTML = "Open";
+    inputAreaSec[idx].style.display = "flex";
+  } else {
+    businessHourDay.classList.remove("active");
+    switchButton[idx].classList.remove("active");
+    displayOpenClose[idx].innerHTML = "Closed";
+    inputAreaSec[idx].style.display = "none";
+  }
+});
+
+// upload logo
+const uploadPersoalImageButton = document.querySelector("#UploadPhoto");
+const uploadPersoalImageInput = document.querySelector(
+  "#UploadPhoto .custom-input"
+);
+
+const uploadPersoalImage = document.querySelector("#UploadPhoto img");
+
+uploadPersoalImageButton.addEventListener("click", () => {
+  uploadPersoalImageInput.click();
+});
+
+uploadPersoalImageInput.addEventListener("change", function () {
+  uploadPersoalImageButton.classList.add("active");
+  const selectedFile = uploadPersoalImageInput.files[0];
+
+  if (selectedFile) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      uploadPersoalImage.src = e.target.result;
+    };
+
+    reader.readAsDataURL(selectedFile);
+  } else {
+    // Clear the image preview if no file is selected
+    uploadPersoalImage.src = "";
+  }
+});
+
+// upload logo
+const uploadBusinessLogoButton = document.querySelector("#UploadBusinessLogo");
+const uploadBusinessLogoInput = document.querySelector(
+  "#UploadBusinessLogo .custom-input"
+);
+
+const uploadBusinessLogo = document.querySelector("#UploadBusinessLogo img");
+
+uploadBusinessLogoButton.addEventListener("click", () => {
+  uploadBusinessLogoInput.click();
+});
+
+uploadBusinessLogoInput.addEventListener("change", function () {
+  uploadBusinessLogoButton.classList.add("active");
+  const selectedFile = uploadBusinessLogoInput.files[0];
+
+  if (selectedFile) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      uploadBusinessLogo.src = e.target.result;
+    };
+
+    reader.readAsDataURL(selectedFile);
+  } else {
+    // Clear the image preview if no file is selected
+    uploadBusinessLogo.src = "";
+  }
+});
+
+const eyeIconButtons = document.querySelectorAll("#eye-icon");
+const passwordInputs = document.querySelectorAll(".typePassword");
+
+eyeIconButtons.forEach((eyeIconButton, idx) => {
+  toggle = false;
+  eyeIconButton.addEventListener("click", () => {
+    toggle = !toggle;
+
+    if (toggle) {
+      eyeIconButton.classList.add("active");
+      passwordInputs[idx].setAttribute("type", "text");
+    } else {
+      eyeIconButton.classList.remove("active");
+      passwordInputs[idx].setAttribute("type", "password");
+    }
+  });
 });

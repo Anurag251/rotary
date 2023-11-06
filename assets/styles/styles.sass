@@ -1461,6 +1461,7 @@ footer
         a
           color: $dark
 
+/***********      event-page-banner      ***********/
 .event-page-banner
   height: 27rem
   @include bgImage()
@@ -1530,6 +1531,7 @@ footer
       &:hover
         background-color: darken($pri, 4%)
 
+/***********      latest-news      ***********/
 .latest-news
   position: relative
   position: relative
@@ -1723,9 +1725,11 @@ footer
         .date
           color: $sec
 
+/***********      latest-on-social-media-section      ***********/
 .latest-on-social-media-section
   background-color: rgba($pri, .2)
 
+/***********      latest-on-social-media      ***********/
 .latest-on-social-media
   .title
     border-bottom: 1px solid rgba($dark, .2)
@@ -1874,6 +1878,7 @@ footer
           font-size: 1.1rem
           color: $sec
 
+/***********      past-events      ***********/
 .past-events
   .title
     padding-bottom: 2rem
@@ -1927,6 +1932,7 @@ footer
       color: #A00000
       // text-decoration: underline
 
+/***********      contact-page      ***********/
 .contact-page
   .title
     border-bottom: 1px solid rgba($dark, .2)
@@ -1965,6 +1971,7 @@ footer
       a
         color: #A00000
 
+/***********      contact-form      ***********/
 .contact-form-bg
   background-color: rgba($pri, .2)
   border-bottom: 2px solid rgba($dark, .4)
@@ -2051,6 +2058,7 @@ footer
       &:hover
         background-color: lighten(#A00000, 5%)
 
+/***********      news-and-event-details      ***********/
 .news-and-event-details
   .left-content
     margin-bottom: 2rem
@@ -2112,9 +2120,11 @@ footer
         font-size: 1rem
         line-height: 1.5rem
 
+/***********      discover-news-bg      ***********/
 .discover-news-bg
   background-color: #EBE3D4
 
+/***********      discover-news      ***********/
 .discover-news
   .next-button
     color: $dark
@@ -2181,9 +2191,11 @@ footer
       .date
         color: $sec
 
+/***********      modal-backdrop      ***********/
 .modal-backdrop
   display: none !important
 
+/***********      new-title      ***********/
 .new-title
   @include flex($justify: space-between)
   margin-bottom: 1rem
@@ -2252,6 +2264,10 @@ footer
       outline: none
       @include trans()
 
+      &.swiper-button-disabled
+        opacity: .5
+        pointer-events: none
+
       &:hover
         background-color: $sec
         color: $light
@@ -2285,6 +2301,7 @@ footer
         &:hover
           color: $dark
 
+/***********      ads-category-section      ***********/
 .ads-category-section
   a
     text-decoration: none !important
@@ -2334,12 +2351,14 @@ footer
         color: rgba($dark, .7)
         @include trans()
 
+/***********      select2-dropdown      ***********/
 .select2-dropdown
   border: 1px solid rgba($dark, .1) !important
 
 .select2-container--default .select2-search--dropdown .select2-search__field
   border: 1px solid rgba($dark, .1) !important
 
+/***********      ads-banners      ***********/
 .ads-banners
   height: 27rem
 
@@ -2427,7 +2446,13 @@ footer
         i
           font-size: .9rem
 
-.ads-section
+/***********      ads-sections      ***********/
+.ads-sections
+  &.also-viewed
+    .mySwiper
+      overflow: hidden
+      position: relative
+
   .ads-filter
     padding: 1rem
     border-radius: .3rem
@@ -2648,12 +2673,14 @@ footer
     width: 100%
     margin-bottom: 1rem
     border-radius: .4rem
+    overflow: hidden
 
     &:hover
-      box-shadow: 0 0 5px rgba($dark, .1)
+      .content,  .image
+        box-shadow: 0 0 5px rgba($dark, .1)
 
     .image
-      height: 13rem
+      height: 15rem
       width: 100%
       border-radius: .4rem .4rem 0 0
       position: relative
@@ -2706,9 +2733,12 @@ footer
       position: relative
       padding: 1rem
 
-      .rot-name
-        .name
-          display: none
+      .rot-info
+        margin-bottom: 0
+
+        .rot-name
+          .name
+            display: none
 
       .user-image
         position: absolute
@@ -2725,19 +2755,61 @@ footer
 
       .heading
         @include flex($justify: space-between)
-        margin: 1rem 0
+        gap: .4rem
+        margin: .5rem 0
+
+        &.top-heading
+          width: 100%
+
+          .cate
+            width: 100%
+            max-width: 95%
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+            width: 100%
+
+          .views
+            justify-content: flex-end
+            max-width: calc( 100% - 10rem )
 
         &.other-head
           margin: .5rem 0
 
-        .cate, .views
+        .cate, .views, .address
           @include flex($justify: flex-start)
           gap: .3rem
-          font-size: .75rem
-          color: rgba($dark, .6)
+          font-size: .88rem
+          width: 100%
+          max-width: 95%
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+
+          a
+            color: rgba($dark, .7)
+            text-decoration: none !important
+
+            &:hover
+              color: #A00000
+
+          strong
+            color: #0f9800
+
+            &.closed
+              color: #A00000
 
           i
-            font-size: .65rem
+            font-size: .7rem
+
+          span
+            max-width: 95%
+            overflow: hidden
+            text-overflow: ellipsis !important
+            white-space: nowrap
+
+      .c-email, .c-web-link, .open-close-time, .views
+        display: none !important
 
       .name
         font-size: 1.2rem
@@ -2787,34 +2859,42 @@ footer
         @include flex($justify: flex-start)
         align-items: stretch
         width: 100%
-        height: 14rem
+        height: 100%
 
         .image
           width: 15rem
           border-radius: .4rem 0 0 .4rem
-          height: 100%
+          height: auto
+
+          a
+            height: 100%
 
         .content
           max-width: calc( 100% - 15rem )
           width: 100%
-          height: 100%
           border-radius: 0 .4rem .4rem 0
           border: 1px solid rgba($dark, .15)
 
           .rot-info
             @include flex($justify: flex-start)
             gap: .4rem
+            margin-bottom: .4rem
 
             .rot-name
               width: 100%
+
               .name
                 font-size: .9rem
                 margin-bottom: 0
                 display: block
                 width: 100%
+                margin-top: 0
 
               .since
                 font-size: .8rem
+
+          .name
+            margin-top: .5rem
 
           .user-image
             position: static
@@ -2823,15 +2903,40 @@ footer
             transform: translate(0)
 
           .heading
-            margin: .5rem 0
+            margin: 0 !important
+
+            li
+              width: 100%
 
           .item-contact-info
             @include flex($justify: flex-start)
-            gap: 1rem
+            // flex-direction: column
+            // align-items: flex-start
+            row-gap: .3rem
+            column-gap: 1rem
             flex-wrap: wrap
+            margin: .3rem 0
+
+            &.open-close-time
+              width: 100%
+              .heading
+                flex: 100%
+                max-width: 100%
+                width: 100%
+
+            .heading
+              flex: 45%
+              max-width: 45%
+              width: 100%
+
+            .cate
+              width: 100%
+
+          .c-address, .c-phone-no, .c-email, .c-web-link, .open-close-time
+            display: flex !important
 
           .item-footer
-            margin-top: 2rem
+            margin-top: 1rem
 
 .ads-popup
   position: fixed
@@ -3066,6 +3171,12 @@ footer
       background: linear-gradient(0, $dark, rgba($dark, .1))
       z-index: 2
 
+  .banner-image
+    height: 23rem
+
+    img
+      @include image()
+
   .banner-content
     position: absolute
     left: 0
@@ -3121,7 +3232,7 @@ footer
       img
         @include image()
 
-    .show-photos
+    .view-photos
       position: absolute
       bottom: 1rem
       right: 1rem
@@ -3178,7 +3289,6 @@ footer
               font-size: .9rem
 
       .details-ads-button
-        padding: 1rem 0
         @include flex($justify: space-between)
         gap: 1rem
         flex-wrap: wrap
@@ -3187,12 +3297,78 @@ footer
           @include flex($justify: flex-start)
           flex-wrap: wrap
           gap: 1.3rem
+          height: 3rem
+
+          li
+            height: 100%
+
+            button
+              color: $dark
+
+          a
+            text-decoration: none
+            height: 100%
+            color: $dark
+
+          .shareButton
+            position: relative
+
+            &:hover
+              .share-popup
+                top: 3rem
+                pointer-events: all
+                opacity: 1
+
+            .share-popup
+              position: absolute
+              right: 0
+              top: 1rem
+              @include flex($justify: center)
+              gap: 1rem
+              background-color: $light
+              padding: .4rem
+              border-radius: 4rem
+              box-shadow: 0 0 10px rgba($dark, .1)
+              z-index: 2
+              pointer-events: none
+              opacity: 0
+              @include trans()
+
+              &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: 80%
+                transform: translate(-50%, -50%) rotate(45deg)
+                height: 1rem
+                width: 1rem
+                background-color: $light
+                box-shadow: -2px -2px 3px rgba($dark, .06)
+                z-index: 1
+
+              li
+                position: relative
+                z-index: 2
+
+              a
+                height: 2rem
+                width: 2rem
+                border-radius: 50%
+                @include flex($justify: center)
+                background-color: $light
+                color: #A00000
+                @include trans()
+
+                &:hover
+                  color: $light
+                  background-color: #A00000
 
           button
             @include flex($justify: flex-start)
             gap: .5rem
             font-size: .9rem
             cursor: pointer
+            height: 100%
 
             &:hover
               color: #A00000
@@ -3249,7 +3425,7 @@ footer
     .content
       .description
         p
-          font-size: .9rem
+          font-size: 1rem
           margin-bottom: 1rem
 
           &:nth-last-child(1)
@@ -3260,6 +3436,10 @@ footer
           @include flex($justify: space-between)
           margin-bottom: 1rem
           font-size: .9rem
+          color: lighten($dark, 30%)
+
+          span
+            color: $dark
 
           &:nth-last-child(1)
             margin-bottom: 0
@@ -3275,6 +3455,33 @@ footer
           align-items: flex-start
           gap: .6rem
           margin-bottom: 1rem
+
+          &.feature-item
+            .icon
+              height: 3rem
+              width: 3rem
+              border-radius: 50%
+              overflow: hidden
+              background-color: rgba(#A00000, .1)
+              @include flex($justify: center)
+
+              span
+                font-size: 1.5rem
+                font-weight: 500
+                color: #A00000
+
+              img
+                height: 55%
+                width: 55%
+                object-fit: contain
+
+            .info
+              max-width: calc(100% - 6rem)
+              width: 100%
+
+              .name
+                font-size: .9rem
+                margin-bottom: .1rem
 
           &.main-member
             flex-direction: column
@@ -3769,6 +3976,774 @@ footer
                   transition: .4s
                   z-index: 1
 
+.ads-area-banner
+  width: 100%
+  background-color: $light
+  padding: .5rem 0
+  border-top: 1px solid rgba($dark, .15)
+  border-bottom: 1px solid rgba($dark, .15)
+
+  &.no-bg-color
+    background: none
+
+  &.longAdss
+    padding: 0
+    border: 0
+    height: 100%
+    padding-bottom: 1rem
+    background: none
+
+    .ads-area-banner-image
+      height: 100%
+
+  .ads-area-banner-image
+    // height: 7rem
+    border-radius: .4rem
+    overflow: hidden
+
+    &.bigAdss
+      // height: 14rem
+      margin-bottom: 2rem
+
+      &:nth-last-child(1)
+        margin-bottom: 0
+
+  img
+    @include image()
+
+/***********      profile-edit-form      ***********/
+.profile-edit-form
+  .title-part
+    padding: 0
+
+    .name
+      margin-bottom: .5rem
+      font-size: 1.6rem
+      font-weight: 600
+
+  .custom-form-area
+    padding: 2rem
+    background-color: $light
+    border-radius: .4rem
+    box-shadow: 0 0 10px rgba($dark, .1)
+    max-width: 50rem
+    margin: 0 auto
+
+  .form-subtitle
+    font-size: 1.1rem
+    margin-bottom: 1.3rem
+
+  .form-inputs
+    .form-title
+      margin-bottom: 1.5rem
+      font-size: 1.2rem
+      font-weight: 500
+
+      .required
+        color: #fc0000
+
+    .business-details-all-section
+      margin-bottom: 0
+      overflow: hidden
+      display: grid
+      grid-template-rows: 0fr
+      @include trans()
+
+      &.active
+        height: 100%
+        grid-template-rows: 1fr
+
+        .business-details-all-section-area
+          margin: 1rem 0
+          padding: 2rem 1rem 1rem 1rem
+          border-color: rgba($dark, .4)
+          overflow: visible
+
+      .business-details-all-section-area
+        position: relative
+        margin: 0
+        overflow: hidden
+        padding: 0 1rem
+        border: 1px solid transparent
+        border-radius: .4rem
+        @include trans()
+
+        .form-section-title
+          position: absolute
+          left: .5rem
+          top: 0
+          transform: translateY(-50%)
+          font-size: 1.3rem
+          font-weight: 600
+          background-color: $light
+          padding: .4rem
+
+    .input-group
+      margin-bottom: .5rem
+
+      &.repeaterListSection
+        .removeButton
+          padding: .4rem .8rem
+          background-color: #A00000
+          border-radius: .3rem
+          color: $light
+          font-size: .8rem
+          @include flex($justify: center)
+          gap: .5rem
+          cursor: pointer
+
+          &:hover
+            background-color: lighten(#A00000, 5%)
+
+        .form-title
+          @include flex($justify: space-between)
+          flex-wrap: wrap
+          width: 100%
+          gap: 1rem
+
+          .addFeature
+            padding: .4rem .8rem
+            background-color: #00aa1f
+            border-radius: 3rem
+            color: $light
+            font-size: .8rem
+            @include flex($justify: center)
+            gap: .5rem
+            cursor: pointer
+
+            &:hover
+              background-color: darken(#00aa1f, 5%)
+
+      &.have-business-details
+        @include flex($justify: space-between)
+        gap: 1rem
+        padding: 1rem
+        background-color: rgba($dark, .04)
+        border-radius: .5rem
+        margin-bottom: 1rem
+
+        .form-title
+          margin-bottom: 0
+          font-size: 1.1rem
+
+        .switch-area
+          @include flex($justify: flex-end)
+          gap: .1rem
+
+          &.active
+            span
+              &.noActive
+                color: rgba($dark, .6)
+
+              &.yesActive
+                color: $dark
+
+            .switch-button
+              .indicator
+                background-color: rgba($sec, .5)
+
+                &::after
+                  background-color: $sec
+                  left: 90%
+
+          span
+            font-size: .9rem
+            font-weight: 600
+
+            &.noActive
+              color: $dark
+
+            &.yesActive
+              color: rgba($dark, .6)
+
+          .switch-button
+            @include flex(center)
+            margin-left: 1rem
+
+            &.active
+              .indicator
+                background-color: rgba($sec, .5)
+
+                &::after
+                  background-color: $sec
+                  left: 90%
+
+            .indicator
+              margin-right: 1rem
+              position: relative
+              height: 1rem
+              width: 2rem
+              background-color: rgba($light, 0.4)
+              border-radius: 3rem
+              cursor: pointer
+              background-color: rgba($dark, .4)
+
+              &::after
+                content: ""
+                position: absolute
+                left: 10%
+                top: 50%
+                transform: translate(-50%, -50%)
+                height: 1.4rem
+                width: 1.4rem
+                background-color: $light
+                box-shadow: 0 2px 6px rgba($dark, .32)
+                border-radius: 50%
+                @include trans()
+
+      &:nth-last-child(1)
+        margin-bottom: 0
+
+  .phone-number-box
+    @include flex($justify: stretch)
+    gap: 1rem
+
+    .group
+      margin-bottom: 0
+      max-width: calc( 100% - 8rem )
+      width: 100%
+
+      &:nth-child(1)
+        max-width: 8rem
+        width: 100%
+
+  .hotelCategory-label
+    margin-bottom: 1rem
+
+  .hotelCategory
+    margin-bottom: 2rem
+
+    ul
+      @include flex($justify: flex-start)
+      flex-wrap: wrap
+      gap: 1rem
+
+      li
+        .button
+          @include flex($justify: flex-start)
+          gap: .6rem
+          padding: .4rem .6rem
+          background-color: rgba($dark, .05)
+          border-radius: .2rem
+          cursor: pointer
+
+          &:hover
+            background-color: rgba($dark, .1)
+
+          &.active
+            background-color: $pri
+
+            .box
+              i
+                display: block
+
+          .box
+            height: 1rem
+            width: 1rem
+            background-color: $light
+            position: relative
+            border-radius: .2rem
+
+            i
+              position: absolute
+              top: 50%
+              left: 70%
+              transform: translate(-50%, -50%)
+              display: none
+              font-size: 1.4rem
+
+  span.info
+    font-size: .95rem
+    margin-bottom: .7rem
+
+  .repeaterListArea
+    width: 100%
+    @include grid($columns: 1fr 1fr)
+
+    .repeaterList
+      width: 100%
+
+  .repeaterListArea > div:nth-last-child(1)
+    display: none
+
+  .input-group-divider
+    width: 100%
+    @include grid($columns: 1fr 1fr)
+
+  .group
+    width: 100%
+    height: 3rem
+    position: relative
+    margin-bottom: 1.5rem
+
+    &.uploadImageArea
+      height: 10rem
+      width: 10rem
+      border: 1px dashed rgba($dark, .6)
+      border-radius: .3rem
+      cursor: pointer
+      overflow: hidden
+
+      &.active
+        border-style: solid
+
+        .preview-image
+          display: block
+
+        &:hover
+          label
+            opacity: 1
+            color: $light
+            transform: translateY(0)
+            font-size: 1rem
+
+            &::before
+              display: block
+
+        label
+          opacity: 0
+
+      label
+        text-align: center !important
+        width: 100%
+        height: 100%
+        @include flex($justify: center)
+        flex-direction: column
+
+        &::after
+          display: none
+
+        &::before
+          content: ""
+          @include dark($opacity: .5)
+          z-index: -1
+          display: none
+
+        i
+          font-size: 2rem
+
+    .preview-image
+      @include image()
+      object-fit: contain
+      display: none
+
+    .input-icon
+      position: absolute
+      right: 1rem
+      top: 50%
+      transform: translateY(-50%)
+      height: 1.1rem
+      width: 1.1rem
+      @include flex($justify: center)
+
+      &.eye-icon
+        cursor: pointer
+
+        &.active
+          &::after
+            height: 0
+
+        &::after
+          content: ''
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%) rotate(45deg)
+          height: 110%
+          width: 3px
+          background-color: lighten($dark, 30%)
+          border-right: 1.5px solid $light
+          z-index: 2
+          @include trans()
+
+      i
+        font-size: 1rem
+        color: lighten($dark, 30%)
+
+      svg
+        height: 100%
+        width: 100%
+
+    &.fileType
+      border: 1.5px solid #ACACAC
+      border-radius: .4rem
+      padding: .3rem 1rem
+
+    &.active
+      border-color: $sec
+
+      .custom-input
+        padding: 0 !important
+        border: none !important
+        padding-top: .5rem !important
+
+    &.textarea
+      min-height: 6rem
+      height: auto
+
+      .custom-input
+        min-height: 8rem
+        height: 100%
+        max-height: 15rem
+
+      label
+        top: 1.3rem
+
+      textarea
+        resize: vertical
+        min-height: 3.3rem
+
+    &.error
+      border-color: #A00000
+      margin-bottom: 2rem
+
+      label
+        color: #A00000
+
+    .input-error
+      position: absolute
+      bottom: -2.5rem
+      left: .4rem
+      text-align: left
+      font-size: 12px
+      font-weight: 500
+      color: #A00000
+      display: none
+
+    label
+      position: absolute
+      top: 50%
+      left: .5rem
+      padding: 0 .5rem
+      transform: translateY(-50%)
+      @include trans()
+      pointer-events: none
+      color: lighten($dark, 35%)
+      font-size: .95rem
+      letter-spacing: .5px
+      max-width: 90%
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        height: 4px
+        width: 100%
+        background-color: $light
+        z-index: -1
+
+      &.shrink, &.autoActive
+        @include shrinkLabel()
+        color: $sec
+
+    .inner-input
+      width: 100%
+      height: 100%
+
+    .custom-input
+      width: 100%
+      height: 100%
+      font-size: 1rem
+      border: 1px solid #ACACAC
+      border-radius: .3rem
+      padding: .5rem 1rem
+      text-align: left
+
+      &.auto
+        &::placeholder
+          color: rgba($dark, .6)
+
+      &::placeholder
+        color: transparent
+
+      &:focus
+        border-color: $sec
+
+        &::placeholder
+          color: rgba($dark, .6)
+
+      &:focus ~ label
+        @include shrinkLabel()
+        color: $sec
+
+      &.active
+        border-color: $sec
+
+    .custom-input[type='password']
+      padding-right: 3rem
+
+    .custom-input[type='file']
+      opacity: 0
+      padding-top: .2rem
+      border: 1px solid #ACACAC
+      border-radius: .4rem
+      padding: .5rem 1rem
+
+      &.active[type='file']
+        opacity: 1
+
+  .submit-btn
+    width: 100%
+    font-weight: 600
+    margin-top: 1rem
+    font-size: 16px
+    background-color: $sec
+    padding: 1rem
+    color: $light
+    border-radius: .3rem
+    @include flex($justify: center)
+    gap: 10px
+    text-align: center
+    cursor: pointer
+
+    &:hover
+      background-color: lighten($sec, 10%)
+
+    img
+      height: 20px
+      width: 20px
+      margin-left: 5px
+      @include trans()
+
+    &:hover
+      img
+        transform: translateX(4px)
+
+  .all-day-list
+    ul
+      li
+        @include flex($justify: flex-start)
+        gap: 3rem
+        margin-bottom: 1rem
+
+        &.active
+          .switch-area
+            span
+              color: #00a005
+
+        h4
+          font-size: 1rem
+          font-weight: 600
+          max-width: 4rem
+          width: 100%
+
+        .switch-area
+          @include flex(center)
+
+          .switch-button
+            margin-right: 1rem
+            position: relative
+            height: 1rem
+            width: 2rem
+            background-color: rgba($light, 0.4)
+            border-radius: 3rem
+            cursor: pointer
+            background-color: rgba($dark, .4)
+
+            &.active
+              background-color: rgba($sec, .5)
+
+              &::after
+                background-color: $sec
+                left: 90%
+
+            &::after
+              content: ""
+              position: absolute
+              left: 10%
+              top: 50%
+              transform: translate(-50%, -50%)
+              height: 1.4rem
+              width: 1.4rem
+              background-color: $light
+              box-shadow: 0 2px 6px rgba($dark, .32)
+              border-radius: 50%
+              @include trans()
+
+          span
+            font-size: 1rem
+            font-weight: 600
+            color: #A00000
+
+        .input-area-sec
+          @include flex($justify: center)
+          gap: 1rem
+
+          .group
+            margin-bottom: 0
+            height: 2.5rem
+
+/***********      club-section-area, committee-section-area     ***********/
+.club-section-area, .committee-section-area
+  .title
+    h4
+      font-size: 1rem
+
+    h2
+      font-weight: 500
+
+  .club-title
+    padding: .5rem
+    border-radius: .4rem
+    background-color: $light
+    font-size: 1.5rem
+
+  .club-filter, .committee-filter
+    position: sticky
+    top: 1rem
+    padding: 1rem
+    border-radius: .3rem
+    background-color: $light
+    box-shadow: 0 0 10px rgba($dark, .08)
+
+    .club-filter-title, .committee-filter-title
+      margin-bottom: 1rem
+      padding-bottom: 1rem
+      border-bottom: 1px solid rgba($dark, .1)
+      @include flex($justify: flex-start)
+      gap: .4rem
+      font-size: 1.1rem
+      font-weight: 600
+
+      i
+        color: #A00000
+
+    .select2-container
+      width: 100% !important
+
+    .input-groups
+      .group
+        margin-bottom: 1rem
+        position: relative
+
+        .search-button
+          position: absolute
+          right: 0
+          top: 50%
+          transform: translateY(-50%)
+          height: 3rem
+          width: 3rem
+          @include flex($justify: center)
+          background-color: $pri
+          color: $light
+          border-radius: 0 .3rem .3rem 0
+          cursor: pointer
+
+          &:hover
+            background-color: darken($pri, 5%)
+
+        #mySelect
+          width: 100%
+
+        .select2-selection__arrow
+          top: 50% !important
+          transform: translateY(-50%) !important
+
+        .select2-container--open .select2-dropdown--below
+          border: 1px solid rgba($dark, .1) !important
+
+        .select2-selection
+          width: 100%
+          height: 3rem
+          border-radius: .3rem
+          border: 1px solid rgba($dark, .1)
+          padding: .5rem
+          font-size: 1rem
+
+        input, select
+          height: 3rem
+          width: 100%
+          border-radius: .3rem
+          border: 1px solid rgba($dark, .1)
+          padding: .5rem
+          font-size: 1rem
+
+          &::placeholder
+            font-size: .8rem
+
+    .checkbox-area
+      margin-top: 1.4rem
+
+      h4
+        font-size: 1.1rem
+        font-weight: 600
+        margin-bottom: .7rem
+
+      ul
+        .group
+          margin-bottom: .4rem
+          @include flex($justify: flex-start)
+          gap: .4rem
+
+          input
+            height: 1rem
+            width: 1rem
+            border: 1px solid rgba($dark, .1)
+            border-radius: .2rem
+            margin-bottom: 0
+            cursor: pointer
+
+          label
+            font-size: .9rem
+            color: rgba($dark, .6)
+            margin: 0
+            cursor: pointer
+
+    .submit
+      padding: .5rem
+      width: 100%
+      border-radius: .3rem
+      color: $light
+      background-color: #A00000
+      cursor: pointer
+      font-size: .9rem
+      @include flex($justify: center)
+      gap: .4rem
+
+      i
+        font-size: .8rem
+
+      &:hover
+        background-color: lighten(#A00000, 5%)
+
+  .club-item-list
+    a
+      text-decoration: none
+
+    .club-item
+      padding: 1rem
+      background-color: $light
+      border-radius: .4rem
+      // border: 1px solid #A00000
+      border-left: 4px solid #A00000
+      @include trans()
+      margin-bottom: 1.5rem
+
+      &:hover
+        box-shadow: 4px 6px 6px rgba($dark, .2)
+        transform: scale(1.04) translateY(-2px)
+
+        .name
+          color: #A00000
+
+      .name
+        font-size: 1.2rem
+        font-weight: 600
+        margin-bottom: 0
+        color: $dark
+        @include trans()
+
+      p
+        margin-top: .4rem
+        margin-bottom: 0
+        font-size: .9rem
+        color: $dark
+
 @keyframes spin
   to
     stroke-dashoffset: 0
@@ -3855,7 +4830,7 @@ footer
         font-size: 3rem
         line-height: 3rem
 
-  .ads-section
+  .ads-sections
     .search-filter-area
       margin-top: 2rem
 
@@ -4042,9 +5017,17 @@ footer
     .image
       display: none
 
-  .ads-section
+  .ads-sections
     .ads-item-list
       grid-template-columns: 1fr
+
+      &.active
+        .item
+          .image
+            width: 12rem
+
+          .content
+            max-width: calc( 100% - 12rem )
 
       .item
         .image
@@ -4053,6 +5036,11 @@ footer
   .ads-details-banner
     .details-head
       .ads-profile-details
+        .details-ads-button
+          .nav-button-list
+            height: 100%
+            padding: 1rem 0
+
         .profile-sec
           flex-direction: column
 
@@ -4082,8 +5070,25 @@ footer
                   .image
                     height: 12rem
 
+  .profile-edit-form
+    .custom-form-area
+      padding: 2rem 1rem
+
+    .repeaterListArea
+      grid-template-columns: 1fr
+
+    .all-day-list
+      width: 100%
+      ul
+        li
+          flex-wrap: wrap
+          gap: .5rem
+
+          .input-area-sec
+            margin-bottom: 1rem
+
 @media only screen and ( max-width: 691px)
-  .ads-section
+  .ads-sections
     .search-filter-area
       .sort-section
         .search-filter
@@ -4271,8 +5276,6 @@ footer
             @include image()
             object-fit: contain
 
-@media only screen and ( max-width: 518px)
-
 @media only screen and ( max-width: 500px)
   header
     .inner
@@ -4310,6 +5313,24 @@ footer
 
               .comment-infos
                 max-width: 100%
+
+  .ads-sections
+    .pagination-area
+      .prev-button, .next-button
+        padding: .3rem 1rem
+        font-size: .8rem
+
+      .page-number
+        gap: .3rem
+
+        button
+          height: 2rem
+          width: 2rem
+
+  .profile-edit-form
+    .input-group-divider
+      grid-template-columns: 1fr
+      grid-gap: 0
 
 @media only screen and ( max-width: 470px)
   header
@@ -4607,6 +5628,13 @@ footer
               .image
                 height: 12rem
 
+  .ads-sections
+    .pagination-area
+      .page-number
+        li
+          &:nth-child(3), &:nth-child(4)
+            display: none
+
 @media only screen and ( max-width: 370px)
   .side-nav
     .side-nav-close-btn
@@ -4636,3 +5664,17 @@ footer
 
           .image
             height: 15rem
+
+@media only screen and ( max-width: 367px)
+  .ads-details-banner
+    .details-head
+      .ads-profile-details
+        .details-ads-button
+          .nav-button-list
+            .shareButton
+              .share-popup
+                right: auto
+                left: 0
+
+                &::before
+                  left: 20%
