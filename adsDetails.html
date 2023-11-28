@@ -417,7 +417,10 @@
                   <div class="content">
                     <h1 class="name">Sleep In a Room in Apartment</h1>
                     <p class="desc">Luxury hotel in the heart of Blommsbury</p>
-                    <div class="rating">
+                    <h6>
+                      <strong class="closed">Closed</strong>
+                    </h6>
+                    <!-- <div class="rating">
                       <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -427,7 +430,7 @@
                       </div>
 
                       <span>4.5</span>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
 
@@ -624,7 +627,7 @@
     <div class="ads-all-details">
       <div class="container">
         <div class="row">
-          <div class="col-lg-9 c-padding">
+          <div class="col-lg-9 c-padding stickyScrolling">
             <div class="details-left-section">
               <!-- Description -->
               <div class="details-section">
@@ -687,12 +690,12 @@
                       <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
                         <div class="item feature-item">
                           <div class="icon">
-                            <span></span>
+                            <!-- <span></span> -->
+                            <img src="./assets/images/bird_bg.jpeg" alt="" />
                           </div>
 
                           <div class="info">
                             <div class="name">Room</div>
-                            <p class="role">amenities</p>
                           </div>
                         </div>
                       </div>
@@ -704,7 +707,7 @@
                           </div>
 
                           <div class="info">
-                            <div class="name">Bathroom</div>
+                            <div class="name">Bathroom Bathroom Bathroom</div>
                             <p class="role">amenities</p>
                           </div>
                         </div>
@@ -713,7 +716,7 @@
                       <div class="col-lg-4 col-md-4 col-sm-6" id="featureItem">
                         <div class="item feature-item">
                           <div class="icon">
-                            <span></span>
+                            <img src="./assets/images/bird_bg.jpeg" alt="" />
                           </div>
 
                           <div class="info">
@@ -1560,7 +1563,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 c-padding">
+          <div class="col-lg-3 c-padding stickyScrolling">
             <div class="details-right-section">
               <!-- Details -->
               <div class="details-section">
@@ -1643,7 +1646,7 @@
                       <div class="col-lg-12 col-md-7">
                         <div class="map">
                           <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.9793414019337!2d85.30099458040792!3d27.717924114749213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18e5207db46b%3A0x70f774e60c4701f!2sDathu%20Sadak%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1697615846480!5m2!1sen!2snp"
+                            src="https://maps.app.goo.gl/embs1bFY8SGdHrZR8"
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                           ></iframe>
@@ -1651,28 +1654,32 @@
                       </div>
                       <div class="col-lg-12 col-md-5">
                         <ul class="contact-infos">
-                          <li>
+                          <li
+                            title="484, Ellis st, San Fransisco, CS 94102, United States"
+                          >
                             <i class="fas fa-map-marker-alt"></i>
                             484, Ellis st, San Fransisco, CS 94102, United
                             States
                           </li>
 
-                          <li>
+                          <li title="+ 62 8245 9875">
                             <a href="tel:">
                               <i class="fas fa-phone"></i>
-                              + 62 8245 9875
+                              <span>+ 62 8245 9875</span>
                             </a>
                           </li>
-                          <li>
+
+                          <li title="support@listee.comsupport@listee.com">
                             <a href="mailto:">
                               <i class="fas fa-envelope"></i>
-                              support@listee.com
+                              <span> support@listee.comsupport@listee.com</span>
                             </a>
                           </li>
-                          <li>
+
+                          <li title="websitewww.listee.com">
                             <a href="#">
                               <i class="fas fa-link"></i>
-                              websitewww.listee.com
+                              <span>websitewww.listee.com</span>
                             </a>
                           </li>
                         </ul>
@@ -1796,18 +1803,44 @@
                   <div class="contact-form">
                     <form action="">
                       <div class="group">
-                        <label for="">Name</label>
-                        <input type="text" />
+                        <input
+                          class="custom-input"
+                          id="forFullname"
+                          name="forFullname"
+                          type="text"
+                          onchange="getData(this)"
+                        />
+                        <label class="form-input-label" for="forFullname"
+                          >Name</label
+                        >
                       </div>
 
                       <div class="group">
-                        <label for="">Email</label>
-                        <input type="email" />
+                        <input
+                          class="custom-input"
+                          id="forEmail"
+                          name="forEmail"
+                          type="email"
+                          onchange="getData(this)"
+                        />
+                        <label class="form-input-label" for="forEmail"
+                          >Email</label
+                        >
                       </div>
 
                       <div class="group textarea">
-                        <label for="">Message</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea
+                          class="custom-input"
+                          name="forMessage"
+                          id="forMessage"
+                          cols="30"
+                          rows="10"
+                          onchange="getData(this)"
+                        ></textarea>
+
+                        <label class="form-input-label" for="forMessage"
+                          >Message</label
+                        >
                       </div>
 
                       <button class="submit-button">
@@ -2500,8 +2533,10 @@
       );
 
       featureList.forEach((item) => {
-        item.querySelector(".icon span").innerHTML =
-          item.querySelector(".name").innerHTML[0];
+        if (item.querySelector(".icon span") !== null) {
+          item.querySelector(".icon span").innerHTML =
+            item.querySelector(".name").innerHTML[0];
+        }
       });
     </script>
     <script>

@@ -638,3 +638,24 @@ eyeIconButtons.forEach((eyeIconButton, idx) => {
     }
   });
 });
+
+const profileNavButtons = document.querySelectorAll(
+  ".profile-edit-nav-list .profile-edit-nav-button"
+);
+const dataFilters = document.querySelectorAll(".dataFilter");
+
+profileNavButtons.forEach((profileNavButton, index) => {
+  profileNavButton.addEventListener("click", () => {
+    dataFilters.forEach((filter) => filter.classList.remove("active"));
+    profileNavButtons.forEach((button) => button.classList.remove("active"));
+
+    console.log(dataFilters[index].getAttribute("data-filter"));
+    if (
+      dataFilters[index].getAttribute("data-filter") ===
+      profileNavButton.getAttribute("data-name")
+    ) {
+      dataFilters[index].classList.add("active");
+      profileNavButton.classList.add("active");
+    }
+  });
+});

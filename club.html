@@ -327,55 +327,59 @@
     <section>
       <div class="club-section-area">
         <div class="container">
-          <div class="title">
-            <h4>CLUBS IN</h4>
-            <h2>RI DISTRICT 3292</h2>
-          </div>
-
           <div class="row">
             <div class="col-lg-4">
-              <div class="club-filter mb-3">
-                <div class="club-filter-title">
-                  <i class="fa-solid fa-sliders"></i>
-                  Filter
+              <div class="club-left-section">
+                <div class="club-title">
+                  <h5>CLUBS IN</h5>
+                  <h2>RI DISTRICT 3292</h2>
                 </div>
 
-                <div class="input-groups">
-                  <form action="">
-                    <label for=""
-                      ><strong>
-                        Filter by Club ID, Clubs, President</strong
-                      ></label
-                    >
+                <div class="club-filter mb-3">
+                  <div class="club-filter-title">
+                    <i class="fa-solid fa-sliders"></i>
+                    Filter
+                  </div>
+
+                  <div class="input-groups">
+                    <form action="">
+                      <label for=""
+                        ><strong>
+                          Filter by Club ID, Clubs, President</strong
+                        ></label
+                      >
+
+                      <div class="group">
+                        <input
+                          type="text"
+                          placeholder="Club ID, Clubs Name, President Name..."
+                        />
+
+                        <button class="search-button">
+                          <i class="fas fa-search"></i>
+                        </button>
+                      </div>
+
+                      <div id="match-list"></div>
+                    </form>
+
+                    <hr class="mt-4" />
+
+                    <label for=""><strong> Order By</strong></label>
 
                     <div class="group">
-                      <input
-                        type="text"
-                        placeholder="Club ID, Clubs Name, President Name..."
-                      />
-
-                      <button class="search-button">
-                        <i class="fas fa-search"></i>
-                      </button>
+                      <select id="chooseCategory">
+                        <option value="Automobile">Order By: Default</option>
+                        <option value="Restaurant">Order By: ASC</option>
+                        <option value="IT">Order By: DESC</option>
+                      </select>
                     </div>
-                  </form>
-
-                  <hr class="mt-4" />
-
-                  <label for=""><strong> Order By</strong></label>
-
-                  <div class="group">
-                    <select id="chooseCategory">
-                      <option value="Automobile">Order By: Default</option>
-                      <option value="Restaurant">Order By: ASC</option>
-                      <option value="IT">Order By: DESC</option>
-                    </select>
                   </div>
+
+                  <h6>Total Clubs - 153</h6>
+
+                  <button class="submit">Reset</button>
                 </div>
-
-                <h6>Total Clubs - 153</h6>
-
-                <button class="submit">Reset</button>
               </div>
             </div>
 
@@ -622,12 +626,135 @@
                     </a>
                   </div>
                 </div>
+
+                <div class="pagination-area">
+                  <button class="prev-button">
+                    <i class="fas fa-arrow-left"></i>
+                    Prev
+                  </button>
+
+                  <ul class="page-number">
+                    <li>
+                      <button class="active">1</button>
+                    </li>
+                    <li>
+                      <button>2</button>
+                    </li>
+                    <li>
+                      <button>3</button>
+                    </li>
+                    <li>
+                      <button>...</button>
+                    </li>
+                    <li>
+                      <button>10</button>
+                    </li>
+                  </ul>
+
+                  <button class="next-button">
+                    Next
+                    <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-9">
+          <!-- Location image previews and checkboxes -->
+          <div id="location-images-section">
+            <!-- Home Page Location -->
+            <div class="row">
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="layout-item">
+                  <input
+                    type="radio"
+                    name="location"
+                    id="home-top-ads"
+                    value="top"
+                    hidden
+                  />
+                  <label for="home-top-ads">
+                    <span>Home Top</span>
+                    <img
+                      id="home-top-location-preview"
+                      src="./assets/images/bird_bg.jpeg"
+                      alt="Home Top Location Preview"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="layout-item">
+                  <input
+                    type="radio"
+                    name="location"
+                    id="home-right-side-ads"
+                    value="top"
+                    hidden
+                  />
+                  <label for="home-right-side-ads">
+                    <span>Home Top</span>
+                    <img
+                      id="home-top-location-preview"
+                      src="./assets/images/bird_bg.jpeg"
+                      alt="Home Top Location Preview"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="layout-item">
+                  <input
+                    type="radio"
+                    name="location"
+                    id="home-card-ads"
+                    value="top"
+                    hidden
+                  />
+                  <label for="home-card-ads">
+                    <span>Home Top</span>
+                    <img
+                      id="home-top-location-preview"
+                      src="./assets/images/bird_bg.jpeg"
+                      alt="Home Top Location Preview"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div class="layout-item">
+                  <input
+                    type="radio"
+                    name="location"
+                    id="home-bottom-ads"
+                    value="top"
+                    hidden
+                  />
+                  <label for="home-bottom-ads">
+                    <span>Home Top</span>
+                    <img
+                      id="home-top-location-preview"
+                      src="./assets/images/bird_bg.jpeg"
+                      alt="Home Top Location Preview"
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- footer-start -->
     <footer>
