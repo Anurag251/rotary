@@ -4699,6 +4699,9 @@ footer .copyright .icons .icon a {
 .ads-area-banner a {
   text-decoration: none !important;
 }
+.ads-area-banner .no-ads-area {
+  margin-bottom: 1rem;
+}
 .ads-area-banner .if-no-ads {
   display: flex;
   justify-content: space-between;
@@ -4731,6 +4734,9 @@ footer .copyright .icons .icon a {
   height: 4rem;
   width: 4rem;
   margin-right: 1rem;
+}
+.ads-area-banner .if-no-ads.if-no-side-ads .name {
+  font-size: 2rem;
 }
 .ads-area-banner .if-no-ads.if-no-side-ads .contact {
   grid-column: span 3;
