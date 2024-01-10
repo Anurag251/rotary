@@ -207,7 +207,7 @@ header
           text-decoration: none
           font-family: "Barlow", sans-serif !important
 
-        &:nth-last-child(1)
+        &:nth-last-child(1), &:nth-last-child(2)
           border-right: 0
 
           &.button-link
@@ -1215,7 +1215,7 @@ header
     .image-area
       position: absolute
       top: -3.2rem
-      left: 0
+      left: 1rem
       height: 35rem
       width: 40%
       z-index: 2
@@ -4373,7 +4373,7 @@ footer
     background: none
 
     .ads-area-banner-image
-      height: 100%
+      height: 400px
 
   .ads-area-banner-image
     // height: 7rem
@@ -4395,17 +4395,19 @@ footer
 
   .no-ads-area
     margin-bottom: 1rem
+
   .if-no-ads
     @include flex($justify: space-between)
-    height: 5rem
+    height: 120px
     width: 100%
-    background-color: rgba($pri, .15)
+    background-color: rgba($dark, .1)
     gap: 1rem
     padding: 0 2rem
     border-radius: .4rem
     @include trans()
 
     &:hover
+      background-color: rgba($pri, .15)
       transform: scale(1.02) translateY(-3px)
       box-shadow: 0 4px 4px rgba($dark, .1)
 
@@ -4413,11 +4415,12 @@ footer
         color: $sec
 
       .contact
-        color: lighten($pri, 5%)
+        color: lighten($pri, 15%)
 
     &.if-no-side-ads
       height: 11rem
-      @include grid($columns: 1fr 1fr)
+      @include grid($columns: 1fr 2.5fr)
+      padding: .8rem 1rem
 
       .icon
         height: 4rem
@@ -4425,7 +4428,11 @@ footer
         margin-right: 1rem
 
       .name
-        font-size: 2rem
+        font-size: 1.5rem
+        width: 100%
+
+        strong
+          margin-left: 0
 
       .contact
         grid-column: span 3
@@ -4436,16 +4443,22 @@ footer
       flex-direction: column
       height: 100%
       justify-content: center
-      gap: 3rem
+      gap: 2rem
       padding: 2rem
 
       .icon
-        height: 6rem
-        width: 6rem
+        height: 5rem
+        width: 5rem
 
       .name
         text-align: center
-        font-size: 2.4rem
+        font-size: 2rem
+
+        strong
+          margin-left: 0
+
+      .contact
+        font-size: 1.3rem
 
     .icon
       height: 3.5rem
@@ -4457,13 +4470,21 @@ footer
 
     .name
       margin-bottom: 0
-      font-size: 2.2rem
-      color: $dark
+      font-size: 1.6rem
+      color: rgba($dark, .7)
+      text-transform: uppercase
       @include trans()
+
+      strong
+        margin-left: 1rem
+        text-transform: lowercase
+
+      .for-mobile-ads
+        display: none
 
     .contact
       font-size: 1.5rem
-      color: darken($pri, 5%)
+      color: $pri
       font-weight: 500
       margin-bottom: 0
       @include trans()
@@ -4619,7 +4640,7 @@ footer
       margin-bottom: .5rem
 
       &.repeaterListSection
-        .removeButton
+        .removeButton, .removeFeatureButton, .removeGalleryButton
           padding: .4rem .8rem
           background-color: #A00000
           border-radius: .3rem
@@ -4793,14 +4814,14 @@ footer
     font-size: .95rem
     margin-bottom: .7rem
 
-  .repeaterListArea
+  .repeaterListArea1, .repeaterListArea2
     width: 100%
     @include grid($columns: 1fr 1fr)
 
     .repeaterList
       width: 100%
 
-  .repeaterListArea > div:nth-last-child(1)
+  .repeaterListArea1 > div:nth-last-child(1), .repeaterListArea2 > div:nth-last-child(1)
     display: none
 
   .input-group-divider
@@ -5547,8 +5568,11 @@ footer
       li
         margin-bottom: .8rem
         font-size: .9rem
-        @include flex($justify: flex-start)
-        gap: .5rem
+        // @include flex($justify: flex-start)
+        // gap: .5rem
+
+        i
+          margin-right: .5rem
 
         &:nth-last-child(1)
           margin-bottom: 0
@@ -5564,6 +5588,13 @@ footer
         &::marker
           font-size: 1.1rem
           color: $pri
+
+  .frustrations-section
+    .frustrations-list
+      padding-left: 1.5rem
+
+      li
+        list-style: disc !important
 
   .favourite-brands-section
     .favourite-brands-list
@@ -5854,15 +5885,33 @@ footer
 
   .ads-area-banner
     .if-no-ads
+      height: 100px
+
+      .icon
+        height: 3rem
+        width: 3rem
+
+      .name
+        font-size: 1.4rem
+
+        strong
+          margin-left: .7rem
+
+      .contact
+        font-size: 1.3rem
+
       &.if-no-side-ads
-        height: 10rem
+        height: 9.5rem
 
         .icon
           height: 3.7rem
           width: 3.7rem
 
         .name
-          font-size: 1.6rem
+          font-size: 1.2rem
+
+        .contact
+          font-size: 1rem
 
   .latest-news
     .right-content
@@ -5941,6 +5990,16 @@ footer
         line-height: 3rem
 
   .ads-sections
+    &.search-filter-page
+      margin-bottom: 2rem
+
+      .stickyScrolling
+        margin-bottom: 2rem
+        position: static
+        top: 1.5rem
+        bottom: auto
+        align-self: flex-start
+
     .item
       &.no-business
         .image
@@ -5956,6 +6015,7 @@ footer
         position: relative
         height: 35rem
         width: 100%
+        left: 0
 
         img
           @include image()
@@ -6024,32 +6084,33 @@ footer
 
   .ads-area-banner
     .if-no-ads
-      height: 4rem
+      height: 80px
       padding: 0 1rem
 
+      .icon
+        height: 2.2rem
+        width: 2.2rem
+
+      .name
+        font-size: 1.2rem
+
+      .contact
+        font-size: 1rem
+
       &.if-no-side-ads
-        height: 8rem
+        height: 7rem
+        grid-template-columns: 1fr 3.5fr
 
         .icon
-          height: 2.4rem
-          width: 2.4rem
+          height: 2rem
+          width: 2rem
           margin-right: 0
 
         .name
-          font-size: 1.3rem
+          font-size: .92rem
 
         .contact
-          font-size: .9rem
-
-      .icon
-        height: 2.5rem
-        width: 2.5rem
-
-      .name
-        font-size: 1.8rem
-
-      .contact
-        font-size: 1.1rem
+          font-size: .83rem
 
 @media only screen and ( max-width: 900px )
   header
@@ -6268,42 +6329,43 @@ footer
 
   .ads-area-banner
     .if-no-ads
-      height: 4rem
+      height: 60px
       padding: 0 1rem
+
+      .icon
+        height: 1.6rem
+        width: 1.6rem
+
+      .name
+        font-size: .9rem
+
+      .contact
+        font-size: .8rem
 
       &.if-no-card-ads
         .contact
           font-size: 1.6rem
 
       &.if-no-side-ads
-        height: 16rem
+        height: 18rem
+        grid-template-columns: 1fr 3fr
 
         .icon
-          height: 7rem
-          width: 7rem
+          height: 6rem
+          width: 6rem
           margin-right: 0
 
         .name
-          font-size: 3rem
+          font-size: 2.7rem
 
         .contact
-          font-size: 1.6rem
-
-      .icon
-        height: 2rem
-        width: 2rem
-
-      .name
-        font-size: 1.1rem
-
-      .contact
-        font-size: .8rem
+          font-size: 1.8rem
 
   .profile-edit-form
     .custom-form-area
       padding: 2rem 1rem
 
-    .repeaterListArea
+    .repeaterListArea, .repeaterListArea1
       grid-template-columns: 1fr
 
     .all-day-list
@@ -6381,9 +6443,12 @@ footer
             //     height: 25rem
 
   .ads-area-banner
+    .longAdss
+      .ads-area-banner-image
+        height: 500px
     .if-no-ads
       &.if-no-card-ads
-        height: 30rem
+
         .contact
           font-size: 1.6rem
 
@@ -6573,6 +6638,18 @@ footer
     .input-group-divider
       grid-template-columns: 1fr
       grid-gap: 0
+
+  .ads-area-banner
+    .if-no-ads
+      height: 100px
+
+      .name
+        strong
+          span
+            display: none
+
+        .for-mobile-ads
+          display: inline-block
 
 @media only screen and ( max-width: 470px)
   header
@@ -6862,15 +6939,27 @@ footer
 
   .ads-area-banner
     .if-no-ads
+      height: 80px
+
+      .icon
+        height: 1.5rem
+        width: 1.5rem
+
+      .name
+        font-size: .8rem
+
+      .contact
+        font-size: .7rem
+
       &.if-no-side-ads
-        height: 16rem
+        height: 15rem
 
         .icon
-          height: 6rem
-          width: 6rem
+          height: 5rem
+          width: 5rem
 
         .name
-          font-size: 2.5rem
+          font-size: 2rem
 
         .contact
           font-size: 1.5rem
@@ -6930,6 +7019,8 @@ footer
 
   .ads-area-banner
     .if-no-ads
+      height: 60px
+
       &.if-no-side-ads
         height: 12rem
 
@@ -6938,7 +7029,7 @@ footer
           width: 4rem
 
         .name
-          font-size: 2rem
+          font-size: 1.6rem
 
         .contact
           font-size: 1.1rem
@@ -6997,6 +7088,23 @@ footer
 
                 &::before
                   left: 20%
+
+@media only screen and ( max-width: 348px)
+  .ads-area-banner
+    .if-no-ads
+      &.if-no-side-ads
+        height: 10.5rem
+        grid-template-columns: 1fr 4fr
+
+        .icon
+          height: 3rem
+          width: 3rem
+
+        .name
+          font-size: 1.3rem
+
+        .contact
+          font-size: 1.1rem
 
 #location-images-section
   .layout-item
@@ -7086,3 +7194,457 @@ footer
       height: .7rem
       width: 6rem
       background: linear-gradient(270deg, rgba($dark, .1), rgba($dark, .2))
+
+/********* 
+ new css for pdf 
+ *********/
+
+.pdfBody
+  height: 100%
+
+.distric-committee-pdf
+  height: 100%
+  background-color: #fff
+
+  table
+    width: 100%
+    // background-color: #fff
+
+    .inner-div-center
+      position: relative
+
+  .pdf-heading
+    position: absolute
+    top: 10px
+    height: 4.7rem
+    background-color: $pri
+    border-bottom: 3px solid $dark
+    position: relative
+    z-index: 4
+    margin-bottom: .5rem
+    padding: 0 1rem
+    overflow: hidden
+
+    .heading
+      text-align: center
+      height: 2.7rem
+
+      h1
+        height: 100%
+        @include flex($justify: center)
+        font-size: 1.3rem
+        color: $light
+        text-transform: uppercase
+        padding: 1rem
+        background-color: $light
+        color: $dark
+        position: relative
+        border: 1px solid $dark
+        border-bottom-width: 3px
+        border-right-width: 3px
+
+        .square1, .square2, .square3, .square4
+          position: absolute
+          height: 1rem
+          width: 1rem
+          background-color: $pri
+          transform: rotate(45deg)
+          border: 1px solid transparent
+
+        .square1
+          left: -.55rem
+          top: -.55rem
+          border-right-color: $dark
+
+        .square2
+          right: -.55rem
+          top: -.55rem
+          border-bottom-color: $dark
+
+        .square3
+          right: -.55rem
+          bottom: -.55rem
+          border-left-color: $dark
+          border-left-width: 3px
+
+        .square4
+          left: -.55rem
+          bottom: -.55rem
+          border-top-color: $dark
+
+    .logo
+      height: 3.5rem
+      width: 9rem
+      padding: .2rem .5rem
+      @include flex($justify: center)
+      // clip-path: polygon(8% 0, 92% 0, 100% 15%, 100% 85%, 92% 100%, 8% 100%, 0 85%, 0 15%)
+      background-color: $light
+      position: relative
+      border: 1px solid $dark
+      border-bottom-width: 3px
+      border-right-width: 3px
+
+      .square1, .square2, .square3, .square4
+        position: absolute
+        height: 1rem
+        width: 1rem
+        background-color: $pri
+        transform: rotate(45deg)
+        border: 1px solid transparent
+
+      .square1
+        left: -.55rem
+        top: -.55rem
+        border-right-color: $dark
+
+      .square2
+        right: -.55rem
+        top: -.55rem
+        border-bottom-color: $dark
+
+      .square3
+        right: -.55rem
+        bottom: -.55rem
+        border-left-color: $dark
+        border-left-width: 3px
+
+      .square4
+        left: -.55rem
+        bottom: -.55rem
+        border-top-color: $dark
+
+      .logo-image
+        width: 100%
+        height: 100%
+        @include bgImage()
+        background-size: contain
+        background-repeat: no-repeat !important
+
+  .wrapper
+    max-width: 800px
+    margin: 0 auto
+    padding: 0 1rem
+    height: 100%
+
+  .distric-committee-section
+    height: 100%
+    border: 2px solid $dark
+    position: relative
+    padding: 1rem 1.2rem 2rem
+
+    .circle1, .circle2, .circle3, .circle4
+      position: absolute
+      height: 3rem
+      width: 3rem
+      border-radius: 50%
+      border: 2px solid transparent
+      background-color: $light
+      border-bottom-color: $dark
+      z-index: 2
+
+    .circle1
+      top: -1.62rem
+      left: -1.62rem
+      transform: rotate(-45deg)
+
+    .circle2
+      top: -1.62rem
+      right: -1.62rem
+      transform: rotate(45deg)
+
+    .circle3
+      bottom: -1.62rem
+      right: -1.62rem
+      transform: rotate(-225deg)
+
+    .circle4
+      bottom: -1.62rem
+      left: -1.62rem
+      transform: rotate(225deg)
+
+  .pdf-title
+    height: 2.2rem
+    @include flex($justify: center)
+    margin-bottom: 1rem
+    background-color: $sec
+    color: $light
+    border: 1px solid $sec
+    position: relative
+    border-radius: 1rem
+    box-shadow: 0 2px 4px rgba($dark, .2)
+    border-bottom: 3px solid $dark
+
+    .circle1, .circle2
+      z-index: 1
+      height: 1.8rem
+      width: 1.8rem
+      border-width: 1px
+      border-bottom-color: $sec
+
+    .circle1
+      top: -.96rem
+      left: -.96rem
+      transform: rotate(-45deg)
+
+    .circle2
+      top: -.96rem
+      right: -.96rem
+      transform: rotate(45deg)
+
+    h2
+      font-size: 1.1rem
+      font-weight: 700
+
+  .main-section, .list-section
+    height: 100%
+
+    .item
+      @include flex($justify: center)
+      align-items: stretch
+      gap: 1rem
+      height: 100%
+
+      .image
+        min-height: 7.5rem
+        max-height: 100%
+        min-width: 7rem
+        max-width: 7rem
+        position: relative
+        border: 2px solid $dark
+
+        .circle1, .circle2, .circle3, .circle4
+          height: 1.2rem
+          width: 1.2rem
+
+        .circle1
+          top: -.72rem
+          left: -.72rem
+
+        .circle2
+          top: -.72rem
+          right: -.72rem
+
+        .circle3
+          bottom: -.72rem
+          right: -.72rem
+
+        .circle4
+          bottom: -.72rem
+          left: -.72rem
+
+        .bg-image
+          @include bgImage()
+          height: 100%
+          width: 100%
+
+      .content
+        width: calc( 100% - 7.5rem )
+
+        .name
+          font-size: 1.3rem
+          margin-bottom: .5rem
+
+        h5
+          font-size: 1.05rem
+          font-weight: 400
+          margin-bottom: .2rem
+
+  .main-section
+    @include flex($justify: center)
+    gap: 1.5rem
+    margin-bottom: 1rem
+    padding-bottom: 1rem
+    border-bottom: 2px solid $dark
+
+  .list-section
+    @include grid($columns: 1fr 1fr)
+
+    .item
+      .content
+        .name
+          font-size: 1rem
+          font-weight: 600
+          margin-bottom: .3rem
+        h5
+          font-size: .8rem
+          margin-bottom: .2rem
+
+  .page-number-sec
+    position: relative
+    width: 100%
+    @include flex($justify: center)
+    padding: .5rem
+    z-index: 3
+
+    .line1, .line2, .line3
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      height: 1px
+      background-color: rgba($dark, .7)
+      z-index: 1
+
+    .line1
+      top: 1.3rem
+      width: 60%
+
+    .line2
+      top: 1.8rem
+      width: 80%
+
+    .line3
+      top: 2.3rem
+      width: 60%
+
+    .page-number
+      position: relative
+      height: 3rem
+      background-color: $sec
+      color: $light
+      font-size: 1rem
+      padding: .4rem .5rem
+      border-radius: .5rem .5rem 0 0
+      z-index: 2
+
+  .details-main-section
+    @include grid($columns: .6fr .6fr 3fr)
+
+    .item
+      @include flex($justify: flex-start)
+      flex-direction: column
+      gap: .3rem
+
+      .image
+        min-height: 6.6rem
+        max-height: 100%
+        min-width: 6rem
+        max-width: 6rem
+        position: relative
+        border: 2px solid $dark
+
+        .circle1, .circle2, .circle3, .circle4
+          height: 1.2rem
+          width: 1.2rem
+
+        .circle1
+          top: -.72rem
+          left: -.72rem
+
+        .circle2
+          top: -.72rem
+          right: -.72rem
+
+        .circle3
+          bottom: -.72rem
+          right: -.72rem
+
+        .circle4
+          bottom: -.72rem
+          left: -.72rem
+
+        .bg-image
+          @include bgImage()
+          height: 100%
+          width: 100%
+
+      .content
+        .name
+          font-size: .9rem
+          font-weight: 600
+
+    .other-infos
+      ul
+        li
+          @include flex($justify: flex-start)
+          font-size: .85rem
+          margin-bottom: .2rem
+
+          .name
+            max-width: 8rem
+            width: 100%
+            font-weight: 600
+            @include flex($justify: space-between)
+            margin-right: .3rem
+
+  .details-other-info-list
+    padding: .6rem .8rem
+    margin-top: 1rem
+    border: 1px solid $dark
+    position: relative
+    background-color: rgba($dark, .1)
+
+    .circle1, .circle2, .circle3, .circle4
+      height: 1.5rem
+      width: 1.5rem
+      border: 1px solid transparent
+      border-bottom-color: $dark
+
+    .circle1
+      top: -.8rem
+      left: -.8rem
+
+    .circle2
+      top: -.8rem
+      right: -.8rem
+
+    .circle3
+      bottom: -.8rem
+      right: -.8rem
+
+    .circle4
+      bottom: -.8rem
+      left: -.8rem
+
+    .info-title
+      text-align: center
+      font-size: .9rem
+      margin-bottom: .3rem
+
+    p
+      font-size: .75rem
+      line-height: 1.3rem
+
+    ul
+      @include flex($justify: flex-start)
+      flex-wrap: wrap
+      column-gap: .7rem
+      row-gap: .3rem
+
+      li
+        font-size: .75rem
+
+  .other-member-list
+    margin-top: 1rem
+
+    ul
+      @include grid($columns: 1fr 1fr)
+      grid-row-gap: 10px
+
+      li
+        p
+          font-size: .75rem
+          text-align: justify
+          line-height: 1.1rem
+
+  .meeting-main-section
+    margin-bottom: 1rem
+
+    &:nth-last-child(1)
+      margin-bottom: 0
+
+    .meeting-title
+      font-size: 1.2rem
+      font-weight: 600
+
+    .meeting-table
+      margin-top: .5rem
+      width: 100%
+
+      th
+        text-align: left
+        font-size: .8rem
+        font-weight: 600
+
+      td
+        font-size: .8rem
+        padding: .1rem 0

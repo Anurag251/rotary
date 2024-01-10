@@ -42,7 +42,7 @@ if (customButtons[0] !== undefined || customButtons[0] !== null) {
       let x = e.offsetX;
       let y = e.offsetY;
 
-      console.log(e);
+      // console.log(e);
 
       bobble[idx].style.left = `${x}px`;
       bobble[idx].style.top = `${y}px`;
@@ -150,6 +150,21 @@ if (inputGroups[0] !== undefined) {
 
 // input shring code
 let formInputLabels = document.querySelectorAll(".form-input-label");
+let customInputs = document.querySelectorAll(
+  ".profile-edit-form .custom-input"
+);
+let customInputLabels = document.querySelectorAll(
+  ".profile-edit-form .form-input-label"
+);
+
+if (customInputs.length) {
+  customInputs.forEach((customInput, idx) => {
+    if (customInput.value.length) {
+      customInputLabels[idx].classList.add("shrink");
+    }
+  });
+}
+
 const getData = (data) => {
   formInputLabels.forEach((formInputLabel, idx) => {
     let dataAttributeName = data.getAttribute("name");
@@ -212,7 +227,7 @@ if (hiddenImageSec) {
 
   imageCloseBtn.addEventListener("click", () => {
     hiddenImageSec.classList.remove("active");
-    console.log("hello");
+    // console.log("hello");
   });
 
   bgForClose.addEventListener("click", () => {
@@ -245,6 +260,11 @@ navLink.forEach((link, idx) => {
   }
 });
 
+// have-business-details
+const switchIsbusinessInput = document.querySelector(
+  ".have-business-details #switch-isbusiness-input"
+);
+
 const haveBusinessDetails = document.querySelector(
   ".have-business-details .switch-button"
 );
@@ -256,54 +276,70 @@ const switchArea = document.querySelector(
 const businessDetailsAllSection = document.querySelector(
   ".business-details-all-section"
 );
+
+let toggleHaveBusinessDetails =
+  switchIsbusinessInput.value === "No" ? false : true;
+
 haveBusinessDetails.addEventListener("click", () => {
-  switchArea.classList.toggle("active");
-  businessDetailsAllSection.classList.toggle("active");
+  toggleHaveBusinessDetails = !toggleHaveBusinessDetails;
+
+  if (toggleHaveBusinessDetails) {
+    switchArea.classList.add("active");
+    businessDetailsAllSection.classList.add("active");
+    switchIsbusinessInput.setAttribute("value", "Yes");
+  } else {
+    switchArea.classList.remove("active");
+    businessDetailsAllSection.classList.remove("active");
+    switchIsbusinessInput.setAttribute("value", "No");
+  }
 });
 
-haveBusinessDetails.click();
+if (toggleHaveBusinessDetails) {
+  switchArea.classList.add("active");
+  businessDetailsAllSection.classList.add("active");
+  switchIsbusinessInput.setAttribute("value", "Yes");
+} else {
+  switchArea.classList.remove("active");
+  businessDetailsAllSection.classList.remove("active");
+  switchIsbusinessInput.setAttribute("value", "No");
+}
 
-const runAgain = () => {
-  const uploadImageButtons = document.querySelectorAll(
-    ".repeaterListArea .uploadImageArea"
-  );
-  const uploadImageInputs = document.querySelectorAll(
-    ".repeaterListArea .uploadImageArea .custom-input"
-  );
+// haveBusinessDetails.click();
 
-  const uploadImages = document.querySelectorAll(
-    ".repeaterListArea .uploadImageArea img"
-  );
+const uploadImageButtons = document.querySelectorAll(
+  ".repeaterListArea .uploadImageArea"
+);
+const uploadImageInputs = document.querySelectorAll(
+  ".repeaterListArea .uploadImageArea .custom-input"
+);
 
-  uploadImageButtons.forEach((uploadImageButton, idx) => {
-    uploadImageButton.addEventListener("click", () => {
-      uploadImageInputs[idx].click();
-      console.log("helo");
-    });
+const uploadImages = document.querySelectorAll(
+  ".repeaterListArea .uploadImageArea img"
+);
 
-    uploadImageInputs[idx].addEventListener("change", function () {
-      uploadImageButton.classList.add("active");
-      const selectedFile = uploadImageInputs[idx].files[0];
-
-      console.log(selectedFile);
-
-      if (selectedFile) {
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-          uploadImages[idx].src = e.target.result;
-        };
-
-        reader.readAsDataURL(selectedFile);
-      } else {
-        // Clear the image preview if no file is selected
-        uploadImages[idx].src = "";
-      }
-    });
+uploadImageButtons.forEach((uploadImageButton, idx) => {
+  uploadImageButton.addEventListener("click", () => {
+    uploadImageInputs[idx].click();
   });
-};
 
-runAgain();
+  uploadImageInputs[idx].addEventListener("change", function () {
+    uploadImageButton.classList.add("active");
+    const selectedFile = uploadImageInputs[idx].files[0];
+    console.log("ola");
+
+    if (selectedFile) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        uploadImages[idx].src = e.target.result;
+      };
+
+      reader.readAsDataURL(selectedFile);
+    } else {
+      uploadImages[idx].src = "";
+    }
+  });
+});
 
 const addRepeaterButton = document.querySelector("#addFeature");
 const repeaterListArea = document.querySelector("#featuresListing");
@@ -318,7 +354,40 @@ const businessHourDays = document.querySelectorAll("#businessHourDay");
 
 // addFeature
 addRepeaterButton.addEventListener("click", function () {
-  runAgain();
+  const uploadImageButtons = document.querySelectorAll(
+    ".repeaterListArea1 .uploadImageArea"
+  );
+  const uploadImageInputs = document.querySelectorAll(
+    ".repeaterListArea1 .uploadImageArea .custom-input"
+  );
+
+  const uploadImages = document.querySelectorAll(
+    ".repeaterListArea1 .uploadImageArea img"
+  );
+
+  uploadImageButtons.forEach((uploadImageButton, idx) => {
+    uploadImageButton.addEventListener("click", () => {
+      uploadImageInputs[idx].click();
+    });
+
+    uploadImageInputs[idx].addEventListener("change", function () {
+      uploadImageButton.classList.add("active");
+      const selectedFile = uploadImageInputs[idx].files[0];
+      // console.log("ola");
+
+      if (selectedFile) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          uploadImages[idx].src = e.target.result;
+        };
+
+        reader.readAsDataURL(selectedFile);
+      } else {
+        uploadImages[idx].src = "";
+      }
+    });
+  });
 
   const repeaterDiv = document.createElement("div");
   repeaterDiv.innerHTML = `
@@ -329,11 +398,11 @@ addRepeaterButton.addEventListener("click", function () {
             onchange="getData(this)"
             type="text"
             class="custom-input auto"
-            name="forFeatureTitle"
-            id="forFeatureTitle"
+            name="feature_titles[]"
+            id="feature_titles[]"
             placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
           />
-          <label class="form-input-label shrink" for="forFeatureTitle">
+          <label class="form-input-label shrink" for="feature_titles[]">
             Feature Title
           </label>
         </div>
@@ -347,12 +416,12 @@ addRepeaterButton.addEventListener("click", function () {
             onchange="getData(this)"
             type="file"
             class="custom-input"
-            name="forFeatureImage"
-            id="forFeatureImage"
+            name="feature_images[]"
+            id="feature_images[]"
             hidden
           />
           <img class="preview-image" src="" alt="" />
-          <label class="form-input-label" for="forFeatureImage">
+          <label class="form-input-label" for="feature_images[]">
             <i class="fas fa-cloud-arrow-up"></i>
             <br />
             Click to upload
@@ -364,6 +433,7 @@ addRepeaterButton.addEventListener("click", function () {
           something went wrong
         </p>
       </div>
+      <input type="hidden" name="feature_indexes[]" value="new">
       <div class="removeButton">Remove</div>
     </div>
   `;
@@ -372,7 +442,7 @@ addRepeaterButton.addEventListener("click", function () {
   removeButton.addEventListener("click", function () {
     repeaterListArea.removeChild(repeaterDiv);
 
-    console.log(repeaterListArea);
+    // console.log(repeaterListArea);
   });
 
   repeaterListArea.appendChild(repeaterDiv);
@@ -454,9 +524,43 @@ setTimeout(() => {
 //   addHoursButton.click();
 // }, 1000);
 
-// addGallery
+addGallery;
 addGalleryButton.addEventListener("click", function () {
-  runAgain();
+  const uploadImageButtons = document.querySelectorAll(
+    ".repeaterListArea2 .uploadImageArea"
+  );
+  const uploadImageInputs = document.querySelectorAll(
+    ".repeaterListArea2 .uploadImageArea .custom-input"
+  );
+
+  const uploadImages = document.querySelectorAll(
+    ".repeaterListArea2 .uploadImageArea img"
+  );
+
+  uploadImageButtons.forEach((uploadImageButton, idx) => {
+    uploadImageButton.addEventListener("click", () => {
+      uploadImageInputs[idx].click();
+    });
+
+    uploadImageInputs[idx].addEventListener("change", function () {
+      uploadImageButton.classList.add("active");
+      const selectedFile = uploadImageInputs[idx].files[0];
+      // console.log("ola");
+
+      if (selectedFile) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          uploadImages[idx].src = e.target.result;
+        };
+
+        reader.readAsDataURL(selectedFile);
+      } else {
+        uploadImages[idx].src = "";
+      }
+    });
+  });
+
   const repeaterDiv = document.createElement("div");
   repeaterDiv.innerHTML = `
     <div class="repeaterList">
@@ -466,11 +570,11 @@ addGalleryButton.addEventListener("click", function () {
             onchange="getData(this)"
             type="text"
             class="custom-input auto"
-            name="forGalleryTitle"
-            id="forGalleryTitle"
+            name="image_titles[]"
+            id="image_titles[]"
             placeholder="eg: Food, Room, Car, Hotel etc..."
           />
-          <label class="form-input-label shrink" for="forGalleryTitle">
+          <label class="form-input-label shrink" for="image_titles[]">
             Gallery Title
           </label>
         </div>
@@ -484,12 +588,12 @@ addGalleryButton.addEventListener("click", function () {
             onchange="getData(this)"
             type="file"
             class="custom-input"
-            name="forGalleryImage"
-            id="forGalleryImage"
+            name="gallery_images[]"
+            id="gallery_images[]"
             hidden
           />
           <img class="preview-image" src="" alt="" />
-          <label class="form-input-label" for="forGalleryImage">
+          <label class="form-input-label" for="gallery_images[]">
             <i class="fas fa-cloud-arrow-up"></i>
             <br />
             Click to upload
@@ -501,6 +605,7 @@ addGalleryButton.addEventListener("click", function () {
           something went wrong
         </p>
       </div>
+      <input type="hidden" name="gallery_indexes[]" value="new">
       <div class="removeButton">Remove</div>
     </div>
   `;
@@ -512,6 +617,18 @@ addGalleryButton.addEventListener("click", function () {
 
   galleryListing.appendChild(repeaterDiv);
 });
+
+function removeGalleryButton(button) {
+  var listItem = button.parentNode;
+  var list = listItem.parentNode;
+  list.removeChild(listItem);
+}
+
+function removeFeatureButton(button) {
+  var listItem = button.parentNode;
+  var list = listItem.parentNode;
+  list.removeChild(listItem);
+}
 
 addGalleryButton.click();
 
@@ -529,11 +646,27 @@ const inputAreaSec = document.querySelectorAll(
   "#businessHourDay .input-area-sec"
 );
 
-businessHourDays.forEach((businessHourDay, idx) => {
-  let toggle = false;
+if (businessHourDays.length) {
+  businessHourDays.forEach((businessHourDay, idx) => {
+    let toggle = displayOpenClose[idx].innerText === "Closed" ? false : true;
 
-  switchButton[idx].addEventListener("click", () => {
-    toggle = !toggle;
+    switchButton[idx].addEventListener("click", () => {
+      toggle = !toggle;
+
+      if (toggle) {
+        businessHourDay.classList.add("active");
+        switchButton[idx].classList.add("active");
+        displayOpenClose[idx].innerHTML = "Open";
+        inputAreaSec[idx].style.display = "flex";
+        businessHourDay.querySelector("input").value = "";
+      } else {
+        businessHourDay.classList.remove("active");
+        switchButton[idx].classList.remove("active");
+        displayOpenClose[idx].innerHTML = "Closed";
+        inputAreaSec[idx].style.display = "none";
+        businessHourDay.querySelector("input").setAttribute("value", "");
+      }
+    });
 
     if (toggle) {
       businessHourDay.classList.add("active");
@@ -547,19 +680,7 @@ businessHourDays.forEach((businessHourDay, idx) => {
       inputAreaSec[idx].style.display = "none";
     }
   });
-
-  if (toggle) {
-    businessHourDay.classList.add("active");
-    switchButton[idx].classList.add("active");
-    displayOpenClose[idx].innerHTML = "Open";
-    inputAreaSec[idx].style.display = "flex";
-  } else {
-    businessHourDay.classList.remove("active");
-    switchButton[idx].classList.remove("active");
-    displayOpenClose[idx].innerHTML = "Closed";
-    inputAreaSec[idx].style.display = "none";
-  }
-});
+}
 
 // upload logo
 const uploadPersoalImageButton = document.querySelector("#UploadPhoto");
@@ -646,10 +767,9 @@ const dataFilters = document.querySelectorAll(".dataFilter");
 
 profileNavButtons.forEach((profileNavButton, index) => {
   profileNavButton.addEventListener("click", () => {
+    window.scroll(0, 0);
     dataFilters.forEach((filter) => filter.classList.remove("active"));
     profileNavButtons.forEach((button) => button.classList.remove("active"));
-
-    console.log(dataFilters[index].getAttribute("data-filter"));
     if (
       dataFilters[index].getAttribute("data-filter") ===
       profileNavButton.getAttribute("data-name")
@@ -659,3 +779,164 @@ profileNavButtons.forEach((profileNavButton, index) => {
     }
   });
 });
+
+//newwwwwwwwww
+
+//new code for feature repeater
+// let featureIndex = 1;
+
+// function cloneFeature() {
+//   const uploadImageButtons = document.querySelectorAll(
+//     ".repeaterListArea3 .uploadImageArea"
+//   );
+//   const uploadImageInputs = document.querySelectorAll(
+//     ".repeaterListArea3 .uploadImageArea .custom-input"
+//   );
+
+//   const uploadImages = document.querySelectorAll(
+//     ".repeaterListArea3 .uploadImageArea img"
+//   );
+
+//   uploadImageButtons.forEach((uploadImageButton, idx) => {
+//     uploadImageButton.addEventListener("click", () => {
+//       uploadImageInputs[idx].click();
+//     });
+
+//     uploadImageInputs[idx].addEventListener("change", function () {
+//       uploadImageButton.classList.add("active");
+//       const selectedFile = uploadImageInputs[idx].files[0];
+//       console.log("ola1");
+
+//       if (selectedFile) {
+//         const reader = new FileReader();
+
+//         reader.onload = function (e) {
+//           uploadImages[idx].src = e.target.result;
+//         };
+
+//         reader.readAsDataURL(selectedFile);
+//       } else {
+//         uploadImages[idx].src = "";
+//       }
+//     });
+//   });
+
+//   const featuresListing = document.getElementById("featuresListing");
+//   const newItem = featuresListing
+//     .querySelector(".repeaterList")
+//     .cloneNode(true);
+
+//   featureIndex++;
+//   newItem
+//     .querySelector("#forFeatureTitle")
+//     .setAttribute("id", `forFeatureTitle${featureIndex}`);
+//   newItem
+//     .querySelector('.form-input-label[for="forFeatureTitle"]')
+//     .setAttribute("for", `forFeatureTitle${featureIndex}`);
+
+//   newItem.querySelector(".custom-input").value = "";
+
+//   newItem.querySelector(".removeButton").addEventListener("click", function () {
+//     removeFeature(this);
+//   });
+
+//   featuresListing.appendChild(newItem);
+// }
+
+// cloneFeature();
+
+// setTimeout(() => {
+//   cloneFeature();
+// }, 500);
+
+// function removeFeature(element) {
+//   const item = element.closest(".repeaterList");
+
+//   if (item.parentNode) {
+//     const featuresListing = item.parentNode;
+//     if (featuresListing.childElementCount > 1) {
+//       featuresListing.removeChild(item);
+//     } else {
+//       console.log("At least one item must be present");
+//     }
+//   }
+// }
+
+// let galleryIndex = 1;
+
+// function cloneGallery() {
+//   const uploadImageButtons = document.querySelectorAll(
+//     ".repeaterListArea4 .uploadImageArea"
+//   );
+//   const uploadImageInputs = document.querySelectorAll(
+//     ".repeaterListArea4 .uploadImageArea .custom-input"
+//   );
+
+//   const uploadImages = document.querySelectorAll(
+//     ".repeaterListArea4 .uploadImageArea img"
+//   );
+
+//   uploadImageButtons.forEach((uploadImageButton, idx) => {
+//     uploadImageButton.addEventListener("click", () => {
+//       uploadImageInputs[idx].click();
+//     });
+
+//     uploadImageInputs[idx].addEventListener("change", function () {
+//       uploadImageButton.classList.add("active");
+//       const selectedFile = uploadImageInputs[idx].files[0];
+//       console.log("ola1");
+
+//       if (selectedFile) {
+//         const reader = new FileReader();
+
+//         reader.onload = function (e) {
+//           uploadImages[idx].src = e.target.result;
+//         };
+
+//         reader.readAsDataURL(selectedFile);
+//       } else {
+//         uploadImages[idx].src = "";
+//       }
+//     });
+//   });
+
+//   const featuresListing = document.getElementById("galleryListing");
+//   const newItem = featuresListing
+//     .querySelector(".repeaterList")
+//     .cloneNode(true);
+
+//   galleryIndex++;
+//   newItem
+//     .querySelector("#forFeatureTitle")
+//     .setAttribute("id", `forFeatureTitle${galleryIndex}`);
+//   newItem
+//     .querySelector('.form-input-label[for="forFeatureTitle"]')
+//     .setAttribute("for", `forFeatureTitle${galleryIndex}`);
+
+//   newItem.querySelector(".custom-input").value = "";
+
+//   newItem.querySelector(".removeButton").addEventListener("click", function () {
+//     removeGallery(this);
+//   });
+
+//   featuresListing.appendChild(newItem);
+// }
+
+// cloneGallery();
+
+// setTimeout(() => {
+//   cloneGallery();
+// }, 500);
+
+// function removeGallery(element) {
+//   const item = element.closest(".repeaterList");
+
+//   if (item.parentNode) {
+//     const featuresListing = item.parentNode;
+//     if (featuresListing.childElementCount > 1) {
+//       featuresListing.removeChild(item);
+//     } else {
+//       console.log("At least one item must be present");
+//     }
+//   }
+// }

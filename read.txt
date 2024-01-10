@@ -1,0 +1,21 @@
+Return from AoC
+After the payment has been completed/rejected, the buyer is redirected to your store. Value
+of redirectUrl determines where and with what parameters the user will go after DCB process.
+By defining the return address (redirectUrl), you can ask Teleaudio to attach additional data.
+Special tokens whose names begin witch the @ (at) sign are used for this purpose.
+Tokens:
+@id: ID that you assigned to this specific payment
+@tid: transactionId – payment identifier assigned by Teleaudio. If @tid is found in
+the redirectURL, Teleaudio will replace this token with the transaction
+identifier.
+@msisdn: In place of this token, Teleaudio will insert the buyer’s phone number (9 dogits)
+@pmsisdn: Buyer’s phone number with country code (48600600600) (11 digits)
+@status: Possible values:
+COMPLETED – paid
+REJECTED – payment rejected
+@code: Payment status returned by the operator.
+@price: The value that will be added to the client invoice.
+@carrier: Operator mnemonic P/O/E/4. (P-Plus, O-Orange, E-TMobile, 4-Play).
+@sid: Service Id assigned to license.
+
+yo parameter haru padhnu paryo tyo file ma 

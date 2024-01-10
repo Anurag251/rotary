@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hello Worlds</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header style="height: 100vh">
+      <h1>Scroll down to see the section</h1>
+    </header>
+
+    <section class="target-section" style="height: 100vh">
+      <h2>This is the target section</h2>
+      <p>Scroll to this section to trigger the detection.</p>
+    </section>
+
+    <section class="target-section" style="height: 100vh">
+      <h2>This is the target section</h2>
+      <p>Scroll to this section to trigger the detection.</p>
+    </section>
+
+    <section class="target-section" style="height: 100vh">
+      <h2>This is the target section</h2>
+      <p>Scroll to this section to trigger the detection.</p>
+    </section>
+
+    <section class="target-section" style="height: 100vh">
+      <h2>This is the target section</h2>
+      <p>Scroll to this section to trigger the detection.</p>
+    </section>
+
+    <script>
+      function sectionIntersecting(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("The target section is in the viewport!");
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+          } else {
+            entry.target.classList.remove("active");
+          }
+        });
+      }
+
+      const sectionObserver = new IntersectionObserver(sectionIntersecting, {
+        threshold: 0.5,
+      });
+
+      const targetSection = document.querySelectorAll(".target-section");
+
+      targetSection.forEach((data) => {
+        sectionObserver.observe(data);
+      });
+    </script>
+  </body>
 </html>
+
+<!-- For Ad Home page
+-Banner text  (Let us help you Connecting Rotarians)  give (Connecting)  red color.
+-Banner section and classification section not separated.
+-Search bar is missing search icon and it should be like broken layout. 
+-Bottom slider ads should be 350 x 200.
+
+For Ad card listing
+-See all button is missing in card image.
+-if closed color should be red and if open color should be red also bold the text.
+
+For User card listing
+-if classification name is long float down below user name.
+
+For Ad details page
+-Shortcut Nav is missing.
+-Description should be justify.
+-Business info section if closed red color if open green color and also bold the text.
+-Contact Business section label is missing also it should shrink if input is focused and height of input and its border radius is not perfect.
+-People also viewed section is missing.
+-Gallery section if possible open image if user click. 
+
+For User details page
+-Increase the height of user image.
+-Club in missing
+-Contact Business section label is missing also it should shrink if input is focused and height of input and its border radius is not perfect.
+
+New update in figma design
+-Added a title in Ad card listing page.-->

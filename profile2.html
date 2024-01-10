@@ -337,7 +337,7 @@
             <div class="col-lg-4 stickyScrolling">
               <div class="profile-edit-nav">
                 <div class="details-section">
-                  <div class="title-sec">Update Information</div>
+                  <div class="title-sec">Welcome Anurag</div>
 
                   <div class="content">
                     <div class="profile-edit-nav-section">
@@ -345,36 +345,36 @@
                         <li>
                           <button
                             class="profile-edit-nav-button active"
-                            data-name="Personal Details"
+                            data-name="Personal Profile"
                           >
-                            Personal Details
+                            Personal Profile
                           </button>
                         </li>
 
                         <li>
                           <button
                             class="profile-edit-nav-button"
-                            data-name="Rotary Details"
+                            data-name="Rotary Engagement"
                           >
-                            Rotary Details
+                            Rotary Engagement
                           </button>
                         </li>
 
                         <li>
                           <button
                             class="profile-edit-nav-button"
-                            data-name="Business Details"
+                            data-name="Business Profile"
                           >
-                            Business Details
+                            Business Profile (If any)
                           </button>
                         </li>
 
                         <li>
                           <button
                             class="profile-edit-nav-button"
-                            data-name="Login Details"
+                            data-name="Login Info"
                           >
-                            Login Details
+                            Login Info
                           </button>
                         </li>
                       </ul>
@@ -429,10 +429,10 @@
                 <div class="inner-form">
                   <div
                     class="form dataFilter active"
-                    data-filter="Personal Details"
+                    data-filter="Personal Profile"
                   >
                     <div class="title-part no-bg">
-                      <div class="name">Personal Details</div>
+                      <div class="name">Personal Profile</div>
                     </div>
 
                     <p class="form-subtitle"></p>
@@ -467,6 +467,7 @@
                                   class="custom-input"
                                   name="forFName"
                                   id="forFName"
+                                  value="hello"
                                 />
 
                                 <label class="form-input-label" for="forFName">
@@ -572,6 +573,49 @@
                             <p class="input-error">something went wrong</p>
                           </div> -->
 
+                          <div class="input-group">
+                            <div class="group">
+                              <div class="inner-input">
+                                <select
+                                  onchange="getData(this)"
+                                  class="custom-input"
+                                  name="forClassification"
+                                  id="forClassification"
+                                >
+                                  <option value=""></option>
+                                  <option value="Doctor">Doctor</option>
+                                  <option value="IT">IT</option>
+                                  <option value="Restaurant">Restaurant</option>
+                                </select>
+                                <label
+                                  class="form-input-label"
+                                  for="forClassification"
+                                >
+                                  -- Select Classification --
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+
+                          <div class="input-group">
+                            <div class="group textarea">
+                              <div class="inner-input">
+                                <textarea
+                                  class="custom-input"
+                                  name="forBio"
+                                  id="forBio"
+                                  onchange="getData(this)"
+                                ></textarea>
+
+                                <label class="form-input-label" for="forBio">
+                                  Bio
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+
                           <div class="group uploadImageArea" id="UploadPhoto">
                             <div class="inner-input">
                               <input
@@ -603,111 +647,15 @@
                     </form>
                   </div>
 
-                  <div class="form dataFilter" data-filter="Rotary Details">
+                  <div class="form dataFilter" data-filter="Rotary Engagement">
                     <div class="title-part no-bg">
-                      <div class="name">Rotary Details</div>
+                      <div class="name">Rotary Engagement</div>
                     </div>
 
                     <p class="form-subtitle"></p>
 
                     <form onSubmit="">
                       <div class="form-inputs">
-                        <div class="input-group">
-                          <div class="form-title">Location Details</div>
-
-                          <div class="input-group-divider">
-                            <div class="group">
-                              <div class="inner-input">
-                                <input
-                                  onchange="getData(this)"
-                                  type="email"
-                                  class="custom-input"
-                                  name="forCity"
-                                  id="forCity"
-                                />
-
-                                <label class="form-input-label" for="forCity">
-                                  City
-                                </label>
-                              </div>
-                              <p class="input-error">something went wrong</p>
-                            </div>
-
-                            <div class="group">
-                              <div class="inner-input">
-                                <input
-                                  onchange="getData(this)"
-                                  type="type"
-                                  class="custom-input"
-                                  name="forPostalCode"
-                                  id="forPostalCode"
-                                />
-
-                                <label
-                                  class="form-input-label"
-                                  for="forPostalCode"
-                                >
-                                  Postal Code
-                                </label>
-                              </div>
-                              <p class="input-error">something went wrong</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="input-group">
-                          <div class="form-title">Classification</div>
-
-                          <div class="group">
-                            <div class="inner-input">
-                              <select
-                                onchange="getData(this)"
-                                class="custom-input"
-                                name="forClassification"
-                                id="forClassification"
-                              >
-                                <option value=""></option>
-                                <option value="Doctor">Doctor</option>
-                                <option value="IT">IT</option>
-                                <option value="Restaurant">Restaurant</option>
-                              </select>
-                              <label
-                                class="form-input-label"
-                                for="forClassification"
-                              >
-                                -- Select Classification --
-                              </label>
-                            </div>
-                            <p class="input-error">something went wrong</p>
-                          </div>
-                        </div>
-
-                        <div class="input-group">
-                          <div class="form-title">Donor Type</div>
-
-                          <div class="group">
-                            <div class="inner-input">
-                              <select
-                                onchange="getData(this)"
-                                class="custom-input"
-                                name="forDonorType"
-                                id="forDonorType"
-                              >
-                                <option value=""></option>
-                                <option value="PHF">PHF</option>
-                                <option value="PHF +1">PHF +1</option>
-                              </select>
-                              <label
-                                class="form-input-label"
-                                for="forDonorType"
-                              >
-                                -- Select Donor Type --
-                              </label>
-                            </div>
-                            <p class="input-error">something went wrong</p>
-                          </div>
-                        </div>
-
                         <div class="input-group">
                           <div class="form-title">Club and Country</div>
 
@@ -755,15 +703,108 @@
                             </div>
                           </div>
                         </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Admit Date</div>
+
+                          <div class="group">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="date"
+                                class="custom-input active"
+                                name="AdmitDate"
+                                id="forAdmitDate"
+                              />
+
+                              <label
+                                class="form-input-label shrink"
+                                for="forAdmitDate"
+                              >
+                                Date
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Location Details</div>
+
+                          <div class="input-group-divider">
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="email"
+                                  class="custom-input"
+                                  name="forCity"
+                                  id="forCity"
+                                />
+
+                                <label class="form-input-label" for="forCity">
+                                  City
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+
+                            <div class="group">
+                              <div class="inner-input">
+                                <input
+                                  onchange="getData(this)"
+                                  type="type"
+                                  class="custom-input"
+                                  name="forPostalCode"
+                                  id="forPostalCode"
+                                />
+
+                                <label
+                                  class="form-input-label"
+                                  for="forPostalCode"
+                                >
+                                  Postal Code
+                                </label>
+                              </div>
+                              <p class="input-error">something went wrong</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="input-group">
+                          <div class="form-title">Donor Type</div>
+
+                          <div class="group">
+                            <div class="inner-input">
+                              <select
+                                onchange="getData(this)"
+                                class="custom-input"
+                                name="forDonorType"
+                                id="forDonorType"
+                              >
+                                <option value=""></option>
+                                <option value="PHF">PHF</option>
+                                <option value="PHF +1">PHF +1</option>
+                              </select>
+                              <label
+                                class="form-input-label"
+                                for="forDonorType"
+                              >
+                                -- Select Donor Type --
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
+                        </div>
                       </div>
 
                       <button class="submit-btn">Update</button>
                     </form>
                   </div>
 
-                  <div class="form dataFilter" data-filter="Business Details">
+                  <div class="form dataFilter" data-filter="Business Profile">
                     <div class="title-part no-bg">
-                      <div class="name">Business Details</div>
+                      <div class="name">Business Profile</div>
                     </div>
 
                     <p class="form-subtitle"></p>
@@ -774,6 +815,14 @@
                           <div class="form-title">
                             Are you willing to list your business?
                           </div>
+
+                          <input
+                            id="switch-isbusiness-input"
+                            value="No"
+                            type="text"
+                            disabled
+                            hidden
+                          />
 
                           <div class="switch-area">
                             <span class="noActive">No</span>
@@ -956,8 +1005,9 @@
                                   <div class="inner-input">
                                     <textarea
                                       class="custom-input"
-                                      name="BusinessDescription"
+                                      name="forBusinessDescription"
                                       id="forBusinessDescription"
+                                      onchange="getData(this)"
                                     ></textarea>
 
                                     <label
@@ -976,8 +1026,9 @@
                                   <div class="inner-input">
                                     <textarea
                                       class="custom-input"
-                                      name="smallSlogan"
+                                      name="forSmallSlogan"
                                       id="forSmallSlogan"
+                                      onchange="getData(this)"
                                     ></textarea>
 
                                     <label
@@ -1109,134 +1160,204 @@
                               </div>
 
                               <div
-                                class="repeaterListArea"
+                                class="repeaterListArea1"
                                 id="featuresListing"
                               >
-                                <!-- <div>
-                                    <div class="repeaterList">
-                                      <div class="group">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="text"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            Feature Title
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="group uploadImageArea">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="file"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            hidden
-                                          />
-    
-                                          <img
-                                            class="preview-image"
-                                            src=""
-                                            alt=""
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            <i class="fas fa-cloud-arrow-up"></i>
-                                            <br />
-                                            Click to upload
-    
-                                            <br />
-                                            Feature Image
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="removeButton">Remove</div>
+                                <div class="repeaterList">
+                                  <div class="group">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="text"
+                                        class="custom-input active"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        Feature Title
+                                      </label>
                                     </div>
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
                                   </div>
-    
-                                  <div>
-                                    <div class="repeaterList">
-                                      <div class="group">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="text"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            Feature Title
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="group uploadImageArea">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="file"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            hidden
-                                          />
-    
-                                          <img
-                                            class="preview-image"
-                                            src=""
-                                            alt=""
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            <i class="fas fa-cloud-arrow-up"></i>
-                                            <br />
-                                            Click to upload
-    
-                                            <br />
-                                            Feature Image
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="removeButton">Remove</div>
+
+                                  <div class="group uploadImageArea">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="file"
+                                        class="custom-input"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        hidden
+                                      />
+
+                                      <img
+                                        class="preview-image"
+                                        src=""
+                                        alt=""
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        <i class="fas fa-cloud-arrow-up"></i>
+                                        <br />
+                                        Click to upload
+
+                                        <br />
+                                        Feature Image
+                                      </label>
                                     </div>
-                                  </div> -->
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
+                                  </div>
+
+                                  <div
+                                    class="removeFeatureButton"
+                                    onclick="removeFeatureButton(this)"
+                                  >
+                                    Remove
+                                  </div>
+                                </div>
+                                <div class="repeaterList">
+                                  <div class="group">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="text"
+                                        class="custom-input active"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        Feature Title
+                                      </label>
+                                    </div>
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
+                                  </div>
+
+                                  <div class="group uploadImageArea">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="file"
+                                        class="custom-input"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        hidden
+                                      />
+
+                                      <img
+                                        class="preview-image"
+                                        src=""
+                                        alt=""
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        <i class="fas fa-cloud-arrow-up"></i>
+                                        <br />
+                                        Click to upload
+
+                                        <br />
+                                        Feature Image
+                                      </label>
+                                    </div>
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
+                                  </div>
+
+                                  <div
+                                    class="removeFeatureButton"
+                                    onclick="removeFeatureButton(this)"
+                                  >
+                                    Remove
+                                  </div>
+                                </div>
+                                <div class="repeaterList">
+                                  <div class="group">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="text"
+                                        class="custom-input active"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        Feature Title
+                                      </label>
+                                    </div>
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
+                                  </div>
+
+                                  <div class="group uploadImageArea">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="file"
+                                        class="custom-input"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        hidden
+                                      />
+
+                                      <img
+                                        class="preview-image"
+                                        src=""
+                                        alt=""
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        <i class="fas fa-cloud-arrow-up"></i>
+                                        <br />
+                                        Click to upload
+
+                                        <br />
+                                        Feature Image
+                                      </label>
+                                    </div>
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
+                                  </div>
+
+                                  <div
+                                    class="removeFeatureButton"
+                                    onclick="removeFeatureButton(this)"
+                                  >
+                                    Remove
+                                  </div>
+                                </div>
                               </div>
                             </div>
 
@@ -1272,8 +1393,9 @@
                                           <input
                                             type="text"
                                             name="timePicker"
-                                            class="custom-input"
+                                            class="custom-input timePicker"
                                             id="forSunAM"
+                                            value="01:00 PM - 06:00 PM"
                                           />
 
                                           <label
@@ -1296,7 +1418,7 @@
                                     <div class="switch-area">
                                       <div class="switch-button"></div>
 
-                                      <span>Closed</span>
+                                      <span>Open</span>
                                     </div>
 
                                     <div class="input-area-sec">
@@ -1305,8 +1427,9 @@
                                           <input
                                             type="text"
                                             name="timePicker"
-                                            class="custom-input"
+                                            class="custom-input timePicker"
                                             id="forMonAM"
+                                            value="01:00 PM - 06:00 PM"
                                           />
 
                                           <label
@@ -1338,7 +1461,7 @@
                                           <input
                                             type="text"
                                             name="timePicker"
-                                            class="custom-input"
+                                            class="custom-input timePicker"
                                             id="forTueAM"
                                           />
 
@@ -1371,7 +1494,7 @@
                                           <input
                                             type="text"
                                             name="timePicker"
-                                            class="custom-input"
+                                            class="custom-input timePicker"
                                             id="forWedAM"
                                           />
 
@@ -1404,7 +1527,7 @@
                                           <input
                                             type="text"
                                             name="timePicker"
-                                            class="custom-input"
+                                            class="custom-input timePicker"
                                             id="forThuAM"
                                           />
 
@@ -1437,7 +1560,7 @@
                                           <input
                                             type="text"
                                             name="timePicker"
-                                            class="custom-input"
+                                            class="custom-input timePicker"
                                             id="forFriAM"
                                           />
 
@@ -1470,7 +1593,7 @@
                                           <input
                                             type="text"
                                             name="timePicker"
-                                            class="custom-input"
+                                            class="custom-input timePicker"
                                             id="forSatAM"
                                           />
 
@@ -1501,132 +1624,138 @@
                                 </div>
                               </div>
 
-                              <div class="repeaterListArea" id="galleryListing">
-                                <!-- <div>
-                                    <div class="repeaterList">
-                                      <div class="group">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="text"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            Feature Title
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="group uploadImageArea">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="file"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            hidden
-                                          />
-    
-                                          <img
-                                            class="preview-image"
-                                            src=""
-                                            alt=""
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            <i class="fas fa-cloud-arrow-up"></i>
-                                            <br />
-                                            Click to upload
-    
-                                            <br />
-                                            Feature Image
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="removeButton">Remove</div>
+                              <div
+                                class="repeaterListArea2"
+                                id="galleryListing"
+                              >
+                                <div class="repeaterList">
+                                  <div class="group">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="text"
+                                        class="custom-input active"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        Feature Title
+                                      </label>
                                     </div>
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
                                   </div>
-    
-                                  <div>
-                                    <div class="repeaterList">
-                                      <div class="group">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="text"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            Feature Title
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="group uploadImageArea">
-                                        <div class="inner-input">
-                                          <input
-                                           onchange="getData(this)"
-                                            type="file"
-                                            class="custom-input"
-                                            name="forFeatureTitle"
-                                            id="forFeatureTitle"
-                                            hidden
-                                          />
-    
-                                          <img
-                                            class="preview-image"
-                                            src=""
-                                            alt=""
-                                          />
-    
-                                          <label
-                                            class="form-input-label"
-                                            for="forFeatureTitle"
-                                          >
-                                            <i class="fas fa-cloud-arrow-up"></i>
-                                            <br />
-                                            Click to upload
-    
-                                            <br />
-                                            Feature Image
-                                          </label>
-                                        </div>
-                                        <p class="input-error">
-                                          something went wrong
-                                        </p>
-                                      </div>
-    
-                                      <div class="removeButton">Remove</div>
+
+                                  <div class="group uploadImageArea">
+                                    <div class="inner-input">
+                                      <input
+                                        onchange="getData(this)"
+                                        type="file"
+                                        class="custom-input active"
+                                        name="forFeatureTitle"
+                                        id="forFeatureTitle"
+                                        hidden
+                                      />
+
+                                      <img
+                                        class="preview-image"
+                                        src=""
+                                        alt=""
+                                      />
+
+                                      <label
+                                        class="form-input-label shrink"
+                                        for="forFeatureTitle"
+                                      >
+                                        <i class="fas fa-cloud-arrow-up"></i>
+                                        <br />
+                                        Click to upload
+
+                                        <br />
+                                        Feature Image
+                                      </label>
                                     </div>
-                                  </div> -->
+                                    <p class="input-error">
+                                      something went wrong
+                                    </p>
+                                  </div>
+
+                                  <div
+                                    class="removeGalleryButton"
+                                    onclick="removeGalleryButton(this)"
+                                  >
+                                    Remove
+                                  </div>
+                                </div>
+                                <!-- 
+                                <div>
+                                  <div class="repeaterList">
+                                    <div class="group">
+                                      <div class="inner-input">
+                                        <input
+                                          onchange="getData(this)"
+                                          type="text"
+                                          class="custom-input"
+                                          name="forFeatureTitle"
+                                          id="forFeatureTitle"
+                                          placeholder="eg: Free wifi, Pickup and Drop, Swimming pool etc..."
+                                        />
+
+                                        <label
+                                          class="form-input-label"
+                                          for="forFeatureTitle"
+                                        >
+                                          Feature Title
+                                        </label>
+                                      </div>
+                                      <p class="input-error">
+                                        something went wrong
+                                      </p>
+                                    </div>
+
+                                    <div class="group uploadImageArea">
+                                      <div class="inner-input">
+                                        <input
+                                          onchange="getData(this)"
+                                          type="file"
+                                          class="custom-input"
+                                          name="forFeatureTitle"
+                                          id="forFeatureTitle"
+                                          hidden
+                                        />
+
+                                        <img
+                                          class="preview-image"
+                                          src=""
+                                          alt=""
+                                        />
+
+                                        <label
+                                          class="form-input-label"
+                                          for="forFeatureTitle"
+                                        >
+                                          <i class="fas fa-cloud-arrow-up"></i>
+                                          <br />
+                                          Click to upload
+
+                                          <br />
+                                          Feature Image
+                                        </label>
+                                      </div>
+                                      <p class="input-error">
+                                        something went wrong
+                                      </p>
+                                    </div>
+
+                                    <div class="removeButton">Remove</div>
+                                  </div>
+                                </div> -->
                               </div>
                             </div>
 
@@ -1637,9 +1766,9 @@
                     </form>
                   </div>
 
-                  <div class="form dataFilter" data-filter="Login Details">
+                  <div class="form dataFilter" data-filter="Login Info">
                     <div class="title-part no-bg">
-                      <div class="name">Login Details</div>
+                      <div class="name">Login Info</div>
                     </div>
 
                     <p class="form-subtitle"></p>
@@ -1647,7 +1776,27 @@
                     <form onSubmit="">
                       <div class="form-inputs">
                         <div class="input-group">
-                          <div class="form-title">Login Details</div>
+                          <div class="group">
+                            <div class="inner-input">
+                              <input
+                                onchange="getData(this)"
+                                type="email"
+                                class="custom-input"
+                                name="forMemberId"
+                                id="forMemberId"
+                                value="member_id"
+                                disabled
+                              />
+
+                              <label
+                                class="form-input-label shrink"
+                                for="forMemberId"
+                              >
+                                Member Id
+                              </label>
+                            </div>
+                            <p class="input-error">something went wrong</p>
+                          </div>
 
                           <div class="group">
                             <div class="inner-input">
@@ -2042,17 +2191,44 @@
 
     <script>
       $(function () {
-        $('input[name="timePicker"]').daterangepicker({
+        $('input[class="custom-input timePicker"]').daterangepicker({
           timePicker: true,
-          timePickerIncrement: 15, // Example: increment by 15 minutes
-          timePicker24Hour: true, // Example: display time in 24-hour format
-          timePickerSeconds: false, // Example: remove seconds from the time picker
-          startDate: moment().startOf("hour"),
-          endDate: moment().startOf("hour").add(1, "hour"), // Set an initial time range
+          timePickerIncrement: 15,
+          timePicker24Hour: true,
+          timePickerSeconds: false,
           locale: {
-            format: "hh:mm A", // Adjust the format to display only time
+            format: "hh:mm A",
           },
+          autoUpdateInput: false, // Disable auto-update to manually control the input value
+          startDate: moment().startOf("day"),
+          endDate: moment().startOf("day"),
         });
+
+        $('input[class="custom-input timePicker"]').on(
+          "apply.daterangepicker",
+          function (ev, picker) {
+            // Check if the start and end dates are the same (no range selected)
+            if (picker.startDate.isSame(picker.endDate)) {
+              $(this).val(""); // Set the value to an empty string
+            } else {
+              // Update the value with the selected time range
+              $(this).val(
+                picker.startDate.format("hh:mm A") +
+                  " - " +
+                  picker.endDate.format("hh:mm A")
+              );
+            }
+          }
+        );
+
+        // Optionally, handle the 'cancel.daterangepicker' event to clear the value if the user cancels
+        $('input[class="custom-input timePicker"]').on(
+          "cancel.daterangepicker",
+          function () {
+            // Update the value to be empty when the user cancels
+            $(this).val("");
+          }
+        );
       });
     </script>
   </body>
